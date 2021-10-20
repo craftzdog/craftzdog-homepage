@@ -18,12 +18,7 @@ import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
-import {
-  IoLogoTwitter,
-  IoLogoInstagram,
-  IoLogoGithub,
-  IoLogoDiscord
-} from 'react-icons/io5'
+import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
 import thumbYouTube from '../public/images/links/youtube.png'
 import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
 
@@ -73,9 +68,9 @@ const Home = () => (
         </Heading>
         <Paragraph>
           I am currently a full stack freelancer. I like to create new products
-          and help people to develop their ideas. And when I'm not online, I
-          like to play sports. Currently I'm helping bars/restaurants in my city
-          with the product called
+          and help people to develop their ideas. And when I&apos;m not online,
+          I like to play sports. Currently I&apos;m helping bars/restaurants in
+          my city with the product called
           <NextLink href="/works/inkdrop">
             <Link> Pideme</Link>
           </NextLink>
