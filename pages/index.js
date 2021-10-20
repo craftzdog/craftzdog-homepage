@@ -37,15 +37,16 @@ const Home = () => (
         textAlign="center"
         bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
       >
-        Hello, I&apos;m a full-stack developer based in Japan!
+        Hello, I am a Full-Stack developer specialised in Frontend development
+        with high knowledge in Digital Marketing.
       </Box>
 
       <Box display={{ md: 'flex' }}>
         <Box flexGrow={1}>
           <Heading as="h2" variant="page-title">
-            Takuya Matsuyama
+            Angel Batlles
           </Heading>
-          <p>Digital Craftsman ( Artist / Developer / Designer )</p>
+          <p>Digital Freak (Developer /Crypto gossip/ Always learning )</p>
         </Box>
         <Box
           flexShrink={0}
@@ -71,14 +72,12 @@ const Home = () => (
           Work
         </Heading>
         <Paragraph>
-          Takuya is a freelance and a full-stack developer based in Osaka with a
-          passion for building digital services/stuff he wants. He has a knack
-          for all things launching products, from planning and designing all the
-          way to solving real-life problems with code. When not online, he loves
-          hanging out with his camera. Currently, he is living off of his own
-          product called{' '}
+          I am currently a full stack freelancer. I like to create new products
+          and help people to develop their ideas. And when I'm not online, I
+          like to play sports. Currently I'm helping bars/restaurants in my city
+          with the product called
           <NextLink href="/works/inkdrop">
-            <Link>Inkdrop</Link>
+            <Link> Pideme</Link>
           </NextLink>
           .
         </Paragraph>
@@ -96,21 +95,23 @@ const Home = () => (
           Bio
         </Heading>
         <BioSection>
-          <BioYear>1984</BioYear>
-          Born in Osaka (大阪), Japan.
+          <BioYear>1989</BioYear>
+          Born in Granollers, Barcelona.
         </BioSection>
         <BioSection>
-          <BioYear>2010</BioYear>
-          Completed the Master&apos;s Program in the Graduate School of
-          Information Science at Nara Institute of Science and Technology
-          (奈良先端科学技術大学院大学情報科学研究科修士課程)
+          <BioYear>2014</BioYear>
+          Completed CFGS for DAI(Development of Computer Applications)
         </BioSection>
         <BioSection>
-          <BioYear>2010</BioYear>
-          Worked at Yahoo! Japan (ヤフー株式会社入社)
+          <BioYear>2013</BioYear>
+          Worked at Grafix Gestio Informatica! Barcelona
         </BioSection>
         <BioSection>
-          <BioYear>2012 to present</BioYear>
+          <BioYear>2020</BioYear>
+          Worked at Kumux! Barcelona
+        </BioSection>
+        <BioSection>
+          <BioYear>2021 to present</BioYear>
           Works as a freelance
         </BioSection>
       </Section>
@@ -119,17 +120,7 @@ const Home = () => (
         <Heading as="h3" variant="section-title">
           I ♥
         </Heading>
-        <Paragraph>
-          Art, Music,{' '}
-          <Link href="https://illust.odoruinu.net/" target="_blank">
-            Drawing
-          </Link>
-          , Playing Drums,{' '}
-          <Link href="https://500px.com/p/craftzdog" target="_blank">
-            Photography
-          </Link>
-          , Leica, Machine Learning
-        </Paragraph>
+        <Paragraph>Music, Sport, CryptoCurrency</Paragraph>
       </Section>
 
       <Section delay={0.3}>
@@ -138,57 +129,36 @@ const Home = () => (
         </Heading>
         <List>
           <ListItem>
-            <Link href="https://github.com/craftzdog" target="_blank">
+            <Link href="https://github.com/abatlles" target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="teal"
                 leftIcon={<Icon as={IoLogoGithub} />}
               >
-                @craftzdog
+                @abatlles
               </Button>
             </Link>
           </ListItem>
           <ListItem>
-            <Link href="https://twitter.com/inkdrop_app" target="_blank">
+            <Link href="https://twitter.com/abatlles" target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="teal"
                 leftIcon={<Icon as={IoLogoTwitter} />}
               >
-                @inkdrop_app
+                @abatles
               </Button>
             </Link>
           </ListItem>
+
           <ListItem>
-            <Link href="https://twitter.com/craftzdog" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<Icon as={IoLogoTwitter} />}
-              >
-                @craftzdog
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://instagram.com/craftzdog" target="_blank">
+            <Link href="https://instagram.com/abatlles" target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="teal"
                 leftIcon={<Icon as={IoLogoInstagram} />}
               >
-                @craftzdog
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://discord.gg/QfsG5Kj" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<Icon as={IoLogoDiscord} />}
-              >
-                Discord
+                @abatlles
               </Button>
             </Link>
           </ListItem>

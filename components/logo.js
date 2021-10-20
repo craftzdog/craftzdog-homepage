@@ -31,7 +31,7 @@ const Logo = () => {
             fontWeight="bold"
             ml={3}
           >
-            Takuya Matsuyama
+            Angel Batlles
           </Text>
         </LogoBox>
       </a>
