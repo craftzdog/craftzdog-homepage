@@ -22,18 +22,14 @@ const Works = () => (
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section>
-          <WorkGridItem id="inkdrop" title="Inkdrop" thumbnail={thumbInkdrop}>
-            A Markdown note-taking app with 100+ plugins, cross-platform and
-            encrypted data sync support
+          <WorkGridItem id="pideme" title="Pídeme" thumbnail={thumbInkdrop}>
+            Platform to order and pay for orders from the table and get them to
+            the kitchen.
           </WorkGridItem>
         </Section>
         <Section>
-          <WorkGridItem
-            id="walknote"
-            title="walknote"
-            thumbnail={thumbWalknote}
-          >
-            Music recommendation app for iOS
+          <WorkGridItem id="media" title="Media" thumbnail={thumbWalknote}>
+            Telemedicine platform with AI-based diagnostics
           </WorkGridItem>
         </Section>
 
