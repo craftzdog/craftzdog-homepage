@@ -5,10 +5,9 @@ import { WorkGridItem } from '../components/grid-item'
 
 import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
 import thumbWalknote from '../public/images/works/walknote_eyecatch.png'
-import thumbFourPainters from '../public/images/works/the-four-painters_eyecatch.jpg'
-import thumbMenkiki from '../public/images/works/menkiki_eyecatch.png'
+
 import thumbModeTokyo from '../public/images/works/modetokyo_eyecatch.png'
-import thumbStyly from '../public/images/works/styly_eyecatch.png'
+
 import thumbPichu2 from '../public/images/works/pichu2_eyecatch.png'
 import thumbFreeDBTagger from '../public/images/works/freedbtagger_eyecatch.png'
 import thumbAmembo from '../public/images/works/amembo_eyecatch.png'
@@ -32,23 +31,6 @@ const Works = () => (
             Telemedicine platform with AI-based diagnostics
           </WorkGridItem>
         </Section>
-
-        <Section delay={0.1}>
-          <WorkGridItem
-            id="fourpainters"
-            title="The four painters"
-            thumbnail={thumbFourPainters}
-          >
-            A video work generated with deep learning, imitating famous four
-            painters like Van Gogh
-          </WorkGridItem>
-        </Section>
-        <Section delay={0.1}>
-          <WorkGridItem id="menkiki" thumbnail={thumbMenkiki} title="Menkiki">
-            An app that suggests ramen(noodle) shops based on a given photo of
-            the ramen you want to eat
-          </WorkGridItem>
-        </Section>
       </SimpleGrid>
 
       <Section delay={0.2}>
@@ -62,47 +44,59 @@ const Works = () => (
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section delay={0.3}>
           <WorkGridItem
-            id="modetokyo"
+            id="solidary"
             thumbnail={thumbModeTokyo}
-            title="mode.tokyo"
+            title="Landing for help children in Hospital"
           >
-            The mode magazine for understanding to personally enjoy Japan
+            Landing to help raise money for children in hospital
           </WorkGridItem>
         </Section>
-        <Section delay={0.3}>
-          <WorkGridItem id="styly" thumbnail={thumbStyly} title="Styly">
-            A VR Creative tools for fashion brands
-          </WorkGridItem>
-        </Section>
+        <Section delay={0.3}></Section>
       </SimpleGrid>
 
       <Section delay={0.4}>
         <Divider my={6} />
 
         <Heading as="h3" fontSize={20} mb={4}>
-          Old works
+          Learning projects
         </Heading>
       </Section>
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section delay={0.5}>
-          <WorkGridItem id="pichu2" thumbnail={thumbPichu2} title="Pichu*Pichu">
-            Twitter client app for iPhone Safari
+          <WorkGridItem
+            id="avocadoshop"
+            thumbnail={thumbPichu2}
+            title="Avocado shop"
+          >
+            Shop to learn nextjs
           </WorkGridItem>
         </Section>
         <Section delay={0.5}>
           <WorkGridItem
-            id="freedbtagger"
+            id="weatherapp"
             thumbnail={thumbFreeDBTagger}
-            title="freeDBTagger"
+            title="Weatherapp"
           >
-            Automatic audio file tagging tool using FreeDB for Windows
+            Application to know the weather using redux
           </WorkGridItem>
         </Section>
         <Section delay={0.6}>
-          <WorkGridItem id="amembo" thumbnail={thumbAmembo} title="Amembo">
-            P2P private file sharing tool with MSN Messenger integration for
-            Windows
+          <WorkGridItem
+            id="cryptoTracker"
+            thumbnail={thumbAmembo}
+            title="CryptoTracker"
+          >
+            App to list the price of cryptocurrencies in react Native
+          </WorkGridItem>
+        </Section>
+        <Section>
+          <WorkGridItem
+            id="scrapper"
+            thumbnail={thumbModeTokyo}
+            title="Scrapper JS"
+          >
+            Code to access my CrossFit classes when the class is full
           </WorkGridItem>
         </Section>
       </SimpleGrid>

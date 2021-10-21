@@ -71,7 +71,7 @@ const Home = () => (
           and help people to develop their ideas. And when I&apos;m not online,
           I like to play sports. Currently I&apos;m helping bars/restaurants in
           my city with the product called
-          <NextLink href="/works/inkdrop">
+          <NextLink href="/works/pideme">
             <Link> Pideme</Link>
           </NextLink>
           .
@@ -135,13 +135,13 @@ const Home = () => (
             </Link>
           </ListItem>
           <ListItem>
-            <Link href="https://twitter.com/abatlles" target="_blank">
+            <Link href="https://twitter.com/elbatlles" target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="teal"
                 leftIcon={<Icon as={IoLogoTwitter} />}
               >
-                @abatles
+                @elbatlles
               </Button>
             </Link>
           </ListItem>
@@ -168,11 +168,12 @@ const Home = () => (
             My YouTube channel
           </GridItem>
           <GridItem
-            href="https://www.inkdrop.app/"
-            title="Inkdrop"
+            href="https://pideme.es/"
+            title="Pideme"
             thumbnail={thumbInkdrop}
           >
-            A Markdown note-taking app
+            Platform to order and pay for orders from the table and get them to
+            the kitchen.
           </GridItem>
         </SimpleGrid>
 
