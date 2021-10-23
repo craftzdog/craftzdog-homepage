@@ -10,7 +10,7 @@
     "lint": "next lint"
   },
   "keywords": [],
-  "author": "Takuya Matsuyama<hi@craftz.dog>",
+  "author": "Takuya Matsuyama",
   "license": "MIT",
   "dependencies": {
     "@chakra-ui/icons": "^1.0.15",
