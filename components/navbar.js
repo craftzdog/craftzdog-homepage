@@ -1,5 +1,6 @@
 import Logo from './logo'
 import NextLink from 'next/link'
+import { useRouter } from 'next/router'
 import {
   Container,
   Box,
@@ -12,15 +13,18 @@ import {
   MenuList,
   MenuButton,
   IconButton,
-  useColorModeValue
+  useColorModeValue,
+  Select
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
 import { IoLogoGithub } from 'react-icons/io5'
-
+import * as en from '../locales/en'
+import * as es from '../locales/es'
 const LinkItem = ({ href, path, _target, children, ...props }) => {
   const active = path === href
   const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
+
   return (
     <NextLink href={href} passHref>
       <Link
@@ -38,6 +42,16 @@ const LinkItem = ({ href, path, _target, children, ...props }) => {
 
 const Navbar = props => {
   const { path } = props
+  const router = useRouter()
+  const { locale } = router
+  const tAux = locale === 'en' ? en : es
+  const t = tAux.navbar
+  console.log('--')
+  console.log(locale)
+  const changeLanguage = e => {
+    const locale = e.target.value
+    router.push(router.pathname, router.asPath, { locale })
+  }
 
   return (
     <Box
@@ -72,10 +86,10 @@ const Navbar = props => {
           mt={{ base: 4, md: 0 }}
         >
           <LinkItem href="/works" path={path}>
-            Works
+            {t.works}
           </LinkItem>
           <LinkItem href="/posts" path={path}>
-            Posts
+            {t.posts}
           </LinkItem>
           <LinkItem
             _target="_blank"
@@ -87,8 +101,21 @@ const Navbar = props => {
             pl={2}
           >
             <IoLogoGithub />
-            Source
+            {t.source}
           </LinkItem>
+          <Select
+            placeholder="Select option"
+            onChange={changeLanguage}
+            defaultValue={locale}
+            className="text-white text-shadow-sm text-lg bg-transparent tracking-wide"
+          >
+            <option className="text-black" value="en">
+              EN
+            </option>
+            <option className="text-black" value="es">
+              ES
+            </option>
+          </Select>
         </Stack>
 
         <Box flex={1} align="right">
@@ -114,9 +141,24 @@ const Navbar = props => {
                 </NextLink>
                 <MenuItem
                   as={Link}
-                  href="https://github.com/craftzdog/craftzdog-homepage"
+                  href="https://github.com/elbatlles/craftzdog-homepage"
                 >
                   View Source
+                </MenuItem>
+                <MenuItem>
+                  <Select
+                    placeholder="Select option"
+                    onChange={changeLanguage}
+                    defaultValue={locale}
+                    className="text-white text-shadow-sm text-lg bg-transparent tracking-wide"
+                  >
+                    <option className="text-black" value="en">
+                      EN
+                    </option>
+                    <option className="text-black" value="es-ES">
+                      ES
+                    </option>
+                  </Select>
                 </MenuItem>
               </MenuList>
             </Menu>
