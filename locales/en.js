@@ -14,7 +14,8 @@ export const home = {
   learning: 'Learning',
   like: 'Music, Sport, CryptoCurrency',
   ssnn: 'On the web',
-  bottonPost: 'Popular posts'
+  bottonPost: 'Popular posts',
+  present: 'to present'
 }
 
 export const work = {
@@ -56,5 +57,7 @@ export const works = {
 export const navbar = {
   works: 'Works',
   posts: 'Posts',
-  source: 'Source'
+  source: 'Source',
+  about: 'About',
+  select: 'Select'
 }

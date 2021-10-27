@@ -5,33 +5,35 @@ export const home = {
     'Digital Freak (Desarrollador / Cotilla de las criptomonedas/ Siempre aprendiendo )',
   work: 'Trabajos',
   workText:
-    'Actualmente soy un freelancer full stack. Me gusta crear nuevos productos y ayudar a la gente a desarrollar sus ideas. Y cuando no estoy conectado, me gusta hacer deporte. Actualmente estoy ayudando a los bares/restaurantes de mi ciudad con el producto llamado',
+    'Actualmente soy un freelancer full stack. Me gusta crear nuevos productos y ayudar a la gente a desarrollar sus ideas. Y cuando no estoy conectado, me gusta hacer deporte. Actualmente estoy ayudando a los bares/restaurantes de mi ciudad con ',
   bottomPortfolio: 'Mi portfolio',
   born: 'Nací in Granollers, Barcelona.',
-  dai: 'Acabé CFGS for DAI(Development of Computer Applications)',
+  dai: 'Acabé CFGS de DAI (Desarrollo de aplicacionés informaticas)',
   grafix: 'Trabajé en Grafix Gestio Informatica! Barcelona',
   kumux: 'Trabajé at Kumux! Barcelona',
-  freelance: 'Trabajo as a freelance',
+  freelance: 'Trabajo como freelance',
   learning: 'Aprendiendo',
   like: 'Música, Deporte, Criptomonedas',
   ssnn: 'Redes Sociales',
-  bottonPost: 'posts'
+  bottonPost: 'posts',
+  present: 'hasta ahora'
 }
 
 export const work = {
-  work: 'Works',
+  work: 'Trabajos',
   pidemeText:
-    'Platform to order and pay for orders from the table and get them to the kitchen.',
-  mediaText: 'Telemedicine platform with AI-based diagnostics',
-  collaborations: 'Collaborations',
-  landing: 'Landing for help children in Hospital',
-  landingText: 'Landing to help raise money for children in hospital',
-  titleLearning: 'Learning projects',
-  textAvocado: 'Shop to learn nextjs',
-  textWeatherApp: 'Application to know the weather using redux',
+    'Plataforma para pedir y pagar los pedidos de la mesa y llevarlos a la cocina.',
+  mediaText: 'Plataforma de telemedicina con diagnósticos basados en IA.',
+  collaborations: 'Colaboraciones',
+  landing: 'Landing para ayudar a los niños en los hospitales',
+  landingText: 'Landing para ayudar a los niños en los hospitales',
+  titleLearning: 'Proyectos de aprendizaje',
+  textAvocado: 'Tienda para aprender nextjs',
+  textWeatherApp: 'Aplicación para saber el tiempo actual usando redux',
   textCryptoTracker:
-    'App to list the price of cryptocurrencies in react Native',
-  textScrapper: 'Code to access my CrossFit classes when the class is full'
+    'App para listar el precio de las criptodivisas en react Native',
+  textScrapper:
+    'Pequeño script para  acceder a mis clases de CrossFit cuando está llena'
 }
 export const blog = {
   commingSoon: 'Comming Soon'
@@ -56,5 +58,7 @@ export const works = {
 export const navbar = {
   works: 'Trabajos',
   posts: 'Posts',
-  source: 'Fuente'
+  source: 'Fuente',
+  about: 'Sobre mi',
+  select: 'Escoge idioma'
 }

@@ -106,7 +106,7 @@ const Home = () => {
             {t.kumux}
           </BioSection>
           <BioSection>
-            <BioYear>2021 to present</BioYear>
+            <BioYear>2021 {t.present}</BioYear>
             {t.freelance}
           </BioSection>
         </Section>
@@ -196,13 +196,13 @@ const Home = () => {
           </GridItem>
 </SimpleGrid>*/}
 
-          <Box align="center" my={4}>
+          {/*  <Box align="center" my={4}>
             <NextLink href="/posts">
               <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
                 {t.bottonPost}
               </Button>
             </NextLink>
-          </Box>
+</Box> */}
         </Section>
       </Container>
     </Layout>

@@ -26,7 +26,6 @@ const Works = () => {
         <Heading as="h3" fontSize={20} mb={4}>
           {t.work}
         </Heading>
-
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
           <Section>
             <WorkGridItem id="pideme" title="Pídeme" thumbnail={thumbInkdrop}>
@@ -38,24 +37,68 @@ const Works = () => {
               {t.mediaText}
             </WorkGridItem>
           </Section>
+          <Section>
+            <WorkGridItem
+              id="personalweb"
+              title="Web personal"
+              thumbnail={thumbWalknote}
+            >
+              Mi web como personal para dar mis servicios como programador
+            </WorkGridItem>
+          </Section>
         </SimpleGrid>
+        <Section delay={0.4}>
+          <Divider my={6} />
 
+          <Heading as="h3" fontSize={20} mb={4}>
+            Como Trabajador de Kumux
+          </Heading>
+        </Section>
+        <SimpleGrid columns={[1, 1, 2]} gap={6}>
+          <Section delay={0.3}>
+            <WorkGridItem
+              id="kumux"
+              thumbnail={thumbModeTokyo}
+              title={'Web de Kumux'}
+            >
+              Creación de su web corporativa
+            </WorkGridItem>
+          </Section>
+          <Section delay={0.3}>
+            <WorkGridItem
+              id="appKumux"
+              thumbnail={thumbModeTokyo}
+              title={'AppWeb para Kumux'}
+            >
+              WebApp para diseñar productos de iluminaria
+            </WorkGridItem>
+          </Section>
+          <Section delay={0.3}></Section>
+        </SimpleGrid>
         <Section delay={0.2}>
           <Divider my={6} />
 
           <Heading as="h3" fontSize={20} mb={4}>
-            {t.collaborations}
+            Como Trabajador de Grafix
           </Heading>
         </Section>
-
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
           <Section delay={0.3}>
             <WorkGridItem
-              id="solidary"
+              id="aqdindustrial"
               thumbnail={thumbModeTokyo}
-              title={t.landing}
+              title={'Ecommerce de productos de seguridad industrial'}
             >
-              {t.landingText}
+              Ecommerce para la venda de productos de seguridad Industrial
+            </WorkGridItem>
+          </Section>
+          <Section delay={0.3}>
+            <WorkGridItem
+              id="littlebox"
+              thumbnail={thumbModeTokyo}
+              title={'Ecommerce de productos para campings'}
+            >
+              Ecommerce para la venda de cajas los clientes de los Campings
             </WorkGridItem>
           </Section>
           <Section delay={0.3}></Section>
@@ -65,10 +108,9 @@ const Works = () => {
           <Divider my={6} />
 
           <Heading as="h3" fontSize={20} mb={4}>
-            {t.landingText}
+            {t.titleLearning}
           </Heading>
         </Section>
-
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
           <Section delay={0.5}>
             <WorkGridItem

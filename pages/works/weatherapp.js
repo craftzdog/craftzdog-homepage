@@ -40,7 +40,8 @@ const Work = () => (
         <Center>Media coverage</Center>
       </Heading>
 
-      <WorkImage src="/images/works/pichu2_eyecatch.png" alt="Pichu*Pichu" />
+      <WorkImage src="/images/works/weather_1.png" alt="WeatherApp" />
+      <WorkImage src="/images/works/weather_2.png" alt="WeatherApp" />
     </Container>
   </Layout>
 )

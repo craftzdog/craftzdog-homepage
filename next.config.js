@@ -13,8 +13,14 @@ module.exports = {
     async rewrites() {
       return [
         {
-          source: '/works',
-          destination: '/trabajos'
+          source: '/es/works',
+          destination: '/es/angel',
+          locale: false // Use `locale: false` so that the prefix matches the desired locale correctly
+        },
+        {
+          source: '/en/pony',
+          destination: '/en/posts',
+          locale: false
         }
       ]
     }

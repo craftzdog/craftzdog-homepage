@@ -5,7 +5,7 @@ import { Title, WorkImage, Meta } from '../../components/work'
 import P from '../../components/paragraph'
 
 const Work = () => (
-  <Layout title="walknote">
+  <Layout title="IA-Prvevent">
     <Container>
       <Title>
         IA-Prevent <Badge>2021-Nowaday</Badge>
@@ -22,13 +22,10 @@ const Work = () => (
         </ListItem>
       </List>
 
-      <SimpleGrid columns={2} gap={2}>
-        <WorkImage src="/images/works/walknote_01.png" alt="walknote" />
-        <WorkImage src="/images/works/walknote_02.png" alt="walknote" />
+      <SimpleGrid columns={1} gap={2}>
+        <WorkImage src="/images/works/iaprevent_1.png" alt="walknote" />
+        <WorkImage src="/images/works/iaprevent_2.png" alt="walknote" />
       </SimpleGrid>
-      <WorkImage src="/images/works/walknote_03.png" alt="walknote" />
-      <WorkImage src="/images/works/walknote_04.png" alt="walknote" />
-      <WorkImage src="/images/works/walknote_05.png" alt="walknote" />
     </Container>
   </Layout>
 )

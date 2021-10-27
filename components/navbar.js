@@ -46,8 +46,7 @@ const Navbar = props => {
   const { locale } = router
   const tAux = locale === 'en' ? en : es
   const t = tAux.navbar
-  console.log('--')
-  console.log(locale)
+
   const changeLanguage = e => {
     const locale = e.target.value
     router.push(router.pathname, router.asPath, { locale })
@@ -83,6 +82,7 @@ const Navbar = props => {
           width={{ base: 'full', md: 'auto' }}
           alignItems="center"
           flexGrow={1}
+          className="angeee"
           mt={{ base: 4, md: 0 }}
         >
           <LinkItem href="/works" path={path}>
@@ -103,8 +103,21 @@ const Navbar = props => {
             <IoLogoGithub />
             {t.source}
           </LinkItem>
+        </Stack>
+
+        <Box
+          flex={1}
+          align="right"
+          direction={{ base: 'column', md: 'row' }}
+          width={{ base: 'full', md: 'auto' }}
+          alignItems="center"
+          flexGrow={1}
+        >
           <Select
-            placeholder="Select option"
+            display={{ base: 'none', md: 'inline-block' }}
+            w={[75, 75, 75]}
+            mx={2}
+            placeholder={t.select}
             onChange={changeLanguage}
             defaultValue={locale}
             className="text-white text-shadow-sm text-lg bg-transparent tracking-wide"
@@ -116,9 +129,6 @@ const Navbar = props => {
               ES
             </option>
           </Select>
-        </Stack>
-
-        <Box flex={1} align="right">
           <ThemeToggleButton />
 
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
@@ -131,23 +141,23 @@ const Navbar = props => {
               />
               <MenuList>
                 <NextLink href="/" passHref>
-                  <MenuItem as={Link}>About</MenuItem>
+                  <MenuItem as={Link}>{t.about}</MenuItem>
                 </NextLink>
                 <NextLink href="/works" passHref>
-                  <MenuItem as={Link}>Works</MenuItem>
+                  <MenuItem as={Link}> {t.works}</MenuItem>
                 </NextLink>
                 <NextLink href="/posts" passHref>
-                  <MenuItem as={Link}>Posts</MenuItem>
+                  <MenuItem as={Link}> {t.posts}</MenuItem>
                 </NextLink>
                 <MenuItem
                   as={Link}
                   href="https://github.com/elbatlles/craftzdog-homepage"
                 >
-                  View Source
+                  {t.source}
                 </MenuItem>
                 <MenuItem>
                   <Select
-                    placeholder="Select option"
+                    placeholder={t.select}
                     onChange={changeLanguage}
                     defaultValue={locale}
                     className="text-white text-shadow-sm text-lg bg-transparent tracking-wide"

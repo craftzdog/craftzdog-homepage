@@ -8,28 +8,25 @@ const Work = () => (
   <Layout title="Pideme">
     <Container>
       <Title>
-        Pídeme <Badge>2021- Nowadays</Badge>
+        AQD Industrial <Badge>2019</Badge>
       </Title>
-      <P>
-        Platform to order and pay for orders from the table and get them to the
-        kitchen.
-      </P>
+      <P>Ecoomerce para la venda de productos industriales</P>
       <List ml={4} my={4}>
         <ListItem>
           <Meta>Website</Meta>
-          <Link isExternal href="https://www.pideme.es/">
-            P&iacute;deme <ExternalLinkIcon mx="2px" />
+          <Link isExternal href="https://www.industrialproduct.es/">
+            AQD Industrial <ExternalLinkIcon mx="2px" />
           </Link>
         </ListItem>
 
         <ListItem>
           <Meta>Stack</Meta>
-          <span>PHP, Laravel</span>
+          <span>PHP, Prestashop</span>
         </ListItem>
       </List>
 
-      <WorkImage src="/images/works/pideme_1.png" alt="Pideme" />
-      <WorkImage src="/images/works/pideme_2.png" alt="Pideme" />
+      <WorkImage src="/images/works/aqd_1.png" alt="Inkdrop" />
+      <WorkImage src="/images/works/aqd_2.png" alt="Inkdrop" />
     </Container>
   </Layout>
 )
