@@ -36,10 +36,6 @@ const Work = () => (
         </ListItem>
       </List>
 
-      <Heading as="h4" fontSize={16} my={6}>
-        <Center>Media coverage</Center>
-      </Heading>
-
       <WorkImage src="/images/works/weather_1.png" alt="WeatherApp" />
       <WorkImage src="/images/works/weather_2.png" alt="WeatherApp" />
     </Container>
