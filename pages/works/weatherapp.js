@@ -3,9 +3,10 @@ import Layout from '../../components/layouts/article'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { Title, WorkImage, Meta } from '../../components/work'
 import P from '../../components/paragraph'
+import Lang from '../../lib/utils'
 
 const Work = () => {
-  const t = lang('works')
+  const t = Lang('works')
   return (
     <Layout title="WeatherApp">
       <Container>

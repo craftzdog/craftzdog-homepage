@@ -3,10 +3,10 @@ import Layout from '../../components/layouts/article'
 
 import { Title, WorkImage, Meta } from '../../components/work'
 import P from '../../components/paragraph'
-import lang from '../../lib/utils'
+import Lang from '../../lib/utils'
 
 const Work = () => {
-  const t = lang('work')
+  const t = Lang('work')
   return (
     <Layout title="IA Prevent">
       <Container>

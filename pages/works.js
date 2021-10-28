@@ -12,9 +12,9 @@ import thumbPichu2 from '../public/images/works/pichu2_eyecatch.png'
 import thumbFreeDBTagger from '../public/images/works/freedbtagger_eyecatch.png'
 import thumbAmembo from '../public/images/works/amembo_eyecatch.png'
 
-import lang from '../lib/utils'
+import Lang from '../lib/utils'
 const Works = () => {
-  const t = lang('work')
+  const t = Lang('work')
   return (
     <Layout title="Works">
       <Container>

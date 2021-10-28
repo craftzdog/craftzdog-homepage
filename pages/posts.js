@@ -1,6 +1,6 @@
 import { Container, Heading } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
-import lang from '../lib/utils'
+import Lang from '../lib/utils'
 
 {
   /*
@@ -15,7 +15,7 @@ import thumb50xFaster from '../public/images/contents/youtube-50x-faster.jpg' */
 }
 
 const Posts = () => {
-  const t = lang('blog')
+  const t = Lang('blog')
 
   return (
     <Layout title="Posts">

@@ -18,10 +18,10 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 
 import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
-import lang from '../lib/utils'
+import Lang from '../lib/utils'
 
 const Home = () => {
-  const t = lang('home')
+  const t = Lang('home')
   return (
     <Layout>
       <Container>
