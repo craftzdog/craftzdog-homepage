@@ -15,7 +15,7 @@ import thumb50xFaster from '../public/images/contents/youtube-50x-faster.jpg' */
 }
 
 const Posts = () => {
-  const t = lang()
+  const t = lang('blog')
 
   return (
     <Layout title="Posts">

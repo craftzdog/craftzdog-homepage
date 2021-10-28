@@ -49,24 +49,24 @@ export const blog = {
 
 export const works = {
   textPideme:
-    'Platform to order and pay for orders from the table and get them to the kitchen.',
+    'Plataforma para pedir y pagar los pedidos de la mesa y llevarlos a la cocina.',
   textIA:
-    'Platform created to help Chileans in their diagnoses and applying AI in the results to help doctors.',
+    'Plataforma creada para ayudar a los chilenos en sus diagnósticos y aplicar la IA en los resultados para ayudar a los médicos.',
   titleHelp: 'Landing for help children',
   texthelp:
     'Website to help organise an event to raise money for hospitalised children',
-  textPersonal: 'Web para dar mis servicios como desarrollador',
-  textKumux: 'Web corporativa para mostrar los servicios de Kumux',
-  textAppKumux: 'Plataforma para la creación de iluminarias',
-  textAQD: 'Ecommerce para la venda de productos industriales',
+  textPersonal: 'Web para dar mis servicios como desarrollador.',
+  textKumux: 'Web corporativa para mostrar los servicios de Kumux.',
+  textAppKumux: 'Plataforma para la creación de iluminarias.',
+  textAQD: 'Ecommerce para la venda de productos industriales.',
   textAvocado: 'Web que creé para un curso de Platzi para aprender Nextjs.',
   textWeatherApp:
     'Web created from a Udemy course where I learned more about jest, redux and useeffect.',
-  textLittlebox: 'Plataforma para la venda de campings',
+  textLittlebox: 'Plataforma para la venda de campings.',
   textCryptoTracker:
-    'App where you can see a list of cryptocurrencies and their prices, created with React Native.',
+    'App donde se puede ver una lista de criptodivisas y sus precios, creada con React Native.',
   textScrapper:
-    'Small script created with Javascript and using selenium libraries to be able to take time in my gym when there is a free slot.'
+    'Pequeño script creado con Javascript y utilizando las librerías de selenium para poder sacar tiempo en mi gimnasio cuando haya un hueco libre.'
 }
 
 export const navbar = {
