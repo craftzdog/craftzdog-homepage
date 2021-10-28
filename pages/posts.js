@@ -1,9 +1,7 @@
 import { Container, Heading } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
+import lang from '../lib/utils'
 
-import { useRouter } from 'next/router'
-import * as en from '../locales/en'
-import * as es from '../locales/es'
 {
   /*
 
@@ -17,10 +15,7 @@ import thumb50xFaster from '../public/images/contents/youtube-50x-faster.jpg' */
 }
 
 const Posts = () => {
-  const router = useRouter()
-  const { locale } = router
-  const tAux = locale === 'en' ? en : es
-  const t = tAux.blog
+  const t = lang()
 
   return (
     <Layout title="Posts">

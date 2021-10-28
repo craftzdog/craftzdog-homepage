@@ -20,10 +20,18 @@ export const home = {
 }
 
 export const work = {
+  textLittlebox:
+    'Ecommerce para la venda de cajas los clientes de los Campings',
+  textPersonal: ' Mi web como personal para dar mis servicios como programador',
+  grafix: 'Como Trabajador de Grafix',
+  textAQD: '  Ecommerce para la venda de productos de seguridad Industrial',
+  kumux: 'Como Trabajador de Kumux',
+  kumuxText: ' Creación de su web corporativa',
+  textAppkumux: ' WebApp para diseñar productos de iluminaria',
   work: 'Trabajos',
-  pidemeText:
+  textPideme:
     'Plataforma para pedir y pagar los pedidos de la mesa y llevarlos a la cocina.',
-  mediaText: 'Plataforma de telemedicina con diagnósticos basados en IA.',
+  textMedia: 'Plataforma de telemedicina con diagnósticos basados en IA.',
   collaborations: 'Colaboraciones',
   landing: 'Landing para ayudar a los niños en los hospitales',
   landingText: 'Landing para ayudar a los niños en los hospitales',
@@ -47,14 +55,20 @@ export const works = {
   titleHelp: 'Landing for help children',
   texthelp:
     'Website to help organise an event to raise money for hospitalised children',
-  textAvocado: 'Web that I created for a Platzi course to learn Nextjs.',
+  textPersonal: 'Web para dar mis servicios como desarrollador',
+  textKumux: 'Web corporativa para mostrar los servicios de Kumux',
+  textAppKumux: 'Plataforma para la creación de iluminarias',
+  textAQD: 'Ecommerce para la venda de productos industriales',
+  textAvocado: 'Web que creé para un curso de Platzi para aprender Nextjs.',
   textWeatherApp:
     'Web created from a Udemy course where I learned more about jest, redux and useeffect.',
+  textLittlebox: 'Plataforma para la venda de campings',
   textCryptoTracker:
     'App where you can see a list of cryptocurrencies and their prices, created with React Native.',
   textScrapper:
     'Small script created with Javascript and using selenium libraries to be able to take time in my gym when there is a free slot.'
 }
+
 export const navbar = {
   works: 'Trabajos',
   posts: 'Posts',

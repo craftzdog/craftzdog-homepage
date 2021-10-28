@@ -18,14 +18,10 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 
 import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
-import { useRouter } from 'next/router'
-import * as en from '../locales/en'
-import * as es from '../locales/es'
+import lang from '../lib/utils'
+
 const Home = () => {
-  const router = useRouter()
-  const { locale } = router
-  const tAux = locale === 'en' ? en : es
-  const t = tAux.home
+  const t = lang('home')
   return (
     <Layout>
       <Container>

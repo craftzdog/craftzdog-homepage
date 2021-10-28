@@ -3,33 +3,34 @@ import Layout from '../../components/layouts/article'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { Title, WorkImage, Meta } from '../../components/work'
 import P from '../../components/paragraph'
+import lang from '../../lib/utils'
 
-const Work = () => (
-  <Layout title="Menkiki (麺利き)">
-    <Container>
-      <Title>
-        Scrapper JS <Badge>2021</Badge>
-      </Title>
-      <P>
-        Small script created with Javascript and using selenium libraries to be
-        able to take time in my gym when there is a free slot.
-      </P>
+const Work = () => {
+  const t = lang('works')
+  return (
+    <Layout title="Scrapper JS">
+      <Container>
+        <Title>
+          Scrapper JS <Badge>2021</Badge>
+        </Title>
+        <P>{t.textScrapper}</P>
 
-      <List ml={4} my={4}>
-        <ListItem>
-          <Meta>Stack</Meta>
-          <span>Javascript</span>
-        </ListItem>
+        <List ml={4} my={4}>
+          <ListItem>
+            <Meta>Stack</Meta>
+            <span>Javascript</span>
+          </ListItem>
 
-        <ListItem>
-          <Meta>Source</Meta>
-          <Link href="https://github.com/elbatlles/scrapperjs">
-            github.com/elbatlles/scrapperjs <ExternalLinkIcon mx="2px" />
-          </Link>
-        </ListItem>
-      </List>
-    </Container>
-  </Layout>
-)
+          <ListItem>
+            <Meta>Source</Meta>
+            <Link href="https://github.com/elbatlles/scrapperjs">
+              github.com/elbatlles/scrapperjs <ExternalLinkIcon mx="2px" />
+            </Link>
+          </ListItem>
+        </List>
+      </Container>
+    </Layout>
+  )
+}
 
 export default Work
