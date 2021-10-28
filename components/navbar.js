@@ -120,7 +120,6 @@ const Navbar = props => {
             placeholder={t.select}
             onChange={changeLanguage}
             defaultValue={locale}
-            className="text-white text-shadow-sm text-lg bg-transparent tracking-wide"
           >
             <option className="text-black" value="en">
               EN
@@ -155,21 +154,20 @@ const Navbar = props => {
                 >
                   {t.source}
                 </MenuItem>
-                <MenuItem>
-                  <Select
-                    placeholder={t.select}
-                    onChange={changeLanguage}
-                    defaultValue={locale}
-                    className="text-white text-shadow-sm text-lg bg-transparent tracking-wide"
-                  >
-                    <option className="text-black" value="en">
-                      EN
-                    </option>
-                    <option className="text-black" value="es">
-                      ES
-                    </option>
-                  </Select>
-                </MenuItem>
+
+                <Select
+                  placeholder={t.select}
+                  onChange={changeLanguage}
+                  defaultValue={locale}
+                  className="text-white text-shadow-sm text-lg bg-transparent tracking-wide"
+                >
+                  <option className="text-black" value="en">
+                    EN
+                  </option>
+                  <option className="text-black" value="es">
+                    ES
+                  </option>
+                </Select>
               </MenuList>
             </Menu>
           </Box>
