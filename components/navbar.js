@@ -165,7 +165,7 @@ const Navbar = props => {
                     <option className="text-black" value="en">
                       EN
                     </option>
-                    <option className="text-black" value="es-ES">
+                    <option className="text-black" value="es">
                       ES
                     </option>
                   </Select>
