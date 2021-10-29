@@ -27,7 +27,7 @@ export const work = {
 
   kumuxText: ' Creación de su web corporativa',
   grafix: 'As a Grafix Worker',
-  kumux: 'As a Grafix Kumux',
+  kumux: 'As a Kumux Worker',
   work: 'Works',
 
   pidemeText:
