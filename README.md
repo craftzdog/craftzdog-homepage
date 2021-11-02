@@ -1,12 +1,6 @@
 # Angel's Homepage
 
-[https://angelbatllesdev.vercel.app/](https://angelbatllesdev.vercel.app/)
-
-## Tutorial
-
-Watch how I built this website on YouTube:
-
-
+[https://www.freak.wtf/](https://www.freak.wtf/)
 
 ## Stack
 
@@ -28,7 +22,3 @@ $PROJECT_ROOT
 │   # Static files for images and 3d model file
 └── public
 ```
-
-
-
-
