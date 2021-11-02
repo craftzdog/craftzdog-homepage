@@ -7,6 +7,7 @@ import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
 import thumbWalknote from '../public/images/works/walknote_eyecatch.png'
 
 import thumbModeTokyo from '../public/images/works/modetokyo_eyecatch.png'
+import defaultImage from '../public/images/demo-image-default.jpg'
 
 import thumbPichu2 from '../public/images/works/pichu2_eyecatch.png'
 import thumbFreeDBTagger from '../public/images/works/freedbtagger_eyecatch.png'
@@ -23,12 +24,12 @@ const Works = () => {
         </Heading>
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
           <Section>
-            <WorkGridItem id="pideme" title="Pídeme" thumbnail={thumbInkdrop}>
+            <WorkGridItem id="pideme" title="Pídeme" thumbnail={defaultImage}>
               {t.textPideme}
             </WorkGridItem>
           </Section>
           <Section>
-            <WorkGridItem id="media" title="Media" thumbnail={thumbWalknote}>
+            <WorkGridItem id="media" title="Media" thumbnail={defaultImage}>
               {t.textMedia}
             </WorkGridItem>
           </Section>
@@ -36,7 +37,7 @@ const Works = () => {
             <WorkGridItem
               id="personalweb"
               title="Web personal"
-              thumbnail={thumbWalknote}
+              thumbnail={defaultImage}
             >
               {t.textPersonal}
             </WorkGridItem>
@@ -53,7 +54,7 @@ const Works = () => {
           <Section delay={0.3}>
             <WorkGridItem
               id="kumux"
-              thumbnail={thumbModeTokyo}
+              thumbnail={defaultImage}
               title={'Web de Kumux'}
             >
               {t.kumuxText}
@@ -62,7 +63,7 @@ const Works = () => {
           <Section delay={0.3}>
             <WorkGridItem
               id="appKumux"
-              thumbnail={thumbModeTokyo}
+              thumbnail={defaultImage}
               title={'AppWeb para Kumux'}
             >
               {t.textAppkumux}
@@ -81,7 +82,7 @@ const Works = () => {
           <Section delay={0.3}>
             <WorkGridItem
               id="aqdindustrial"
-              thumbnail={thumbModeTokyo}
+              thumbnail={defaultImage}
               title={'Ecommerce de productos de seguridad industrial'}
             >
               {t.textAQD}
@@ -90,7 +91,7 @@ const Works = () => {
           <Section delay={0.3}>
             <WorkGridItem
               id="littlebox"
-              thumbnail={thumbModeTokyo}
+              thumbnail={defaultImage}
               title={'Ecommerce de productos para campings'}
             >
               {t.textLittlebox}
@@ -110,7 +111,7 @@ const Works = () => {
           <Section delay={0.5}>
             <WorkGridItem
               id="avocadoshop"
-              thumbnail={thumbPichu2}
+              thumbnail={defaultImage}
               title="Avocado shop"
             >
               {t.textAvocado}
@@ -119,7 +120,7 @@ const Works = () => {
           <Section delay={0.5}>
             <WorkGridItem
               id="weatherapp"
-              thumbnail={thumbFreeDBTagger}
+              thumbnail={defaultImage}
               title="Weatherapp"
             >
               {t.textWeatherApp}
@@ -128,7 +129,7 @@ const Works = () => {
           <Section delay={0.6}>
             <WorkGridItem
               id="cryptoTracker"
-              thumbnail={thumbAmembo}
+              thumbnail={defaultImage}
               title="CryptoTracker"
             >
               {t.textCryptoTracker}
@@ -137,7 +138,7 @@ const Works = () => {
           <Section>
             <WorkGridItem
               id="scrapper"
-              thumbnail={thumbModeTokyo}
+              thumbnail={defaultImage}
               title="Scrapper JS"
             >
               {t.textScrapper}
