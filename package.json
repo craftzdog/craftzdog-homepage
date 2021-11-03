@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "prettier": "prettier -write .",
-    "lint": "next lint"
+    "lint": "next lint",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "keywords": [],
   "author": "Angel Batlles",
@@ -17,11 +19,19 @@
     "@chakra-ui/react": "^1.6.9",
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
+    "@storybook/addon-controls": "^6.3.12",
+    "@storybook/addon-essentials": "^6.3.12",
+    "@storybook/addon-links": "^6.3.12",
+    "@storybook/addon-viewport": "^6.3.12",
+    "@storybook/addons": "^6.3.12",
+    "@storybook/preset-create-react-app": "^3.2.0",
+    "@storybook/react": "^6.3.12",
     "framer-motion": "^4.1.17",
     "next": "^11.1.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
+    "storybook": "^6.3.12",
     "three": "^0.133.1"
   },
   "devDependencies": {

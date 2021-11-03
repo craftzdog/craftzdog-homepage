@@ -26,10 +26,12 @@ export const WorkGridItem = ({ children, id, title, thumbnail }) => (
     <NextLink href={`/works/${id}`}>
       <LinkBox cursor="pointer">
         <Image
-          src={thumbnail}
-          alt={title}
-          className="grid-item-thumbnail"
           placeholder="blur"
+          src={thumbnail}
+          layout="responsive"
+          width="100%"
+          height="50%"
+          className="grid-item-thumbnail"
         />
         <LinkOverlay href={`/works/${id}`}>
           <Text mt={2} fontSize={20}>
