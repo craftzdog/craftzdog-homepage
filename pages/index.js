@@ -155,7 +155,7 @@ const Home = () => (
                 colorScheme="teal"
                 leftIcon={<Icon as={IoLogoTwitter} />}
               >
-                @inkdrop_app
+                @inkdrop_app (English)
               </Button>
             </Link>
           </ListItem>
@@ -166,7 +166,7 @@ const Home = () => (
                 colorScheme="teal"
                 leftIcon={<Icon as={IoLogoTwitter} />}
               >
-                @craftzdog
+                @craftzdog (日本語)
               </Button>
             </Link>
           </ListItem>
