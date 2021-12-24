@@ -1,4 +1,4 @@
-import NextLink from 'next/link'
+import NextLink from "next/link";
 import {
   Link,
   Container,
@@ -11,16 +11,16 @@ import {
   ListItem,
   Icon,
   useColorModeValue
-} from '@chakra-ui/react'
-import { ChevronRightIcon } from '@chakra-ui/icons'
-import Paragraph from '../components/paragraph'
-import { BioSection, BioYear } from '../components/bio'
-import Layout from '../components/layouts/article'
-import Section from '../components/section'
-import { GridItem } from '../components/grid-item'
-import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
-import thumbYouTube from '../public/images/links/youtube.png'
-import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
+} from "@chakra-ui/react";
+import { ChevronRightIcon } from "@chakra-ui/icons";
+import Paragraph from "../components/paragraph";
+import { BioSection, BioYear } from "../components/bio";
+import Layout from "../components/layouts/article";
+import Section from "../components/section";
+import { GridItem } from "../components/grid-item";
+import { IoLogoInstagram, IoLogoGithub } from "react-icons/io5";
+import thumbYouTube from "../public/images/links/youtube.png";
+import thumbInkdrop from "../public/images/works/inkdrop_eyecatch.png";
 
 const Home = () => (
   <Layout>
@@ -30,17 +30,17 @@ const Home = () => (
         mb={6}
         p={3}
         textAlign="center"
-        bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
+        bg={useColorModeValue("whiteAlpha.200", "whiteAlpha.200")}
       >
-        Hello, I&apos;m a full-stack developer based in Japan!
+        hei, tervetuloa nettisivulleni
       </Box>
 
-      <Box display={{ md: 'flex' }}>
+      <Box display={{ md: "flex" }}>
         <Box flexGrow={1}>
           <Heading as="h2" variant="page-title">
-            Takuya Matsuyama
+            Oskari Hirvonen
           </Heading>
-          <p>Digital Craftsman ( Artist / Developer / Designer )</p>
+          <p>Frontend developer</p>
         </Box>
         <Box
           flexShrink={0}
@@ -63,24 +63,19 @@ const Home = () => (
 
       <Section delay={0.1}>
         <Heading as="h3" variant="section-title">
-          Work
+          Työt
         </Heading>
         <Paragraph>
-          Takuya is a freelance and a full-stack developer based in Osaka with a
-          passion for building digital services/stuff he wants. He has a knack
-          for all things launching products, from planning and designing all the
-          way to solving real-life problems with code. When not online, he loves
-          hanging out with his camera. Currently, he is living off of his own
-          product called{' '}
+          Oma sää sivusto, käyttäen @openweatherapia.{" "}
           <NextLink href="/works/inkdrop">
-            <Link>Inkdrop</Link>
+            <Link>Sää</Link>
           </NextLink>
           .
         </Paragraph>
         <Box align="center" my={4}>
           <NextLink href="/works">
             <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-              My portfolio
+              Minun portfolio
             </Button>
           </NextLink>
         </Box>
@@ -91,22 +86,17 @@ const Home = () => (
           Bio
         </Heading>
         <BioSection>
-          <BioYear>1984</BioYear>
-          Born in Osaka (大阪), Japan.
+          <BioYear>2005</BioYear>
+          Syntynyt oulussa, Suomi.
         </BioSection>
         <BioSection>
-          <BioYear>2010</BioYear>
-          Completed the Master&apos;s Program in the Graduate School of
-          Information Science at Nara Institute of Science and Technology
-          (奈良先端科学技術大学院大学情報科学研究科修士課程)
+          <BioYear>2021</BioYear>
+          Pääsin osaoon opiskelemaan IT-tukihenkilöksi.
         </BioSection>
         <BioSection>
-          <BioYear>2010</BioYear>
-          Worked at Yahoo! Japan (ヤフー株式会社入社)
-        </BioSection>
-        <BioSection>
-          <BioYear>2012 to present</BioYear>
-          Works as a freelance
+          <BioYear>2021</BioYear>
+          Aloitin enemmmän koodaamaan, jotta voisin joskus päästä töihin
+          jonnekkin ohjelmointi firmaan.
         </BioSection>
       </Section>
 
@@ -115,64 +105,36 @@ const Home = () => (
           I ♥
         </Heading>
         <Paragraph>
-          Art, Music,{' '}
-          <Link href="https://illust.odoruinu.net/" target="_blank">
-            Drawing
-          </Link>
-          , Playing Drums,{' '}
-          <Link href="https://500px.com/p/craftzdog" target="_blank">
-            Photography
-          </Link>
-          , Leica, Machine Learning
+          Musiikki ja vapaa ajalla kavereitten kanssa oleminen, Kuvien ottaminen
+          on myös kiinnostavaa.{" "}
         </Paragraph>
       </Section>
 
       <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
-          On the web
+          Sosiaalliset mediat
         </Heading>
         <List>
           <ListItem>
-            <Link href="https://github.com/craftzdog" target="_blank">
+            <Link href="https://github.com/osenaattori" target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="teal"
                 leftIcon={<Icon as={IoLogoGithub} />}
               >
-                @craftzdog
+                @osenaattori
               </Button>
             </Link>
           </ListItem>
+
           <ListItem>
-            <Link href="https://twitter.com/inkdrop_app" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<Icon as={IoLogoTwitter} />}
-              >
-                @inkdrop_app (English)
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://twitter.com/craftzdog" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<Icon as={IoLogoTwitter} />}
-              >
-                @craftzdog (日本語)
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://instagram.com/craftzdog" target="_blank">
+            <Link href="https://instagram.com/oskari.hirvonen" target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="teal"
                 leftIcon={<Icon as={IoLogoInstagram} />}
               >
-                @craftzdog
+                @oskari.hirvonen
               </Button>
             </Link>
           </ListItem>
@@ -180,31 +142,29 @@ const Home = () => (
 
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
           <GridItem
-            href="https://www.youtube.com/devaslife"
-            title="Dev as Life"
+            href="https://www.youtube.com/watch?v=Sklc_fQBmcs&t=512s"
+            title="next.js"
             thumbnail={thumbYouTube}
-          >
-            My YouTube channel
-          </GridItem>
+          ></GridItem>
           <GridItem
             href="https://www.inkdrop.app/"
             title="Inkdrop"
             thumbnail={thumbInkdrop}
           >
-            A Markdown note-taking app
+            Hyvä muistiinpano ohjelma.
           </GridItem>
         </SimpleGrid>
 
         <Box align="center" my={4}>
           <NextLink href="/posts">
             <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-              Popular posts
+              Videoita
             </Button>
           </NextLink>
         </Box>
       </Section>
     </Container>
   </Layout>
-)
+);
 
-export default Home
+export default Home;

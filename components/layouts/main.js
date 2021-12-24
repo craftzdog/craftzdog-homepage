@@ -1,14 +1,14 @@
-import Head from 'next/head'
-import dynamic from 'next/dynamic'
-import NavBar from '../navbar'
-import { Box, Container } from '@chakra-ui/react'
-import Footer from '../footer'
-import VoxelDogLoader from '../voxel-dog-loader'
+import Head from "next/head";
+import dynamic from "next/dynamic";
+import NavBar from "../navbar";
+import { Box, Container } from "@chakra-ui/react";
+import Footer from "../footer";
+import VoxelDogLoader from "../voxel-dog-loader";
 
-const LazyVoxelDog = dynamic(() => import('../voxel-dog'), {
+const LazyVoxelDog = dynamic(() => import("../voxel-dog"), {
   ssr: false,
   loading: () => <VoxelDogLoader />
-})
+});
 
 const Main = ({ children, router }) => {
   return (
@@ -27,7 +27,7 @@ const Main = ({ children, router }) => {
         <meta property="og:site_name" content="Takuya Matsuyama's Homepage" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="/card.png" />
-        <title>Takuya Matsuyama - Homepage</title>
+        <title>Oskari Hirvonen - Kotisivu</title>
       </Head>
 
       <NavBar path={router.asPath} />
@@ -40,7 +40,7 @@ const Main = ({ children, router }) => {
         <Footer />
       </Container>
     </Box>
-  )
-}
+  );
+};
 
-export default Main
+export default Main;
