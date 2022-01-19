@@ -63,7 +63,7 @@ const Home = () => (
 
       <Section delay={0.1}>
         <Heading as="h3" variant="section-title">
-          Work
+          Bio
         </Heading>
         <Paragraph>
           Takuya is a freelance and a full-stack developer based in Osaka with a
@@ -88,7 +88,7 @@ const Home = () => (
 
       <Section delay={0.2}>
         <Heading as="h3" variant="section-title">
-          Bio
+          Work
         </Heading>
         <BioSection>
           <BioYear>1984</BioYear>
