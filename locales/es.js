@@ -5,7 +5,7 @@ export const home = {
     'Digital Freak (Desarrollador / Cotilla de las criptomonedas/ Siempre aprendiendo )',
   work: 'Trabajos',
   workText:
-    'Actualmente soy un freelancer full stack. Me gusta crear nuevos productos y ayudar a la gente a desarrollar sus ideas. Y cuando no estoy conectado, me gusta hacer deporte. Actualmente estoy ayudando a los bares/restaurantes de mi ciudad con ',
+    'Actualmente trabajo para TravelPort. Me gusta crear nuevos productos y ayudar a la gente a desarrollar sus ideas. Y cuando no estoy conectado, me gusta hacer deporte. Actualmente estoy ayudando a los bares/restaurantes de mi ciudad con ',
   bottomPortfolio: 'Mi portfolio',
   born: 'Nací in Granollers, Barcelona.',
   dai: 'Acabé CFGS de DAI (Desarrollo de aplicacionés informaticas)',

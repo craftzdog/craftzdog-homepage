@@ -4,7 +4,7 @@ export const home = {
   subName: 'Digital Freak (Developer /Crypto gossip/ Always learning )',
   work: 'Work',
   workText:
-    'I am currently a full stack freelancer. I like to create new products and help people to develop their ideas. And when I&apos;m not online, I like to play sports. Currently I&apos;m helping bars/restaurants in my city with the product called',
+    'I am currently a full stack in TravelPort. I like to create new products and help people to develop their ideas. And when I&apos;m not online, I like to play sports. Currently I&apos;m helping bars/restaurants in my city with the product called',
   bottomPortfolio: 'My portfolio',
   born: 'Born in Granollers, Barcelona.',
   dai: 'Completed CFGS for DAI(Development of Computer Applications)',
