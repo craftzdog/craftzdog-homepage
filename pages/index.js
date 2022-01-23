@@ -22,7 +22,7 @@ import Lang from '../lib/utils'
 import React, {useState } from 'react'
 
 const Home = () => {
-  const [count, setCount] = useState(0)
+
 
   const t = Lang('home')
   return (
