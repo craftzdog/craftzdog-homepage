@@ -11,6 +11,7 @@ export const home = {
   grafix: 'Worked at Grafix Gestio Informatica! Barcelona',
   kumux: 'Worked at Kumux! Barcelona',
   freelance: 'Works as a freelance',
+  travelport: 'Works at Travelport! Barcelona',
   learning: 'Learning',
   like: 'Music, Sport, CryptoCurrency',
   ssnn: 'On the web',

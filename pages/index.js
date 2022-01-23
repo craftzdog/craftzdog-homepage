@@ -19,8 +19,66 @@ import Section from '../components/section'
 
 import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
 import Lang from '../lib/utils'
-
+import React, { useEffect, useState } from 'react'
+const data = [
+  {
+    gender: 'female',
+    name: { title: 'Ms', first: 'Ana', last: 'Vicente' },
+    picture: {
+      large: 'https://randomuser.me/api/portraits/women/2.jpg',
+      medium: 'https://randomuser.me/api/portraits/med/women/2.jpg',
+      thumbnail: 'https://randomuser.me/api/portraits/thumb/women/2.jpg'
+    },
+    nat: 'ES'
+  },
+  {
+    gender: 'male',
+    name: { title: 'Mr', first: 'Damiaan', last: 'Wijnen' },
+    picture: {
+      large: 'https://randomuser.me/api/portraits/men/49.jpg',
+      medium: 'https://randomuser.me/api/portraits/med/men/49.jpg',
+      thumbnail: 'https://randomuser.me/api/portraits/thumb/men/49.jpg'
+    },
+    nat: 'NL'
+  },
+  {
+    gender: 'male',
+    name: { title: 'Mr', first: 'Flynn', last: 'Thompson' },
+    picture: {
+      large: 'https://randomuser.me/api/portraits/men/68.jpg',
+      medium: 'https://randomuser.me/api/portraits/med/men/68.jpg',
+      thumbnail: 'https://randomuser.me/api/portraits/thumb/men/68.jpg'
+    },
+    nat: 'NZ'
+  },
+  {
+    gender: 'male',
+    name: { title: 'Mr', first: 'William', last: 'Kristensen' },
+    picture: {
+      large: 'https://randomuser.me/api/portraits/men/63.jpg',
+      medium: 'https://randomuser.me/api/portraits/med/men/63.jpg',
+      thumbnail: 'https://randomuser.me/api/portraits/thumb/men/63.jpg'
+    },
+    nat: 'DK'
+  },
+  {
+    gender: 'male',
+    name: { title: 'Monsieur', first: 'Nick', last: 'Meunier' },
+    picture: {
+      large: 'https://randomuser.me/api/portraits/men/34.jpg',
+      medium: 'https://randomuser.me/api/portraits/med/men/34.jpg',
+      thumbnail: 'https://randomuser.me/api/portraits/thumb/men/34.jpg'
+    },
+    nat: 'CH'
+  }
+]
 const Home = () => {
+  const [count, setCount] = useState(0)
+  const ola = () => {
+    console.log('sdas')
+    console.log(count)
+    setCount(count + 1)
+  }
   const t = Lang('home')
   return (
     <Layout>
@@ -102,8 +160,12 @@ const Home = () => {
             {t.kumux}
           </BioSection>
           <BioSection>
-            <BioYear>2021 {t.present}</BioYear>
+            <BioYear>2021 </BioYear>
             {t.freelance}
+          </BioSection>
+          <BioSection>
+            <BioYear>2022 {t.present}</BioYear>
+            {t.travelport}
           </BioSection>
         </Section>
         <Section delay={0.3}>
@@ -111,18 +173,19 @@ const Home = () => {
             {t.learning}
           </Heading>
           <Paragraph>
-            <Link
-              isExternal
-              href="https://www.udemy.com/course/react-native-the-practical-guide/"
-            >
-              {' '}
-              React Native
+            <Link isExternal href="#">
+              <p>English</p>
             </Link>
           </Paragraph>
           <Paragraph>
-            <Link isExternal href="https://platzi.com/clases/smart-contracts/">
-              {' '}
-              Solidity
+            <Link isExternal href="https://www.codewars.com/users/abatlles/">
+              <p>Katas</p>
+            </Link>
+          </Paragraph>
+
+          <Paragraph>
+            <Link isExternal href="https://share.cryptozombies.io/es/lesson/4/share/NoName?id=WyJjenwxNTE4NjMiLDEsMTRd">
+              <p>CryptoZombies (Solidity)</p>
             </Link>
           </Paragraph>
         </Section>
@@ -139,13 +202,13 @@ const Home = () => {
           </Heading>
           <List>
             <ListItem>
-              <Link href="https://github.com/abatlles" target="_blank">
+              <Link href="https://github.com/elbatlles" target="_blank">
                 <Button
                   variant="ghost"
                   colorScheme="teal"
                   leftIcon={<Icon as={IoLogoGithub} />}
                 >
-                  @abatlles
+                  @elbatlles
                 </Button>
               </Link>
             </ListItem>
