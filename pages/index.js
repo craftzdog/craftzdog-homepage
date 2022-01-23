@@ -122,7 +122,7 @@ const Home = () => {
             </Link>
           </Paragraph>
           <Paragraph>
-            <Link isExternal href="https://www.codewars.com/users/abatlles/">
+            <Link isExternal href="https://app.codesignal.com/profile/elbatlles">
             Katas
             </Link>
           </Paragraph>
