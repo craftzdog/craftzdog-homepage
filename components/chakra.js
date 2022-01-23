@@ -25,3 +25,11 @@ export function getServerSideProps({ req }) {
     }
   }
 }
+
+export function getInitialProps({ req }) {
+  return {
+    props: {
+      cookies: req.headers.cookie ?? ''
+    }
+  }
+}
