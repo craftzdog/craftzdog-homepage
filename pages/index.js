@@ -19,7 +19,7 @@ import Section from '../components/section'
 
 import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
 import Lang from '../lib/utils'
-import React, {useState } from 'react'
+import React from 'react'
 
 const Home = () => {
 
