@@ -117,20 +117,19 @@ const Home = () => {
           <Heading as="h3" variant="section-title">
             {t.learning}
           </Heading>
-          <Paragraph>
-            <Link isExternal href="#">
-              <p>English</p>
+          <Paragraph><Link isExternal href="#">
+             English
             </Link>
           </Paragraph>
           <Paragraph>
             <Link isExternal href="https://www.codewars.com/users/abatlles/">
-              <p>Katas</p>
+            Katas
             </Link>
           </Paragraph>
 
           <Paragraph>
             <Link isExternal href="https://share.cryptozombies.io/es/lesson/4/share/NoName?id=WyJjenwxNTE4NjMiLDEsMTRd">
-              <p>CryptoZombies (Solidity)</p>
+               CryptoZombies (Solidity)
             </Link>
           </Paragraph>
         </Section>
