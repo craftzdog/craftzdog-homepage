@@ -1,5 +1,5 @@
 import React from 'react'
-import { WorkGridItem, variants } from './grid-item'
+import { WorkGridItem } from './grid-item'
 const Template = args => <WorkGridItem {...args} />
 
 export default {
