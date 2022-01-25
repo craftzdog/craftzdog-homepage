@@ -65,11 +65,11 @@ const Home = () => (
           Quem somos
         </Heading>
         <Paragraph>
-          Descrição da agencia{' '}
-          <NextLink href="/works/inkdrop">
-            <Link>Instagram</Link>
-          </NextLink>
-          .
+          Produtora de conteúdos
+          - Tecnologia
+          - Produção
+          - Agenciamento
+          - Audiovisual
         </Paragraph>
         <Box align="center" my={4}>
           <NextLink href="/works">
