@@ -17,17 +17,17 @@ const Works = () => (
   <Layout title="Works">
     <Container>
       <Heading as="h3" fontSize={20} mb={4}>
-        Works
+        Em breve
       </Heading>
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
-        <Section>
+        {/* <Section>
           <WorkGridItem id="inkdrop" title="Inkdrop" thumbnail={thumbInkdrop}>
             A Markdown note-taking app with 100+ plugins, cross-platform and
             encrypted data sync support
           </WorkGridItem>
-        </Section>
-        <Section>
+        </Section> */}
+        {/* <Section>
           <WorkGridItem
             id="walknote"
             title="walknote"
@@ -35,8 +35,8 @@ const Works = () => (
           >
             Music recommendation app for iOS
           </WorkGridItem>
-        </Section>
-
+        </Section> */}
+{/* 
         <Section delay={0.1}>
           <WorkGridItem
             id="fourpainters"
@@ -108,7 +108,7 @@ const Works = () => (
             P2P private file sharing tool with MSN Messenger integration for
             Windows
           </WorkGridItem>
-        </Section>
+        </Section> */}
       </SimpleGrid>
     </Container>
   </Layout>

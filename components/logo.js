@@ -28,14 +28,14 @@ const Logo = () => {
     <Link href="/">
       <a>
         <LogoBox>
-          <Image src={footPrintImg} width={20} height={20} alt="logo" />
+          {/* <Image src={footPrintImg} width={20} height={20} alt="logo" /> */}
           <Text
             color={useColorModeValue('gray.800', 'whiteAlpha.900')}
             fontFamily='M PLUS Rounded 1c", sans-serif'
             fontWeight="bold"
             ml={3}
           >
-            Takuya Matsuyama
+            PilarX
           </Text>
         </LogoBox>
       </a>

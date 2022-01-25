@@ -32,15 +32,15 @@ const Home = () => (
         textAlign="center"
         bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
       >
-        Hello, I&apos;m a full-stack developer based in Japan!
+        Agencia em construção
       </Box>
 
       <Box display={{ md: 'flex' }}>
         <Box flexGrow={1}>
           <Heading as="h2" variant="page-title">
-            Takuya Matsuyama
+            Hello World !
           </Heading>
-          <p>Digital Craftsman ( Artist / Developer / Designer )</p>
+          {/* <p>Digital Craftsman ( Artist / Developer / Designer )</p> */}
         </Box>
         <Box
           flexShrink={0}
@@ -51,11 +51,11 @@ const Home = () => (
           <Image
             borderColor="whiteAlpha.800"
             borderWidth={2}
-            borderStyle="solid"
+            // borderStyle="dashed"
             maxWidth="100px"
             display="inline-block"
-            borderRadius="full"
-            src="/images/takuya.jpg"
+            // borderRadius="full"
+            src="/images/PILARX_free-file.png"
             alt="Profile image"
           />
         </Box>
@@ -63,24 +63,19 @@ const Home = () => (
 
       <Section delay={0.1}>
         <Heading as="h3" variant="section-title">
-          Work
+          Quem somos
         </Heading>
         <Paragraph>
-          Takuya is a freelance and a full-stack developer based in Osaka with a
-          passion for building digital services/stuff he wants. He has a knack
-          for all things launching products, from planning and designing all the
-          way to solving real-life problems with code. When not online, he loves
-          hanging out with his camera. Currently, he is living off of his own
-          product called{' '}
+          Descrição da agencia{' '}
           <NextLink href="/works/inkdrop">
-            <Link>Inkdrop</Link>
+            <Link>Instagram</Link>
           </NextLink>
           .
         </Paragraph>
         <Box align="center" my={4}>
           <NextLink href="/works">
             <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-              My portfolio
+              Portfolio
             </Button>
           </NextLink>
         </Box>
@@ -88,13 +83,13 @@ const Home = () => (
 
       <Section delay={0.2}>
         <Heading as="h3" variant="section-title">
-          Bio
+          Linha do tempo
         </Heading>
         <BioSection>
-          <BioYear>1984</BioYear>
-          Born in Osaka (大阪), Japan.
+          <BioYear>2022</BioYear>
+          Idealização - MVP, Candeias - Pernambuco.
         </BioSection>
-        <BioSection>
+        {/* <BioSection>
           <BioYear>2010</BioYear>
           Completed the Master&apos;s Program in the Graduate School of
           Information Science at Nara Institute of Science and Technology
@@ -107,12 +102,12 @@ const Home = () => (
         <BioSection>
           <BioYear>2012 to present</BioYear>
           Works as a freelance
-        </BioSection>
+        </BioSection> */}
       </Section>
 
-      <Section delay={0.3}>
+      {/* <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
-          I ♥
+          
         </Heading>
         <Paragraph>
           Art, Music,{' '}
@@ -125,60 +120,27 @@ const Home = () => (
           </Link>
           , Leica, Machine Learning
         </Paragraph>
-      </Section>
+      </Section> */}
 
       <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
-          On the web
+          Siga-nos
         </Heading>
         <List>
           <ListItem>
-            <Link href="https://github.com/craftzdog" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<Icon as={IoLogoGithub} />}
-              >
-                @craftzdog
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://twitter.com/inkdrop_app" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<Icon as={IoLogoTwitter} />}
-              >
-                @inkdrop_app (English)
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://twitter.com/craftzdog" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<Icon as={IoLogoTwitter} />}
-              >
-                @craftzdog (日本語)
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://instagram.com/craftzdog" target="_blank">
+            <Link href="https://www.instagram.com/pilarx.ag/" target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="teal"
                 leftIcon={<Icon as={IoLogoInstagram} />}
               >
-                @craftzdog
+                @pilarx.ag
               </Button>
             </Link>
           </ListItem>
         </List>
 
-        <SimpleGrid columns={[1, 2, 2]} gap={6}>
+        {/* <SimpleGrid columns={[1, 2, 2]} gap={6}>
           <GridItem
             href="https://www.youtube.com/devaslife"
             title="Dev as Life"
@@ -193,12 +155,12 @@ const Home = () => (
           >
             A Markdown note-taking app
           </GridItem>
-        </SimpleGrid>
+        </SimpleGrid> */}
 
         <Box align="center" my={4}>
           <NextLink href="/posts">
             <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-              Popular posts
+              Publicaões
             </Button>
           </NextLink>
         </Box>
