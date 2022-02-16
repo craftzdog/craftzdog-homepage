@@ -14,7 +14,7 @@ function Website({ Component, pageProps, router }) {
       <Layout router={router}>
         <AnimatePresence
           exitBeforeEnter
-          initial={false}
+          initial={true}
           onExitComplete={() => {
             if (typeof window !== 'undefined') {
               window.scrollTo({ top: 0 })
