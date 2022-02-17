@@ -9,7 +9,6 @@ import {
   Button,
   List,
   ListItem,
-  Icon,
   useColorModeValue
 } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
@@ -72,13 +71,13 @@ const Home = () => (
           way to solving real-life problems with code. When not online, he loves
           hanging out with his camera. Currently, he is living off of his own
           product called{' '}
-          <NextLink href="/works/inkdrop">
+          <NextLink href="/works/inkdrop" scroll={false}>
             <Link>Inkdrop</Link>
           </NextLink>
           .
         </Paragraph>
         <Box align="center" my={4}>
-          <NextLink href="/works">
+          <NextLink href="/works" scroll={false}>
             <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
               My portfolio
             </Button>
@@ -137,7 +136,7 @@ const Home = () => (
               <Button
                 variant="ghost"
                 colorScheme="teal"
-                leftIcon={<Icon as={IoLogoGithub} />}
+                leftIcon={<IoLogoGithub />}
               >
                 @craftzdog
               </Button>
@@ -148,7 +147,7 @@ const Home = () => (
               <Button
                 variant="ghost"
                 colorScheme="teal"
-                leftIcon={<Icon as={IoLogoTwitter} />}
+                leftIcon={<IoLogoTwitter />}
               >
                 @inkdrop_app (English)
               </Button>
@@ -159,7 +158,7 @@ const Home = () => (
               <Button
                 variant="ghost"
                 colorScheme="teal"
-                leftIcon={<Icon as={IoLogoTwitter} />}
+                leftIcon={<IoLogoTwitter />}
               >
                 @craftzdog (日本語)
               </Button>
@@ -170,7 +169,7 @@ const Home = () => (
               <Button
                 variant="ghost"
                 colorScheme="teal"
-                leftIcon={<Icon as={IoLogoInstagram} />}
+                leftIcon={<IoLogoInstagram />}
               >
                 @craftzdog
               </Button>
@@ -196,7 +195,7 @@ const Home = () => (
         </SimpleGrid>
 
         <Box align="center" my={4}>
-          <NextLink href="/posts">
+          <NextLink href="/posts" scroll={false}>
             <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
               Popular posts
             </Button>
