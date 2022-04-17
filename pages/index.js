@@ -35,6 +35,7 @@ const Home = () => (
         p={3}
         textAlign="center"
         bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
+        css={{ backdropFilter: 'blur(10px)' }}
       >
         Hello, I&apos;m a full-stack developer based in Japan!
       </Box>
@@ -60,12 +61,12 @@ const Home = () => (
             h="100px"
             display="inline-block"
             borderRadius="full"
-            overflow='hidden'
+            overflow="hidden"
           >
             <ProfileImage
               src="/images/takuya.jpg"
               alt="Profile image"
-              borderRadius='full'
+              borderRadius="full"
               width="100%"
               height="100%"
             />
