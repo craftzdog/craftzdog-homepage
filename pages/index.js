@@ -4,13 +4,12 @@ import {
   Container,
   Heading,
   Box,
-  Image,
   SimpleGrid,
   Button,
   List,
   ListItem,
-  Icon,
-  useColorModeValue
+  useColorModeValue,
+  chakra
 } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Paragraph from '../components/paragraph'
@@ -21,6 +20,11 @@ import { GridItem } from '../components/grid-item'
 import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
 import thumbYouTube from '../public/images/links/youtube.png'
 import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
+import Image from 'next/image'
+
+const ProfileImage = chakra(Image, {
+  shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
+})
 
 const Home = () => (
   <Layout>
@@ -48,16 +52,24 @@ const Home = () => (
           ml={{ md: 6 }}
           textAlign="center"
         >
-          <Image
+          <Box
             borderColor="whiteAlpha.800"
             borderWidth={2}
             borderStyle="solid"
-            maxWidth="100px"
+            w="100px"
+            h="100px"
             display="inline-block"
             borderRadius="full"
-            src="/images/takuya.jpg"
-            alt="Profile image"
-          />
+            overflow='hidden'
+          >
+            <ProfileImage
+              src="/images/takuya.jpg"
+              alt="Profile image"
+              borderRadius='full'
+              width="100%"
+              height="100%"
+            />
+          </Box>
         </Box>
       </Box>
 
@@ -137,7 +149,7 @@ const Home = () => (
               <Button
                 variant="ghost"
                 colorScheme="teal"
-                leftIcon={<Icon as={IoLogoGithub} />}
+                leftIcon={<IoLogoGithub />}
               >
                 @craftzdog
               </Button>
@@ -148,7 +160,7 @@ const Home = () => (
               <Button
                 variant="ghost"
                 colorScheme="teal"
-                leftIcon={<Icon as={IoLogoTwitter} />}
+                leftIcon={<IoLogoTwitter />}
               >
                 @inkdrop_app (English)
               </Button>
@@ -159,7 +171,7 @@ const Home = () => (
               <Button
                 variant="ghost"
                 colorScheme="teal"
-                leftIcon={<Icon as={IoLogoTwitter} />}
+                leftIcon={<IoLogoTwitter />}
               >
                 @craftzdog (日本語)
               </Button>
@@ -170,7 +182,7 @@ const Home = () => (
               <Button
                 variant="ghost"
                 colorScheme="teal"
-                leftIcon={<Icon as={IoLogoInstagram} />}
+                leftIcon={<IoLogoInstagram />}
               >
                 @craftzdog
               </Button>
