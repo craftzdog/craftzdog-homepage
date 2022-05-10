@@ -37,7 +37,7 @@ const Home = () => (
         bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
         css={{ backdropFilter: 'blur(10px)' }}
       >
-        Hello, I&apos;m a full-stack developer based in Japan!
+        Hello, I&apos;m an indie app developer based in Japan!
       </Box>
 
       <Box display={{ md: 'flex' }}>
@@ -88,7 +88,12 @@ const Home = () => (
           <NextLink href="/works/inkdrop" passHref scroll={false}>
             <Link>Inkdrop</Link>
           </NextLink>
-          .
+          . He publishes content for marketing his products and his YouTube
+          channel called &quot;
+          <NextLink href="https://www.youtube.com/devaslife" passHref>
+            <Link target="_blank">Dev as Life</Link>
+          </NextLink>
+          &quot; has more than 100k subscribers.
         </Paragraph>
         <Box align="center" my={4}>
           <NextLink href="/works" passHref scroll={false}>
