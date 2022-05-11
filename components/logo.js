@@ -35,7 +35,7 @@ const Logo = () => {
             fontWeight="bold"
             ml={3}
           >
-            Takuya Matsuyama
+            Tyler Kim
           </Text>
         </LogoBox>
       </a>
