@@ -15,11 +15,11 @@ import thumb50xFaster from '../public/images/contents/youtube-50x-faster.jpg'
 const Posts = () => (
   <Layout title="Posts">
     <Container maxW="container.xl">
-      <Stack direction={['column', 'row']} spacing='24px' justify="space-between">
-        <Heading as="h3" fontSize={30} mb={4}>
+      <Stack direction={['column', 'row']} my={4} spacing='24px' justify="space-between">
+        <Heading as="h3" fontSize={30}>
           Resume
         </Heading>
-        <Link href="/experience" target="_blank">
+        <Link href="/files/resume.pdf" target="_blank">
           <Button colorScheme="teal" size='md' variant='solid'>
             See as pdf
           </Button>

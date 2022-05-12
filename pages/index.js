@@ -20,8 +20,8 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
 import { BsGithub, BsLinkedin, BsMedium } from 'react-icons/bs'
-import thumbScraft from '../public/images/projects/scraft.png'
-import thumbOrbitron from '../public/images/projects/orbitron.png'
+import thumbScraft from '../public/images/projects/scraft-01.png'
+import thumbOrbitron from '../public/images/projects/orbitron-01.png'
 import Image from 'next/image'
 
 const ProfileImage = chakra(Image, {

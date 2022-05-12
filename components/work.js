@@ -3,7 +3,7 @@ import { Heading, Box, Image, Link, Badge } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 
 export const Title = ({ children }) => (
-  <Box>
+  <Box mt={2}>
     <NextLink href="/projects" passHref>
       <Link>Projects</Link>
     </NextLink>
