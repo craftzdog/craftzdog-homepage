@@ -1,8 +1,7 @@
-import { Container, Heading, SimpleGrid, Link, Button, Box, Stack, Divider, UnorderedList, ListItem, P } from '@chakra-ui/react'
+import { Container, Heading, Link, Button, Stack, Divider, UnorderedList, ListItem } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { ExpItem } from '../components/grid-item'
-import thumbFaikerz from '../public/images/resume/faikerz.png'
 
 const Posts = () => (
   <Layout title="Posts">

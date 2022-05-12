@@ -5,9 +5,6 @@ import {
   List,
   ListItem,
   UnorderedList,
-  Heading,
-  Center,
-  AspectRatio,
   Button,
   Stack
 } from '@chakra-ui/react'

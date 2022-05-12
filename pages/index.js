@@ -7,8 +7,6 @@ import {
   Stack,
   SimpleGrid,
   Button,
-  List,
-  ListItem,
   useColorModeValue,
   chakra,
   IconButton
