@@ -1,8 +1,8 @@
-import { Container, Heading, SimpleGrid, Link, Button, Box, Stack, Divider } from '@chakra-ui/react'
+import { Container, Heading, SimpleGrid, Link, Button, Box, Stack, Divider, UnorderedList, ListItem, P } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
-import { GridItem } from '../components/grid-item'
-import thumbScraft from '../public/images/projects/scraft-01.png'
+import { ExpItem } from '../components/grid-item'
+import thumbFaikerz from '../public/images/resume/faikerz.png'
 
 const Posts = () => (
   <Layout title="Posts">
@@ -25,18 +25,31 @@ const Posts = () => (
       </Heading>
 
       <Section delay={0.1}>
-        <SimpleGrid columns={[1, 2, 2]} gap={6}>
-          <GridItem
-            title="How to build a portfolio website"
-            thumbnail={thumbScraft}
-            href="https://www.youtube.com/watch?v=bSMZgXzC9AA"
-          />
-          <GridItem
-            title="How to take notes in Markdown efficiently with Inkdrop"
-            thumbnail={thumbScraft}
-            href="https://www.youtube.com/watch?v=-qBavwqc_mY"
-          />
-        </SimpleGrid>
+        <Stack>
+        <ExpItem 
+            company="Columbia University" 
+            position="B.S. in Computer Science" 
+            time="Sept 2022 - June 2026" 
+            location="New York, NY" 
+            thumbnail='/images/resume/columbia.png'
+        >
+            <UnorderedList>
+              <ListItem>Leave of Absence [Sept 2020 - Sept 2022]</ListItem>
+            </UnorderedList>
+        </ExpItem>
+        {/* <ExpItem 
+            company="Kent School" 
+            position="High School Diploma" 
+            time="Sept 2018 - June 2020" 
+            location="Kent, CT" 
+            thumbnail='/images/resume/kent.png'
+        >
+            <UnorderedList>
+              <ListItem>Activities: Coding club, Peer Tutor, Kent Guild</ListItem>
+              <ListItem>GPA: 4.06</ListItem>
+            </UnorderedList>
+        </ExpItem> */}
+        </Stack>
       </Section>
 
       <Heading as="h3" fontSize={20} mb={4}>
@@ -44,34 +57,63 @@ const Posts = () => (
       </Heading>
 
       <Section delay={0.3}>
-        <SimpleGrid columns={[1, 2, 2]} gap={6}>
-          <GridItem
-            title="How I’ve Attracted The First 500 Paid Users For My SaaS That Costs $5/mo"
-            thumbnail={thumbScraft}
-            href="https://blog.inkdrop.app/how-ive-attracted-the-first-500-paid-users-for-my-saas-that-costs-5-mo-7a5b94b8e820"
-          />
-          <GridItem
-            title="I stopped setting a financial goal for my SaaS"
-            thumbnail={thumbScraft}
-            href="https://blog.inkdrop.app/i-stopped-setting-a-financial-goal-for-my-saas-a92c3db65506"
-          />
-        </SimpleGrid>
+        <Stack>
+        <ExpItem 
+            company="Faikerz" 
+            position="Freelance Software Engineer" 
+            time="July 2021 - Present" 
+            location="Seoul, Korea" 
+            thumbnail='/images/resume/faikerz.png'
+        >
+            <UnorderedList>
+              <ListItem>Built three counterfeit detection model/APIs; live-tested against Korean E-commerce sites and global fashion brand clients</ListItem>
+              <ListItem>Consectetur adipiscing elit</ListItem>
+            </UnorderedList>
+        </ExpItem>
+        <ExpItem 
+            company="DIYA ML2 - Machine Learning Club" 
+            position="Member" 
+            time="March 2021 - Aug 2021" 
+            location="Remote" 
+            thumbnail='/images/resume/diya.png'
+        >
+            <UnorderedList>
+              <ListItem>Presented and code-reviewed two relevant papers in the Multi-Agent Reinforcement Learning (MARL) team every week.</ListItem>
+              <ListItem> Co-implemented PPO/DQN algorithms with PyTorch in Pommerman MARL environment as baseline models</ListItem>
+            </UnorderedList>
+        </ExpItem>
+        <ExpItem 
+            company="UF SSTP (Student Science Training Program" 
+            position="Participant" 
+            time="June 2019 - Aug 2019" 
+            location="Gainesville, FL" 
+            thumbnail='/images/resume/sstp.png'
+        >
+            <UnorderedList>
+              <ListItem>
+                Assisted ML texture analysis research in Dr. Alina Zare’s lab by implementing deep network models in PyTorch and conducting various experiments with different parameters
+              </ListItem>
+              <ListItem> 
+                Wrote and presented a research report titled ‘Histogram Layer for Texture Classification’ and received the best research paper award among participants
+              </ListItem>
+            </UnorderedList>
+        </ExpItem>
+        </Stack>
       </Section>
 
+      {/* <Heading as="h3" fontSize={20} mb={4}>
+        Selected Awards
+      </Heading>
+
       <Section delay={0.5}>
-        <SimpleGrid columns={[1, 2, 2]} gap={6}>
-          <GridItem
-            title="How to Price Yourself as a Freelance Developer"
-            thumbnail={thumbScraft}
-            href="https://blog.inkdrop.app/how-to-price-yourself-as-a-freelance-developer-3453dfd59d91"
-          />
-          <GridItem
-            title="I made my React Native app 50x faster"
-            thumbnail={thumbScraft}
-            href="https://www.youtube.com/watch?v=vj723NlrIQc"
-          />
-        </SimpleGrid>
-      </Section>
+        <UnorderedList>
+          <ListItem>Lorem ipsum dolor sit amet</ListItem>
+          <ListItem>Consectetur adipiscing elit</ListItem>
+          <ListItem>Integer molestie lorem at massa</ListItem>
+          <ListItem>Facilisis in pretium nisl aliquet</ListItem>
+        </UnorderedList>
+      </Section> */}
+
     </Container>
   </Layout>
 )
