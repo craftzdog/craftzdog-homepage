@@ -1,7 +1,7 @@
 {
-  "name": "craftzdog-homepage",
+  "name": "homepage",
   "version": "1.0.0",
-  "description": "Takuya's website",
+  "description": "Tyler's website",
   "scripts": {
     "dev": "next dev -H 0.0.0.0",
     "build": "next build",
@@ -10,7 +10,7 @@
     "lint": "next lint"
   },
   "keywords": [],
-  "author": "Takuya Matsuyama",
+  "author": "Tyler Kim",
   "license": "MIT",
   "dependencies": {
     "@chakra-ui/icons": "^1.1.7",
