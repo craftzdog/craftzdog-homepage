@@ -157,14 +157,14 @@ const Home = () => (
 
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
           <GridItem
-            href="https://scraft.ai/"
+            href="/projects/scraft"
             title="scraft.ai"
             thumbnail={thumbScraft}
           >
-            web-based essay planner
+            Web-based essay planner with text-mining features
           </GridItem>
           <GridItem
-            href="https://www.inkdrop.app/"
+            href="/projects/orbitron"
             title="Orbitron"
             thumbnail={thumbOrbitron}
           >

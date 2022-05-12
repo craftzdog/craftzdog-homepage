@@ -38,7 +38,7 @@ const Projects = () => (
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section>
           <WorkGridItem id="scraft" title="scraft" thumbnail={thumbScraft}>
-            An essay-planning app with AI
+            Web-based essay planner with text-mining features
           </WorkGridItem>
           <Center >
             <Tag>Web-dev</Tag>

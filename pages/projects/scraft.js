@@ -25,7 +25,7 @@ const Work = () => (
         </Button>
       </Stack>
       <P>
-      A web-based essay planner, with AI
+      Web-based essay planner with text-mining features
       </P>
       <List ml={4} my={4}>
         <ListItem>
@@ -42,12 +42,12 @@ const Work = () => (
           <Meta>Backend</Meta>
           <span>Django Rest, PyTorch, PostgreSQL, Docker</span>
         </ListItem>
-        <ListItem>
+        {/* <ListItem>
           <Meta>Blogpost</Meta>
           <Link href="https://blog.inkdrop.app/how-ive-attracted-the-first-500-paid-users-for-my-saas-that-costs-5-mo-7a5b94b8e820">
             Something I wrote about scraft <ExternalLinkIcon mx="2px" />
           </Link>
-        </ListItem>
+        </ListItem> */}
       </List>
 
       <WorkImage src="/images/projects/scraft-01.png" alt="scraft" />

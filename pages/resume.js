@@ -34,9 +34,11 @@ const Posts = () => (
         >
             <UnorderedList>
               <ListItem>Leave of Absence [Sept 2020 - Sept 2022]</ListItem>
+              {/* <ListItem>Activities: to be updated</ListItem>
+              <ListItem>Courseworks: to be updated</ListItem> */}
             </UnorderedList>
         </ExpItem>
-        {/* <ExpItem 
+        <ExpItem 
             company="Kent School" 
             position="High School Diploma" 
             time="Sept 2018 - June 2020" 
@@ -47,7 +49,7 @@ const Posts = () => (
               <ListItem>Activities: Coding club, Peer Tutor, Kent Guild</ListItem>
               <ListItem>GPA: 4.06</ListItem>
             </UnorderedList>
-        </ExpItem> */}
+        </ExpItem>
         </Stack>
       </Section>
 
@@ -65,8 +67,8 @@ const Posts = () => (
             thumbnail='/images/resume/faikerz.png'
         >
             <UnorderedList>
-              <ListItem>Built three counterfeit detection model/APIs; live-tested against Korean E-commerce sites and global fashion brand clients</ListItem>
-              <ListItem>Consectetur adipiscing elit</ListItem>
+              <ListItem>Working on multiple counterfeit detection model and APIs; used against Korean E-commerce sites and global fashion brand clients</ListItem>
+              <ListItem>Methods include keyword/price correlation analysis, image-classification, and unsupervised clustering</ListItem>
             </UnorderedList>
         </ExpItem>
         <ExpItem 
