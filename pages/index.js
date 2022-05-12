@@ -128,13 +128,13 @@ const Home = () => (
           <NextLink href="/projects/scraft" passHref scroll={false}>
             <Link>scraft.ai</Link>
           </NextLink>.
-          I'm curently exploring fields like text-mining, arduino-robotics, computer-vision, and reinforcement-learning until I settle onto a single one that I would like to dive deeper.{' '}
+          I&apos;m curently exploring fields like text-mining, arduino-robotics, computer-vision, and reinforcement-learning until I settle onto a single one that I would like to dive deeper.{' '}
         </Paragraph>
       </Section>
 
       <Section delay={0.2}>
         <Heading as="h3" variant="section-title">
-          I'm interested in...
+          I&apos;m interested in...
         </Heading>
         <BioSection>
           <BioYear>Web Development</BioYear>
@@ -152,7 +152,7 @@ const Home = () => (
 
       <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
-          I'm most proud of...
+          I&apos;m most proud of...
         </Heading>
 
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
