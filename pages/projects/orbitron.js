@@ -38,6 +38,10 @@ const Work = () => (
       </P>
       <List ml={4} my={4}>
         <ListItem>
+          <Meta>Stacks</Meta>
+            Arduino, Mathematica, C#
+        </ListItem>
+        <ListItem>
           <Meta>Paper</Meta>
           <Link href="/files/orbitron-paper.pdf">
             Intuitive Control Algorithm Development of 4WIS/4WID Using a SpaceMouse <ExternalLinkIcon mx="2px" />

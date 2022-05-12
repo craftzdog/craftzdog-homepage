@@ -13,6 +13,7 @@ import {
   chakra,
   IconButton
 } from '@chakra-ui/react'
+import dynamic from 'next/dynamic'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
@@ -23,6 +24,12 @@ import { BsGithub, BsLinkedin, BsMedium } from 'react-icons/bs'
 import thumbScraft from '../public/images/projects/scraft-01.png'
 import thumbOrbitron from '../public/images/projects/orbitron-01.png'
 import Image from 'next/image'
+import VoxelDogLoader from '../components/voxel-dog-loader'
+
+const LazyVoxelDog = dynamic(() => import('../components/voxel-dog'), {
+  ssr: false,
+  loading: () => <VoxelDogLoader />
+})
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
@@ -31,6 +38,7 @@ const ProfileImage = chakra(Image, {
 const Home = () => (
   <Layout>
     <Container maxW="container.md">
+      <LazyVoxelDog />
       <Box
         borderRadius="lg"
         mb={6}
@@ -49,7 +57,7 @@ const Home = () => (
           </Heading>
           <p>( Product Developer / Web Developer / ML Researcher )</p>
           <Stack mt={4} spacing={4} direction='row' align='center'>
-            <Link href="/experience" target="_blank">
+            <Link href="/files/resume.pdf" target="_blank">
               <Button rightIcon={<ChevronRightIcon />} colorScheme="teal" size='md' variant='solid'>
                 Resume / CV
               </Button>

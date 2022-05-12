@@ -1,7 +1,8 @@
-import { Container, Heading, SimpleGrid, Divider, Stack, Link, Button } from '@chakra-ui/react'
+import { Container, Heading, SimpleGrid, Divider, Stack, Link, Button, Center } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
+import { Tag } from '../components/work'
 
 import thumbScraft from '../public/images/projects/scraft-01.png'
 import thumbOrbitron from '../public/images/projects/orbitron-01.png'
@@ -9,6 +10,8 @@ import thumbTutor from '../public/images/projects/tutor-01.png'
 import thumbKeywordPrice from '../public/images/projects/keywordprice-01.png'
 import thumbFashion from '../public/images/projects/fashionhiernet-01.png'
 import thumbHistCNN from '../public/images/projects/histcnn-02.png'
+import thumbTurret from '../public/images/projects/turret-01.png'
+import thumbChisktale from '../public/images/projects/chisktale-01.png'
 
 const Projects = () => (
   <Layout title="Projects">
@@ -37,6 +40,11 @@ const Projects = () => (
           <WorkGridItem id="scraft" title="scraft" thumbnail={thumbScraft}>
             An essay-planning app with AI
           </WorkGridItem>
+          <Center >
+            <Tag>Web-dev</Tag>
+            <Tag>fullstack</Tag>
+            <Tag>ML (text-mining)</Tag>
+          </Center>
         </Section>
         <Section>
           <WorkGridItem
@@ -46,6 +54,11 @@ const Projects = () => (
           >
             Spherical wheeled vehicle & control algorithm
           </WorkGridItem>
+          <Center >
+            <Tag>Robotics</Tag>
+            <Tag>Research</Tag>
+            <Tag>Patented</Tag>
+          </Center>
         </Section>
 
       </SimpleGrid>
@@ -63,11 +76,18 @@ const Projects = () => (
           <WorkGridItem id="fashion-hiernet" thumbnail={thumbFashion} title="Fashion HierNet">
             Hierarchical Image Classification of Fashion commerce using EfficientNet
           </WorkGridItem>
+          <Center >
+            <Tag>ML (computer-vision)</Tag>
+          </Center>
         </Section>
         <Section delay={0.2}>
           <WorkGridItem id="tutorscheduler" thumbnail={thumbTutor} title="Kent Tutor Scheduler">
             A peer tutor scheduling web service for Kent School
           </WorkGridItem>
+          <Center >
+            <Tag>Web-dev</Tag>
+            <Tag>Backend</Tag>
+          </Center>
         </Section>
         <Section delay={0.2}>
           <WorkGridItem
@@ -77,6 +97,9 @@ const Projects = () => (
           >
             keyword extraction tool/API to assist small businesses to detect counterfeit products on Korean E-commerce websites
           </WorkGridItem>
+          <Center >
+            <Tag>API</Tag>
+          </Center>
         </Section>
         <Section delay={0.2}>
           <WorkGridItem
@@ -86,6 +109,10 @@ const Projects = () => (
           >
             hybrid model that incorporates a stackable, localized histogram layer on convolutional neural network (CNN) for texture analysis applications.
           </WorkGridItem>
+          <Center >
+            <Tag>ML (computer-vision)</Tag>
+            <Tag>research</Tag>
+          </Center>
         </Section>
       </SimpleGrid>
 
@@ -99,18 +126,24 @@ const Projects = () => (
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section delay={0.4}>
-          <WorkGridItem id="turret" thumbnail={thumbFashion} title="T-33 Arduino Turret">
+          <WorkGridItem id="turret" thumbnail={thumbTurret} title="T-33 Arduino Turret">
             Arduino airsoft turret controlled by C# Winforms application
           </WorkGridItem>
+          <Center >
+            <Tag>robotics</Tag>
+          </Center>
         </Section>
         <Section delay={0.4}>
           <WorkGridItem
             id="chisktale"
-            thumbnail={thumbFashion}
-            title="freeDBTagger"
+            thumbnail={thumbChisktale}
+            title="Chisktale"
           >
             An Undertale fangame made with C#
           </WorkGridItem>
+          <Center >
+            <Tag>game-dev</Tag>
+          </Center>
         </Section>
       </SimpleGrid>
     </Container>

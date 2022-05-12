@@ -26,3 +26,9 @@ export const Meta = ({ children }) => (
     {children}
   </Badge>
 )
+
+export const Tag = ({ children }) => (
+  <Badge colorScheme="teal" mr={2}>
+    {children}
+  </Badge>
+)
