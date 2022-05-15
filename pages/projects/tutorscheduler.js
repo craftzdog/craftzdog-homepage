@@ -33,18 +33,18 @@ const Work = () => (
       <UnorderedList my={4}>
         <ListItem>
           <P>
-            Students can sign up, edit, or delete tutor sessions. Tutors can keep track of upcoming sessions. Teachers have access to admin panel and can refer students to sessions
+          Students can sign up, edit, or delete tutor sessions. Tutors can keep track of upcoming sessions. Teachers have access to admin panel and can refer students to sessions
           </P>
         </ListItem>
 
         <ListItem>
           <P>
-            Custom Register/Login system with different user groups(students/tutors/admin); Students can EDIT/DELETE Sessions and receive reminder email; Profile pages with upcoming and past sessions depending on user groups; Admins(teachers) can refer students to specific tutor sessions
+          Custom Register/Login system with different user groups(students/tutors/admin); 
           </P>
         </ListItem>
         <ListItem>
           <P>
-          Deployed into production and currently maintaining service for 500+ active users.
+          Profile pages with upcoming and past sessions depending on user groups; Students and tutors can view past and upcoming tutor sessions.
           </P>
         </ListItem>
       </UnorderedList>

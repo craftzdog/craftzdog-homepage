@@ -47,7 +47,7 @@ const Posts = () => (
         >
             <UnorderedList>
               <ListItem>Activities: Coding club, Peer Tutor, Kent Guild</ListItem>
-              <ListItem>GPA: 4.06</ListItem>
+              <ListItem>GPA: 4.16</ListItem>
             </UnorderedList>
         </ExpItem>
         </Stack>

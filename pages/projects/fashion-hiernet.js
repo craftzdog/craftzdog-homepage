@@ -49,8 +49,8 @@ const Work = () => (
         </ListItem>
         <ListItem>
           <Meta>Original Paper</Meta>
-          <Link href="https://blog.inkdrop.app/how-ive-attracted-the-first-500-paid-users-for-my-saas-that-costs-5-mo-7a5b94b8e820">
-            Paper Link Here <ExternalLinkIcon mx="2px" />
+          <Link href="https://arxiv.org/pdf/2005.06692.pdf">
+          Deep Hierarchical Classification for Category Prediction in E-commerce System <ExternalLinkIcon mx="2px" />
           </Link>
         </ListItem>
       </List>

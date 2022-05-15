@@ -40,7 +40,7 @@ const Work = () => (
         </ListItem>
         <ListItem>
           <Meta>Backend</Meta>
-          <span>Django Rest, PyTorch, PostgreSQL, Docker</span>
+          <span>Django Rest, GPT-3, Huggingface, PostgreSQL, Docker</span>
         </ListItem>
         {/* <ListItem>
           <Meta>Blogpost</Meta>

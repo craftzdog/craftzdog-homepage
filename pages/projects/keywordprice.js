@@ -29,7 +29,7 @@ const Work = () => (
       <UnorderedList my={4}>
         <ListItem>
           <P>
-          extracts keywords from e-commerce items in different categories and provides keywords/price distribution information with user’s feedback input;
+          Extracts keywords from e-commerce items in different categories and provides keywords/price distribution information with user’s feedback input;
           </P>
         </ListItem>
 

@@ -19,6 +19,7 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
 import { BsGithub, BsLinkedin, BsMedium } from 'react-icons/bs'
+import { FaTerminal } from 'react-icons/fa'
 import thumbScraft from '../public/images/projects/scraft-01.png'
 import thumbOrbitron from '../public/images/projects/orbitron-01.png'
 import Image from 'next/image'
@@ -78,13 +79,13 @@ const Home = () => (
                 icon={<BsLinkedin />}
               />
             </Link>
-            <Link href="https://tylertaewook.medium.com/" target="_blank">
+            <Link href="https://term.tylertaewook.com/" target="_blank">
               <IconButton
                 variant='outline'
                 colorScheme='teal'
                 aria-label='medium'
                 fontSize='20px'
-                icon={<BsMedium />}
+                icon={<FaTerminal />}
               />
             </Link>
             
