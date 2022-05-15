@@ -9,7 +9,8 @@ import {
   Button,
   useColorModeValue,
   chakra,
-  IconButton
+  IconButton,
+  Text
 } from '@chakra-ui/react'
 import dynamic from 'next/dynamic'
 import { ChevronRightIcon } from '@chakra-ui/icons'
@@ -18,8 +19,7 @@ import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
-import { BsGithub, BsLinkedin } from 'react-icons/bs'
-import { FaTerminal } from 'react-icons/fa'
+import { BsGithub, BsLinkedin, BsMedium } from 'react-icons/bs'
 import thumbScraft from '../public/images/projects/scraft-01.png'
 import thumbOrbitron from '../public/images/projects/orbitron-01.png'
 import Image from 'next/image'
@@ -85,13 +85,24 @@ const Home = () => (
                 colorScheme='teal'
                 aria-label='medium'
                 fontSize='20px'
-                icon={<FaTerminal />}
+                icon={<BsMedium />}
               />
             </Link>
-            
-            
           </Stack>
+          <Text
+            color={'whiteAlpha.900'}
+            fontFamily='monospace'
+            fontWeight="semibold"
+            fontSize={18}
+            py={2}
+            my={3}
+            pl={3}
+            background={'black'}
+            >
+            ~$ ssh <Link href="https://term.tylertaewook.com">term.tylertaewook.com</Link>█
+          </Text>
         </Box>
+        
         <Box
           flexShrink={0}
           mt={{ base: 4, md: 0 }}
