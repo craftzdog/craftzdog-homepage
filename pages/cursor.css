@@ -1,16 +1,17 @@
  /* blinking cursor */
  #cursor {
-    background: lime;
-    line-height: 17px;
-    margin-left: 3px;
-    -webkit-animation: blink 0.8s infinite;
-    width: 7px;
+    display:inline-block;
+    background: white;
+    line-height: 15px;
+    margin-left: 2px;
+    -webkit-animation: blink 1s infinite;
+    width: 8px;
     height: 15px;
   }
   
   @-webkit-keyframes blink {
     0% {background: #222}
-    50% {background: lime}
+    50% {background: white}
     100% {background: #222}
   }
   

@@ -99,7 +99,7 @@ const Home = () => (
             pl={3}
             background={'black'}
             >
-            ~$ ssh <Link href="https://term.tylertaewook.com">term.tylertaewook.com</Link>█
+            ~$ ssh <Link href="https://term.tylertaewook.com">term.tylertaewook.com</Link><div id="cursor"></div>
           </Text>
         </Box>
         
