@@ -124,7 +124,7 @@ const Home = () => (
         </BioSection>
         <BioSection>
           <BioYear>2012 to present</BioYear>
-          Works as a freelance
+          Working as a freelancer
         </BioSection>
       </Section>
 
