@@ -93,13 +93,25 @@ const Home = () => (
             color={'whiteAlpha.900'}
             fontFamily='monospace'
             fontWeight="semibold"
-            fontSize={18}
-            py={2}
-            my={3}
+            fontSize={15}
+            py={0}
+            mt={3}
             pl={3}
             background={'black'}
             >
-            ~$ ssh <Link href="https://term.tylertaewook.com">term.tylertaewook.com</Link><div id="cursor"></div>
+            ~$ ssh <Link href="https://term.tylertaewook.com">term.tylertaewook.com</Link>
+          </Text>
+          <Text
+            color={'whiteAlpha.900'}
+            fontFamily='monospace'
+            fontWeight="semibold"
+            fontSize={15}
+            py={0}
+            mb={3}
+            pl={3}
+            background={'black'}
+            >
+            ~$ ssh <Link color={"green.300"} href="https://blog.tylertaewook.com">blog.tylertaewook.com</Link><div id="cursor"></div>
           </Text>
         </Box>
         
