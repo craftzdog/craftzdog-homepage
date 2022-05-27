@@ -17,6 +17,7 @@ import {
 import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
 import { BiTerminal } from 'react-icons/bi'
+import { BsVectorPen } from 'react-icons/bs'
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href
@@ -77,7 +78,15 @@ const Navbar = props => {
           <LinkItem href="/resume" path={path}>
             Resume
           </LinkItem>
-          <LinkItem href="https://tylertaewook.medium.com/" path={path}>
+          <LinkItem 
+            target="_blank"
+            href="https://blog.tylertaewook.com"
+            path={path}
+            display="inline-flex"
+            alignItems="center"
+            style={{ gap: 4 }}
+            pl={2}>
+            <BsVectorPen size={23}/>
             Blog
           </LinkItem>
           <LinkItem
@@ -115,7 +124,7 @@ const Navbar = props => {
                 <NextLink href="/resume" passHref>
                   <MenuItem as={Link}>Resume</MenuItem>
                 </NextLink>
-                <NextLink href="https://tylertaewook.medium.com/" passHref>
+                <NextLink href="https://blog.tylertaewook.com/" passHref>
                   <MenuItem as={Link}>Blog</MenuItem>
                 </NextLink>
                 <MenuItem
