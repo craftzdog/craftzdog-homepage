@@ -12,10 +12,10 @@ import { Title, WorkImage, Meta } from '../../components/work'
 import P from '../../components/paragraph'
 
 const Work = () => (
-  <Layout title="mode.tokyo">
+  <Layout title="Margelo">
     <Container>
       <Title>
-        Mareglo <Badge>2022</Badge>
+        Margelo <Badge>2022</Badge>
       </Title>
       <P>
         The corporate website for the elite app development and contracting
