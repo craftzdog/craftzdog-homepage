@@ -16,7 +16,6 @@ import {
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
-import { IoLogoGithub } from 'react-icons/io5'
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href
@@ -58,7 +57,7 @@ const Navbar = props => {
         justify="space-between"
       >
         <Flex align="center" mr={5}>
-          <Heading as="h1" size="lg" letterSpacing={'tighter'}>
+          <Heading as="h1" size="lg">
             <Logo />
           </Heading>
         </Flex>
@@ -72,22 +71,13 @@ const Navbar = props => {
           mt={{ base: 4, md: 0 }}
         >
           <LinkItem href="/works" path={path}>
-            Works
+            Instruktorzy
           </LinkItem>
           <LinkItem href="/posts" path={path}>
-            Posts
+            Oferta
           </LinkItem>
-          <LinkItem
-            target="_blank"
-            href="https://github.com/craftzdog/craftzdog-homepage"
-            path={path}
-            display="inline-flex"
-            alignItems="center"
-            style={{ gap: 4 }}
-            pl={2}
-          >
-            <IoLogoGithub />
-            Source
+          <LinkItem href="/zapisy" path={path}>
+            Zapisy
           </LinkItem>
         </Stack>
 
@@ -104,20 +94,17 @@ const Navbar = props => {
               />
               <MenuList>
                 <NextLink href="/" passHref>
-                  <MenuItem as={Link}>About</MenuItem>
+                  <MenuItem as={Link}>O nas</MenuItem>
                 </NextLink>
                 <NextLink href="/works" passHref>
-                  <MenuItem as={Link}>Works</MenuItem>
+                  <MenuItem as={Link}>Instruktorzy</MenuItem>
                 </NextLink>
                 <NextLink href="/posts" passHref>
-                  <MenuItem as={Link}>Posts</MenuItem>
+                  <MenuItem as={Link}>Oferta</MenuItem>
                 </NextLink>
-                <MenuItem
-                  as={Link}
-                  href="https://github.com/craftzdog/craftzdog-homepage"
-                >
-                  View Source
-                </MenuItem>
+                <NextLink href="/zapisy" passHref>
+                  <MenuItem as={Link}>Zapisy</MenuItem>
+                </NextLink>
               </MenuList>
             </Menu>
           </Box>
