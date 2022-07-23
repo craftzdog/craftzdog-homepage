@@ -38,6 +38,8 @@ You can create your own homepage for free without notifying me by forking this p
 - Add a link to [my homepage](https://www.craftz.dog/)
 - Do not use the 3d voxel dog
 
+Check out [LICENSE](./LICENSE) for more detail.
+
 ---
 
 Looking for a Markdown note-taking app? Check out my app called Inkdrop:
