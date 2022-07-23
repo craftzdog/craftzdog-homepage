@@ -1,4 +1,4 @@
-import { Container, Heading, SimpleGrid, Divider } from '@chakra-ui/react'
+import { Container, Heading, SimpleGrid, Divider,Box,Tabs, TabList, TabPanels, Tab, TabPanel} from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
@@ -17,6 +17,22 @@ import thumbAmembo from '../public/images/works/amembo_eyecatch.png'
 const Works = () => (
   <Layout title="Works">
     <Container>
+    <Box>
+    <Tabs size='md' variant='enclosed'>
+  <TabList>
+    <Tab>All-projects</Tab>
+    <Tab>Catagory</Tab>
+  </TabList>
+  <TabPanels>
+    <TabPanel>
+      <p>one!</p>
+    </TabPanel>
+    <TabPanel>
+      <p>two!</p>
+    </TabPanel>
+  </TabPanels>
+</Tabs>
+</Box>
       <Heading as="h3" fontSize={20} mb={4}>
         Works
       </Heading>
