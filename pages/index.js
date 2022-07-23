@@ -80,7 +80,11 @@ const Home = () => (
           Work
         </Heading>
         <Paragraph>
+<<<<<<< HEAD
         Hello I'am  u an freelance and a full-stack developer,a with a
+=======
+        Hello I'am  an freelance and a full-stack developer,a with a
+>>>>>>> 5590b640c170933a0a137c2036e6ea666897846e
           passion for building and Working on new projects,I provide a digital services 
           for all things launching products, from planning and designing all the
           way to solving real-life problems with code. Checkout my portfolio to know  more 
