@@ -4,7 +4,6 @@ import {
   Link,
   List,
   ListItem,
-  Code,
   //   AspectRatio,
 } from '@chakra-ui/react'
 
