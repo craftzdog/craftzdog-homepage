@@ -2,9 +2,9 @@ import { Container, Heading, SimpleGrid, Divider } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
-import thumbDRM from '../public/images/projects/thumb_drm.png'
+import thumbDRM from '../public/images/projects/thumb_drm.webp'
 const Projects = () => (
-  <Layout title="Works">
+  <Layout title="Projects">
     <Heading as="h1" mt={10} font-size={32}>
       Projects
     </Heading>

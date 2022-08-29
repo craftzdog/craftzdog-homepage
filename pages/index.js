@@ -12,7 +12,7 @@ import {
   List,
   ListItem,
   useColorModeValue,
-  chakra
+  chakra,
 } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Paragraph from '../components/paragraph'
@@ -20,11 +20,11 @@ import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
-import { AiOutlineMail } from "react-icons/ai"
+import { AiOutlineMail } from 'react-icons/ai'
 import Image from 'next/image'
 
 const ProfileImage = chakra(Image, {
-  shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
+  shouldForwardProp: (prop) => ['width', 'height', 'src', 'alt'].includes(prop),
 })
 
 const Home = () => (
@@ -47,7 +47,7 @@ const Home = () => (
           <Heading as="h2" variant="page-title">
             Jianting Feng - 馮建霆
           </Heading>
- 
+
           <Heading fontSize="1em" mt={2}>
             A Data Science and Machine Learning Enthusiast
           </Heading>
@@ -81,24 +81,19 @@ const Home = () => (
 
       <Section delay={0.1}>
         <Heading as="h3" variant="section-title">
-          Work
+          Intro
         </Heading>
         <Paragraph>
-        <Text>
-                Hello, I&apos;m Jianting Feng, a machine learning enthusiast
-                based in Xi&apos;an, China! Currently, I&apos;m looking for a
-                RA/MPhil/PhD position. My major research interest lies in the
-                theory of machine learning and its applications.
-              </Text>
-              <Text>
-                If you have any suggestion, please feel free to{' '}
-                  contact me{' '} 
-                  <Link href="mailto:gianting01@gmail.com">
-                    my email!
-                  </Link>
-
-                🤗!
-              </Text>
+          <Text>
+            Hello, I&apos;m Jianting Feng, a machine learning enthusiast based
+            in Xi&apos;an, China! Currently, I&apos;m looking for a RA/MPhil/PhD
+            position. My major research interest lies in the theory of machine
+            learning and its applications.
+          </Text>
+          <Text>
+            If you have any suggestion, please feel free to contact me{' '}
+            <Link href="mailto:gianting01@gmail.com">my email</Link>🤗!
+          </Text>
         </Paragraph>
         <Box align="center" my={4}>
           <NextLink href="/Jianting_Feng_CV.pdf" passHref scroll={false}>
@@ -125,8 +120,8 @@ const Home = () => (
                   Best Performance Award
                 </Badge>
               </Link>{' '}
-              from Dept. of Statistics, Chinese University of Hong Kong (Top 2
-              in the Workshop)!
+              from Department of Statistics, Chinese University of Hong Kong
+              (Top 2 in the Workshop)!
             </Text>
           </ListItem>
           <ListItem>
@@ -141,19 +136,19 @@ const Home = () => (
       </Section>
       <Section delay={0.2}>
         <Heading as="h3" variant="section-title">
-          Bio
+          Expirences
         </Heading>
         <BioSection>
-        <BioYear>2018-2022</BioYear>
-            <Flex
-              marginLeft="4em"
-              fontSize="md"
-              flexDirection="column"
-              textAlign="left"
-            >
-              <Text>B.Sc in Information and Computing Science </Text>
-              <Text>Beijing Institute of Technology, China</Text>
-            </Flex>
+          <BioYear>2018-2022</BioYear>
+          <Flex
+            marginLeft="4em"
+            fontSize="md"
+            flexDirection="column"
+            textAlign="left"
+          >
+            <Text>B.Sc in Information and Computing Science </Text>
+            <Text>Beijing Institute of Technology, China</Text>
+          </Flex>
         </BioSection>
       </Section>
 
@@ -165,7 +160,8 @@ const Home = () => (
           <ListItem>
             <Text>
               {' '}
-              <Badge>☕️ Coffee</Badge> A caffeine addicted, addicted to SOE and pour over!
+              <Badge>☕️ Coffee</Badge> A caffeine addicted, addicted to SOE and
+              pour over!
             </Text>
           </ListItem>
           <ListItem>
@@ -201,7 +197,7 @@ const Home = () => (
           Contact me
         </Heading>
         <List>
-        <ListItem>
+          <ListItem>
             <Link href="mailto:gianting01@gmail.com" target="_blank">
               <Button
                 variant="ghost"
