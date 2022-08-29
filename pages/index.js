@@ -47,7 +47,8 @@ const Home = () => (
           <Heading as="h2" variant="page-title">
             Jianting Feng - 馮建霆
           </Heading>
-          <Heading fontSize="1em">
+ 
+          <Heading fontSize="1em" mt={2}>
             A Data Science and Machine Learning Enthusiast
           </Heading>
         </Box>
@@ -92,7 +93,7 @@ const Home = () => (
               <Text>
                 If you have any suggestion, please feel free to{' '}
                   contact me{' '} 
-                  <Link to="mailto:gianting01@gmail.com">
+                  <Link href="mailto:gianting01@gmail.com">
                     my email!
                   </Link>
 
