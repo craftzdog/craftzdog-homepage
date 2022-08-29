@@ -1,5 +1,5 @@
 # Jianting's Homepage
-Adopted from 
+Adapted from 
 [https://www.craftz.dog/](https://www.craftz.dog/)
 
 ## Stack
