@@ -2,7 +2,7 @@ import { Box, Link, useColorModeValue } from '@chakra-ui/react'
 
 const Footer = () => {
   return (
-    <Box align="center" opacity={0.4} fontSize="sm">
+    <Box bg={useColorModeValue('#ffffff40', '#20202380')} css={{ backdropFilter: 'blur(10px)' }} position='fixed' bottom={0} pt={2} as="footer" align="center" opacity={0.4} fontSize="sm">
       &copy; {new Date().getFullYear()} Jianting Feng. All Rights Reserved.
       Build with {""}
       <Link
@@ -18,7 +18,7 @@ const Footer = () => {
       >
         ChakraUI
       </Link>
-      , inspired by
+      , inspired by{' '}
       <Link
         textColor={useColorModeValue("blue", "teal")}
         href="https://www.craftz.dog"

@@ -12,7 +12,7 @@ import {
   MenuList,
   MenuButton,
   IconButton,
-  useColorModeValue
+  useColorModeValue,
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
@@ -25,7 +25,9 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
     <NextLink href={href} passHref scroll={false}>
       <Link
         p={2}
-        bg={active ? 'grassTeal' : undefined}
+        bg={active ? 'pink.200' : undefined}
+        rounded="lg"
+        _hover={{ bg: 'pink.100' }}
         color={active ? '#202023' : inactiveColor}
         target={target}
         {...props}
@@ -36,7 +38,7 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
   )
 }
 
-const Navbar = props => {
+const Navbar = (props) => {
   const { path } = props
 
   return (
@@ -71,9 +73,9 @@ const Navbar = props => {
           flexGrow={1}
           mt={{ base: 4, md: 0 }}
         >
-          {/* <LinkItem href="/" path={path}>
-            Home
-          </LinkItem> */}
+          <LinkItem href="/projects" path={path}>
+            Projects
+          </LinkItem>
           {/* <LinkItem href="/works" path={path}>
             Works
           </LinkItem>
@@ -107,7 +109,10 @@ const Navbar = props => {
               />
               <MenuList>
                 <NextLink href="/" passHref>
-                  <MenuItem as={Link}>About</MenuItem>
+                  <MenuItem as={Link}>Home</MenuItem>
+                </NextLink>
+                <NextLink href="/projects" passHref>
+                  <MenuItem as={Link}>Projects</MenuItem>
                 </NextLink>
                 {/* <NextLink href="/works" passHref>
                   <MenuItem as={Link}>Works</MenuItem>
@@ -115,10 +120,7 @@ const Navbar = props => {
                 <NextLink href="/posts" passHref>
                   <MenuItem as={Link}>Posts</MenuItem>
                 </NextLink> */}
-                <MenuItem
-                  as={Link}
-                  href="https://github.com/craftzdog/craftzdog-homepage"
-                >
+                <MenuItem as={Link} href="https://github.com/JiantingFeng">
                   GitHub
                 </MenuItem>
               </MenuList>
