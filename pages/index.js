@@ -4,7 +4,10 @@ import {
   Container,
   Heading,
   Box,
-  SimpleGrid,
+  Text,
+  Flex,
+  UnorderedList,
+  Badge,
   Button,
   List,
   ListItem,
@@ -16,10 +19,8 @@ import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
-import { GridItem } from '../components/grid-item'
 import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
-import thumbYouTube from '../public/images/links/youtube.png'
-import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
+import { AiOutlineMail } from "react-icons/ai"
 import Image from 'next/image'
 
 const ProfileImage = chakra(Image, {
@@ -31,21 +32,24 @@ const Home = () => (
     <Container>
       <Box
         borderRadius="lg"
+        mt={3}
         mb={6}
         p={3}
         textAlign="center"
         bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
         css={{ backdropFilter: 'blur(10px)' }}
       >
-        Hello, I&apos;m an indie app developer based in Japan!
+        🔔 This website is still under construction! 🔔
       </Box>
 
       <Box display={{ md: 'flex' }}>
         <Box flexGrow={1}>
           <Heading as="h2" variant="page-title">
-            Takuya Matsuyama
+            Jianting Feng - 馮建霆
           </Heading>
-          <p>Digital Craftsman ( Artist / Developer / Designer )</p>
+          <Heading fontSize="1em">
+            A Data Science and Machine Learning Enthusiast
+          </Heading>
         </Box>
         <Box
           flexShrink={0}
@@ -64,7 +68,7 @@ const Home = () => (
             overflow="hidden"
           >
             <ProfileImage
-              src="/images/takuya.jpg"
+              src="/images/profile.webp"
               alt="Profile image"
               borderRadius="full"
               width="100%"
@@ -79,52 +83,76 @@ const Home = () => (
           Work
         </Heading>
         <Paragraph>
-          Takuya is a freelance and a full-stack developer based in Osaka with a
-          passion for building digital services/stuff he wants. He has a knack
-          for all things launching products, from planning and designing all the
-          way to solving real-life problems with code. When not online, he loves
-          hanging out with his camera. Currently, he is living off of his own
-          product called{' '}
-          <NextLink href="/works/inkdrop" passHref scroll={false}>
-            <Link>Inkdrop</Link>
-          </NextLink>
-          . He publishes content for marketing his products and his YouTube
-          channel called &quot;
-          <NextLink href="https://www.youtube.com/devaslife" passHref>
-            <Link target="_blank">Dev as Life</Link>
-          </NextLink>
-          &quot; has more than 100k subscribers.
+        <Text>
+                Hello, I&apos;m Jianting Feng, a machine learning enthusiast
+                based in Xi&apos;an, China! Currently, I&apos;m looking for a
+                RA/MPhil/PhD position. My major research interest lies in the
+                theory of machine learning and its applications.
+              </Text>
+              <Text>
+                If you have any suggestion, please feel free to{' '}
+                  contact me{' '} 
+                  <Link to="mailto:gianting01@gmail.com">
+                    my email!
+                  </Link>
+
+                🤗!
+              </Text>
         </Paragraph>
         <Box align="center" my={4}>
-          <NextLink href="/works" passHref scroll={false}>
-            <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-              My portfolio
+          <NextLink href="/Jianting_Feng_CV.pdf" passHref scroll={false}>
+            <Button rightIcon={<ChevronRightIcon />} colorScheme="purple">
+              My resume
             </Button>
           </NextLink>
         </Box>
       </Section>
-
+      <Section delay={0.1}>
+        <Heading as="h3" variant="section-title">
+          News
+        </Heading>
+        <UnorderedList>
+          <ListItem>
+            <BioYear>2022-08</BioYear>
+            <Text>
+              🥳 Delighted to receive{' '}
+              <Link
+                color="blue.500"
+                href="/Certificate _Best Performance Award_Feng Jianting.pdf"
+              >
+                <Badge colorScheme="blue" fontSize="0.8em">
+                  Best Performance Award
+                </Badge>
+              </Link>{' '}
+              from Dept. of Statistics, Chinese University of Hong Kong (Top 2
+              in the Workshop)!
+            </Text>
+          </ListItem>
+          <ListItem>
+            <BioYear>2022-07</BioYear>
+            <Text>👀 Actively looking for a MPhil/PhD position.</Text>
+          </ListItem>
+          <ListItem>
+            <BioYear>2022-06</BioYear>
+            <Text>🎓 Got my Bachelor&apos;s degree!</Text>
+          </ListItem>
+        </UnorderedList>
+      </Section>
       <Section delay={0.2}>
         <Heading as="h3" variant="section-title">
           Bio
         </Heading>
         <BioSection>
-          <BioYear>1984</BioYear>
-          Born in Osaka (大阪), Japan.
-        </BioSection>
-        <BioSection>
-          <BioYear>2010</BioYear>
-          Completed the Master&apos;s Program in the Graduate School of
-          Information Science at Nara Institute of Science and Technology
-          (奈良先端科学技術大学院大学情報科学研究科修士課程)
-        </BioSection>
-        <BioSection>
-          <BioYear>2010</BioYear>
-          Worked at Yahoo! Japan (ヤフー株式会社入社)
-        </BioSection>
-        <BioSection>
-          <BioYear>2012 to present</BioYear>
-          Working as a freelancer
+        <BioYear>2018-2022</BioYear>
+            <Flex
+              marginLeft="4em"
+              fontSize="md"
+              flexDirection="column"
+              textAlign="left"
+            >
+              <Text>B.Sc in Information and Computing Science </Text>
+              <Text>Beijing Institute of Technology, China</Text>
+            </Flex>
         </BioSection>
       </Section>
 
@@ -132,94 +160,91 @@ const Home = () => (
         <Heading as="h3" variant="section-title">
           I ♥
         </Heading>
-        <Paragraph>
-          Art, Music,{' '}
-          <Link href="https://illust.odoruinu.net/" target="_blank">
-            Drawing
-          </Link>
-          , Playing Drums,{' '}
-          <Link href="https://500px.com/p/craftzdog" target="_blank">
-            Photography
-          </Link>
-          , Leica, Machine Learning
-        </Paragraph>
+        <UnorderedList>
+          <ListItem>
+            <Text>
+              {' '}
+              <Badge>☕️ Coffee</Badge> A caffeine addicted, addicted to SOE and pour over!
+            </Text>
+          </ListItem>
+          <ListItem>
+            <Text>
+              {' '}
+              <Badge>🦮 Dogs </Badge> I own a cute {''}
+              <Link
+                color="blue.500"
+                href="https://photos.app.goo.gl/jkEoHVExCmW4Ljhs5"
+              >
+                Beagle dog
+              </Link>
+              !
+            </Text>
+          </ListItem>
+          <ListItem>
+            <Text>
+              <Badge>🏎 Formula 1</Badge> A big fan of{' '}
+              <Link
+                color="red.500"
+                href="https://www.ferrari.com/en-SG/formula1"
+              >
+                Scuderia Ferrari F1 Team
+              </Link>
+              ! (Maybe I cannot reply quickly when a grand prix is ongoing ^ ^)
+            </Text>
+          </ListItem>
+        </UnorderedList>
       </Section>
 
       <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
-          On the web
+          Contact me
         </Heading>
         <List>
-          <ListItem>
-            <Link href="https://github.com/craftzdog" target="_blank">
+        <ListItem>
+            <Link href="mailto:gianting01@gmail.com" target="_blank">
               <Button
                 variant="ghost"
-                colorScheme="teal"
+                colorScheme="yellow"
+                leftIcon={<AiOutlineMail />}
+              >
+                gianting01 [AT] gmail [DOT] com
+              </Button>
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link href="https://github.com/jiantingfeng" target="_blank">
+              <Button
+                variant="ghost"
+                colorScheme="red"
                 leftIcon={<IoLogoGithub />}
               >
-                @craftzdog
+                @JiantingFeng
               </Button>
             </Link>
           </ListItem>
           <ListItem>
-            <Link href="https://twitter.com/inkdrop_app" target="_blank">
+            <Link href="https://twitter.com/jianting_feng" target="_blank">
               <Button
                 variant="ghost"
-                colorScheme="teal"
+                colorScheme="blue"
                 leftIcon={<IoLogoTwitter />}
               >
-                @inkdrop_app (English)
+                @jianting_feng (English)
               </Button>
             </Link>
           </ListItem>
           <ListItem>
-            <Link href="https://twitter.com/craftzdog" target="_blank">
+            <Link href="https://instagram.com/fjianting" target="_blank">
               <Button
                 variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoTwitter />}
-              >
-                @craftzdog (日本語)
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://instagram.com/craftzdog" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
+                colorScheme="purple"
                 leftIcon={<IoLogoInstagram />}
               >
-                @craftzdog
+                @fjianting
               </Button>
             </Link>
           </ListItem>
         </List>
-
-        <SimpleGrid columns={[1, 2, 2]} gap={6}>
-          <GridItem
-            href="https://www.youtube.com/devaslife"
-            title="Dev as Life"
-            thumbnail={thumbYouTube}
-          >
-            My YouTube channel (&gt;100k subs)
-          </GridItem>
-          <GridItem
-            href="https://www.inkdrop.app/"
-            title="Inkdrop"
-            thumbnail={thumbInkdrop}
-          >
-            A Markdown note-taking app
-          </GridItem>
-        </SimpleGrid>
-
-        <Box align="center" my={4}>
-          <NextLink href="/posts" passHref scroll={false}>
-            <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-              Popular posts
-            </Button>
-          </NextLink>
-        </Box>
       </Section>
     </Container>
   </Layout>

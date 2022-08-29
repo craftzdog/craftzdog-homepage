@@ -35,7 +35,7 @@ const Logo = () => {
             fontWeight="bold"
             ml={3}
           >
-            Takuya Matsuyama
+            Jianting Feng
           </Text>
         </LogoBox>
       </a>

@@ -1,41 +1,37 @@
 import Head from 'next/head'
-import dynamic from 'next/dynamic'
 import NavBar from '../navbar'
 import { Box, Container } from '@chakra-ui/react'
 import Footer from '../footer'
-import VoxelDogLoader from '../voxel-dog-loader'
 
-const LazyVoxelDog = dynamic(() => import('../voxel-dog'), {
-  ssr: false,
-  loading: () => <VoxelDogLoader />
-})
 
 const Main = ({ children, router }) => {
   return (
     <Box as="main" pb={8}>
       <Head>
+      <link
+          rel="icon"
+          href="https://img.icons8.com/cute-clipart/64/000000/coffee-to-go.png"
+          type="image/x-icon"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Takuya's homepage" />
-        <meta name="author" content="Takuya Matsuyama" />
-        <meta name="author" content="craftzdog" />
-        <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-        <meta name="twitter:title" content="Takuya Matsuyama" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@craftzdog" />
-        <meta name="twitter:creator" content="@craftzdog" />
-        <meta name="twitter:image" content="https://www.craftz.dog/card.png" />
-        <meta property="og:site_name" content="Takuya Matsuyama" />
-        <meta name="og:title" content="Takuya Matsuyama" />
+        <meta name="description" content="Jianting's homepage" />
+        <meta name="author" content="Jianting Feng" />
+        <meta name="author" content="andyfeng" />
+        <meta name="twitter:title" content="Jianting Feng" />
+        {/* <meta name="twitter:card" content="summary_large_image" /> */}
+        <meta name="twitter:site" content="@jianting_feng" />
+        <meta name="twitter:creator" content="@jianting_feng" />
+        {/* <meta name="twitter:image" content="https://www.craftz.dog/card.png" /> */}
+        <meta property="og:site_name" content="Jianting Feng" />
+        <meta name="og:title" content="Jianting Feng" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.craftz.dog/card.png" />
-        <title>Takuya Matsuyama - Homepage</title>
+        {/* <meta property="og:image" content="https://www.craftz.dog/card.png" /> */}
+        <title>Jianting - Homepage</title>
       </Head>
 
       <NavBar path={router.asPath} />
 
       <Container maxW="container.md" pt={14}>
-        <LazyVoxelDog />
 
         {children}
 
