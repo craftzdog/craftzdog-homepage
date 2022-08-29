@@ -45,7 +45,7 @@ const Home = () => (
       <Box display={{ md: 'flex' }}>
         <Box flexGrow={1}>
           <Heading as="h2" variant="page-title">
-            Jianting Feng - 馮建霆
+            Jianting Feng
           </Heading>
 
           <Heading fontSize="1em" mt={2}>
@@ -92,11 +92,19 @@ const Home = () => (
           </Text>
           <Text>
             If you have any suggestion, please feel free to contact me{' '}
-            <Link href="mailto:gianting01@gmail.com">my email</Link>🤗!
+            <Link href="mailto:gianting01@gmail.com" target="_blank">
+              my email
+            </Link>
+            🤗!
           </Text>
         </Paragraph>
         <Box align="center" my={4}>
-          <NextLink href="/Jianting_Feng_CV.pdf" passHref scroll={false}>
+          <NextLink
+            href="/Jianting_Feng_CV.pdf"
+            passHref
+            scroll={false}
+            target="_blank"
+          >
             <Button rightIcon={<ChevronRightIcon />} colorScheme="purple">
               My resume
             </Button>
@@ -115,6 +123,7 @@ const Home = () => (
               <Link
                 color="blue.500"
                 href="/Certificate _Best Performance Award_Feng Jianting.pdf"
+                target="_blank"
               >
                 <Badge colorScheme="blue" fontSize="0.8em">
                   Best Performance Award
@@ -171,6 +180,7 @@ const Home = () => (
               <Link
                 color="blue.500"
                 href="https://photos.app.goo.gl/jkEoHVExCmW4Ljhs5"
+                target="_blank"
               >
                 Beagle dog
               </Link>
@@ -226,7 +236,7 @@ const Home = () => (
                 colorScheme="blue"
                 leftIcon={<IoLogoTwitter />}
               >
-                @jianting_feng (English)
+                @jianting_feng
               </Button>
             </Link>
           </ListItem>
