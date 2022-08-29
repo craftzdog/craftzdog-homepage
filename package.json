@@ -13,7 +13,7 @@
   "author": "Takuya Matsuyama",
   "license": "MIT",
   "dependencies": {
-    "@chakra-ui/icons": "^2.0.8",
+    "@chakra-ui/icons": "^2.0.9",
     "@chakra-ui/react": "^2.2.8",
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",
