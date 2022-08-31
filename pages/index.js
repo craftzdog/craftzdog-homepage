@@ -39,7 +39,7 @@ const Home = () => (
         bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
         css={{ backdropFilter: 'blur(10px)' }}
       >
-        🔔 This website is still under construction! 🔔
+        Looking for RA/MPhil/PhD positions as well as open source ideas.
       </Box>
 
       <Box display={{ md: 'flex' }}>
