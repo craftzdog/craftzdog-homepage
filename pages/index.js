@@ -91,9 +91,9 @@ const Home = () => (
             learning and its applications.
           </Text>
           <Text>
-            If you have any suggestion, please feel free to contact me{' '}
+            If you have any suggestion, please feel free to{' '}
             <Link href="mailto:gianting01@gmail.com" target="_blank">
-              my email
+              contact me
             </Link>
             🤗!
           </Text>
@@ -105,7 +105,10 @@ const Home = () => (
             scroll={false}
             target="_blank"
           >
-            <Button rightIcon={<ChevronRightIcon />} colorScheme="purple">
+            <Button
+              rightIcon={<ChevronRightIcon />}
+              colorScheme={useColorModeValue('purple', 'orange')}
+            >
               My resume
             </Button>
           </NextLink>

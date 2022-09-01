@@ -20,14 +20,15 @@ import { IoLogoGithub } from 'react-icons/io5'
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href
+  const hover_color = useColorModeValue('purple.200', 'orange.300')
   const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
   return (
     <NextLink href={href} passHref scroll={false}>
       <Link
         p={2}
-        bg={active ? 'pink.200' : undefined}
+        bg={active ? hover_color : undefined}
         rounded="lg"
-        _hover={{ bg: 'pink.100' }}
+        _hover={{ bg: hover_color }}
         color={active ? '#202023' : inactiveColor}
         target={target}
         {...props}
