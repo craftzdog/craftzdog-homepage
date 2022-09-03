@@ -38,8 +38,9 @@ const Home = () => (
         textAlign="center"
         bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
         css={{ backdropFilter: 'blur(10px)' }}
+        textColor="red.400"
       >
-        🔔 This website is still under construction! 🔔
+        👀 Actively looking for a RA/MPhil/PhD position.
       </Box>
 
       <Box display={{ md: 'flex' }}>
@@ -120,6 +121,19 @@ const Home = () => (
         </Heading>
         <UnorderedList>
           <ListItem>
+            <BioYear>2022-09</BioYear>
+            <Text>
+              😎 First PR to {''}
+              <Link
+                href="https://github.com/microsoft/LightGBM"
+                target="_blank"
+              >
+                LightGMB
+              </Link>{' '}
+              Project, a big step forward!
+            </Text>
+          </ListItem>
+          <ListItem>
             <BioYear>2022-08</BioYear>
             <Text>
               🥳 Delighted to receive{' '}
@@ -135,10 +149,6 @@ const Home = () => (
               from Department of Statistics, Chinese University of Hong Kong
               (Top 2 in the Workshop)!
             </Text>
-          </ListItem>
-          <ListItem>
-            <BioYear>2022-07</BioYear>
-            <Text>👀 Actively looking for a MPhil/PhD position.</Text>
           </ListItem>
           <ListItem>
             <BioYear>2022-06</BioYear>
