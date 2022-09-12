@@ -40,7 +40,7 @@ const Home = () => (
         css={{ backdropFilter: 'blur(10px)' }}
         textColor="red.400"
       >
-        👀 Actively looking for a RA/MPhil/PhD position.
+        Working on a PINN (Physical Informed Neural Network) project, contact me if interested!
       </Box>
 
       <Box display={{ md: 'flex' }}>
