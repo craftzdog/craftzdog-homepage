@@ -15,28 +15,28 @@
   "author": "Angel Batlles",
   "license": "MIT",
   "dependencies": {
-    "@chakra-ui/icons": "^1.0.15",
-    "@chakra-ui/react": "^1.6.9",
-    "@emotion/react": "^11.4.1",
-    "@emotion/styled": "^11.3.0",
+    "@chakra-ui/icons": "^2.0.11",
+    "@chakra-ui/react": "^2.3.6",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
     "@storybook/addon-controls": "^6.3.12",
     "@storybook/addon-essentials": "^6.3.12",
-    "@storybook/addon-links": "^6.3.12",
+    "@storybook/addon-links": "^6.5.13",
     "@storybook/addon-viewport": "^6.3.12",
     "@storybook/addons": "^6.3.12",
     "@storybook/preset-create-react-app": "^3.2.0",
     "@storybook/react": "^6.3.12",
-    "framer-motion": "^4.1.17",
+    "framer-motion": "^7.2.0",
     "next": "^11.1.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-icons": "^4.3.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.4.0",
     "storybook": "^6.3.12",
-    "three": "^0.133.1"
+    "three": "^0.146.0"
   },
   "devDependencies": {
-    "eslint": "^7.32.0",
-    "eslint-config-next": "^11.1.2",
-    "prettier": "^2.4.1"
+    "eslint": "^8.22.0",
+    "eslint-config-next": "^12.2.5",
+    "prettier": "^2.7.1"
   }
 }

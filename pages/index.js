@@ -22,8 +22,6 @@ import Lang from '../lib/utils'
 import React from 'react'
 
 const Home = () => {
-
-
   const t = Lang('home')
   return (
     <Layout>
@@ -33,6 +31,7 @@ const Home = () => {
           mb={6}
           p={3}
           textAlign="center"
+          css={{ backdropFilter: 'blur(10px)' }}
           bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
         >
           {t.title}
@@ -117,19 +116,26 @@ const Home = () => {
           <Heading as="h3" variant="section-title">
             {t.learning}
           </Heading>
-          <Paragraph><Link isExternal href="#">
-             English
+          <Paragraph>
+            <Link isExternal href="#">
+              English
             </Link>
           </Paragraph>
           <Paragraph>
-            <Link isExternal href="https://app.codesignal.com/profile/elbatlles">
-            Katas
+            <Link
+              isExternal
+              href="https://app.codesignal.com/profile/elbatlles"
+            >
+              Katas
             </Link>
           </Paragraph>
 
           <Paragraph>
-            <Link isExternal href="https://share.cryptozombies.io/es/lesson/4/share/NoName?id=WyJjenwxNTE4NjMiLDEsMTRd">
-               CryptoZombies (Solidity)
+            <Link
+              isExternal
+              href="https://share.cryptozombies.io/es/lesson/4/share/NoName?id=WyJjenwxNTE4NjMiLDEsMTRd"
+            >
+              CryptoZombies (Solidity)
             </Link>
           </Paragraph>
         </Section>
