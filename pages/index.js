@@ -69,7 +69,7 @@ const Home = () => {
           </Heading>
           <Paragraph>
             {t.workText}
-            <NextLink href="/works/pideme">
+            <NextLink passHref legacyBehavior href="/works/pideme">
               <Link> Pideme</Link>
             </NextLink>
             .
@@ -186,32 +186,6 @@ const Home = () => {
               </Link>
             </ListItem>
           </List>
-
-          {/*}   <SimpleGrid columns={[1, 2, 2]} gap={6}>
-          <GridItem
-            href="https://www.youtube.com/devaslife"
-            title="Dev as Life"
-            thumbnail={thumbYouTube}
-          >
-            My YouTube channel
-          </GridItem>
-          <GridItem
-            href="https://pideme.es/"
-            title="Pideme"
-            thumbnail={thumbInkdrop}
-          >
-            Platform to order and pay for orders from the table and get them to
-            the kitchen.
-          </GridItem>
-</SimpleGrid>*/}
-
-          {/*  <Box align="center" my={4}>
-            <NextLink href="/posts">
-              <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-                {t.bottonPost}
-              </Button>
-            </NextLink>
-</Box> */}
         </Section>
       </Container>
     </Layout>
