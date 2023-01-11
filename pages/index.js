@@ -67,8 +67,8 @@ const Home = () => (
               src="/images/takuya.jpg"
               alt="Profile image"
               borderRadius="full"
-              width="100%"
-              height="100%"
+              width="100"
+              height="100"
             />
           </Box>
         </Box>
@@ -85,22 +85,31 @@ const Home = () => (
           way to solving real-life problems with code. When not online, he loves
           hanging out with his camera. Currently, he is living off of his own
           product called{' '}
-          <NextLink href="/works/inkdrop" passHref scroll={false}>
-            <Link>Inkdrop</Link>
-          </NextLink>
+          <Link as={NextLink} href="/works/inkdrop" passHref scroll={false}>
+            Inkdrop
+          </Link>
           . He publishes content for marketing his products and his YouTube
           channel called &quot;
-          <NextLink href="https://www.youtube.com/devaslife" passHref>
-            <Link target="_blank">Dev as Life</Link>
-          </NextLink>
+          <Link
+            as={NextLink}
+            href="https://www.youtube.com/devaslife"
+            passHref
+            target="_blank"
+          >
+            Dev as Life
+          </Link>
           &quot; has more than 100k subscribers.
         </Paragraph>
         <Box align="center" my={4}>
-          <NextLink href="/works" passHref scroll={false}>
-            <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-              My portfolio
-            </Button>
-          </NextLink>
+          <Button
+            as={NextLink}
+            href="/works"
+            scroll={false}
+            rightIcon={<ChevronRightIcon />}
+            colorScheme="teal"
+          >
+            My portfolio
+          </Button>
         </Box>
       </Section>
 
@@ -214,11 +223,15 @@ const Home = () => (
         </SimpleGrid>
 
         <Box align="center" my={4}>
-          <NextLink href="/posts" passHref scroll={false}>
-            <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-              Popular posts
-            </Button>
-          </NextLink>
+          <Button
+            as={NextLink}
+            href="/posts"
+            scroll={false}
+            rightIcon={<ChevronRightIcon />}
+            colorScheme="teal"
+          >
+            Popular posts
+          </Button>
         </Box>
       </Section>
     </Container>
