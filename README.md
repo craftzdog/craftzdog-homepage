@@ -22,6 +22,4 @@ $PROJECT_ROOT
 ```
 
 ## OG credit
-Takuya's Homepage
-
-[https://www.craftz.dog/](https://www.craftz.dog/)
+This website is built based on the <a href='https://www.craftz.dog/' target='_blank'>Takuya Matsuyama's website</a>.
