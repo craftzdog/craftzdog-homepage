@@ -21,7 +21,7 @@ $PROJECT_ROOT
 └── public
 ```
 
-### OG credit
+## OG credit
 Takuya's Homepage
 
 [https://www.craftz.dog/](https://www.craftz.dog/)
