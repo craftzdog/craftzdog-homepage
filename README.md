@@ -1,4 +1,5 @@
-
+## About
+forked from craftzdog, wanted to play around with making a portfolio
 
 ## Stack
 
