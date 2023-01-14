@@ -17,9 +17,8 @@ import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
-import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
+import { IoLogoTwitter, IoLogoGithub } from 'react-icons/io5'
 import thumbYouTube from '../public/images/links/youtube.png'
-import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
 import Image from 'next/image'
 
 const ProfileImage = chakra(Image, {
@@ -37,15 +36,15 @@ const Home = () => (
         bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
         css={{ backdropFilter: 'blur(10px)' }}
       >
-        Hello, I&apos;m an indie app developer based in Japan!
+        Hello, I&apos;m an indie developer based in U.S.!
       </Box>
 
       <Box display={{ md: 'flex' }}>
         <Box flexGrow={1}>
           <Heading as="h2" variant="page-title">
-            Takuya Matsuyama
+            Felipe Solorzano
           </Heading>
-          <p>Digital Craftsman ( Artist / Developer / Designer )</p>
+          <p>Creative Craftsman (Student / Artist / Developer / Designer )</p>
         </Box>
         <Box
           flexShrink={0}
@@ -64,7 +63,7 @@ const Home = () => (
             overflow="hidden"
           >
             <ProfileImage
-              src="/images/takuya.jpg"
+              src="/images/Felipe2.jpg"
               alt="Profile image"
               borderRadius="full"
               width="100"
@@ -79,16 +78,14 @@ const Home = () => (
           Work
         </Heading>
         <Paragraph>
-          Takuya is a freelance and a full-stack developer based in Osaka with a
-          passion for building digital services/stuff he wants. He has a knack
-          for all things launching products, from planning and designing all the
-          way to solving real-life problems with code. When not online, he loves
-          hanging out with his camera. Currently, he is living off of his own
-          product called{' '}
-          <Link as={NextLink} href="/works/inkdrop" passHref scroll={false}>
-            Inkdrop
-          </Link>
-          . He publishes content for marketing his products and his YouTube
+          Felipe is an aspiring Computer Scientist and current student at Christopher Columbus High School.
+          In addition to his passion for technology, his faith as a Catholic is also an important aspect of my life.
+          He believes that my programming skills can be used to make a positive impact in the world and serve others.
+          He is constantly learning and expanding his knowledge of Computer Science, and is excited to turn his
+          passions into a career. In his free time, you can find him participating in his church community,
+          or tinkering on personal projects which you can learn more about on this website.
+          He is determined to use his skills and faith to make a difference in the tech industry and excited to
+          see what the future holds.
           channel called &quot;
           <Link
             as={NextLink}
@@ -118,18 +115,12 @@ const Home = () => (
           Bio
         </Heading>
         <BioSection>
-          <BioYear>1984</BioYear>
-          Born in Osaka (大阪), Japan.
+          <BioYear>2004</BioYear>
+          Born in Florida, United States.
         </BioSection>
         <BioSection>
-          <BioYear>2010</BioYear>
-          Completed the Master&apos;s Program in the Graduate School of
-          Information Science at Nara Institute of Science and Technology
-          (奈良先端科学技術大学院大学情報科学研究科修士課程)
-        </BioSection>
-        <BioSection>
-          <BioYear>2010</BioYear>
-          Worked at Yahoo! Japan (ヤフー株式会社入社)
+          <BioYear>2023</BioYear>
+          Completed High School
         </BioSection>
         <BioSection>
           <BioYear>2012 to present</BioYear>
@@ -143,20 +134,20 @@ const Home = () => (
         </Heading>
         <Paragraph>
           Art, Music,{' '}
-          <Link href="https://illust.odoruinu.net/" target="_blank">
+          <Link href="https://www.tumblr.com/blog/felos2004" target="_blank">
             Drawing
           </Link>
-          , Playing Drums,{' '}
-          <Link href="https://500px.com/p/craftzdog" target="_blank">
+          , Playing guitar,{' '}
+          <Link href="https://500px.com/p/solfelosnoel?view=photos" target="_blank">
             Photography
           </Link>
-          , Leica, Machine Learning
+          , Machine Learning
         </Paragraph>
       </Section>
 
       <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
-          On the web
+          Socials
         </Heading>
         <List>
           <ListItem>
@@ -166,7 +157,7 @@ const Home = () => (
                 colorScheme="teal"
                 leftIcon={<IoLogoGithub />}
               >
-                @craftzdog
+                @Felos9001
               </Button>
             </Link>
           </ListItem>
@@ -177,29 +168,7 @@ const Home = () => (
                 colorScheme="teal"
                 leftIcon={<IoLogoTwitter />}
               >
-                @inkdrop_app (English)
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://twitter.com/craftzdog" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoTwitter />}
-              >
-                @craftzdog (日本語)
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://instagram.com/craftzdog" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoInstagram />}
-              >
-                @craftzdog
+                @Email
               </Button>
             </Link>
           </ListItem>
@@ -207,18 +176,11 @@ const Home = () => (
 
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
           <GridItem
-            href="https://www.youtube.com/devaslife"
-            title="Dev as Life"
+            href="https://www.youtube.com/channel/UCQ8uTBTK6olf4o8cUMtBiWQ"
+            title="Felos"
             thumbnail={thumbYouTube}
           >
-            My YouTube channel (&gt;100k subs)
-          </GridItem>
-          <GridItem
-            href="https://www.inkdrop.app/"
-            title="Inkdrop"
-            thumbnail={thumbInkdrop}
-          >
-            A Markdown note-taking app
+            My YouTube channel
           </GridItem>
         </SimpleGrid>
 
