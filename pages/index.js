@@ -17,9 +17,10 @@ import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
-import { IoLogoTwitter, IoLogoGithub } from 'react-icons/io5'
+import { IoLogoTwitter, IoLogoGithub, IoLogoGoogle, IoLogoLinkedin  } from 'react-icons/io5'
 import thumbYouTube from '../public/images/links/youtube.png'
 import Image from 'next/image'
+
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
@@ -79,23 +80,13 @@ const Home = () => (
         </Heading>
         <Paragraph>
           Felipe is an aspiring Computer Scientist and current student at Christopher Columbus High School.
-          In addition to his passion for technology, his faith as a Catholic is also an important aspect of my life.
-          He believes that my programming skills can be used to make a positive impact in the world and serve others.
+          In addition to his passion for technology, his faith as a Catholic is also an important aspect of his life.
+          He believes that his programming skills can be used to make a positive impact in the world and serve others.
           He is constantly learning and expanding his knowledge of Computer Science, and is excited to turn his
           passions into a career. In his free time, you can find him participating in his church community,
           or tinkering on personal projects which you can learn more about on this website.
           He is determined to use his skills and faith to make a difference in the tech industry and excited to
           see what the future holds.
-          channel called &quot;
-          <Link
-            as={NextLink}
-            href="https://www.youtube.com/devaslife"
-            passHref
-            target="_blank"
-          >
-            Dev as Life
-          </Link>
-          &quot; has more than 100k subscribers.
         </Paragraph>
         <Box align="center" my={4}>
           <Button
@@ -123,7 +114,7 @@ const Home = () => (
           Completed High School
         </BioSection>
         <BioSection>
-          <BioYear>2012 to present</BioYear>
+          <BioYear>present</BioYear>
           Working as a freelancer
         </BioSection>
       </Section>
@@ -133,15 +124,15 @@ const Home = () => (
           I ♥
         </Heading>
         <Paragraph>
-          Art, Music,{' '}
+          Music,{' '}
           <Link href="https://www.tumblr.com/blog/felos2004" target="_blank">
-            Drawing
+            Art
           </Link>
           , Playing guitar,{' '}
           <Link href="https://500px.com/p/solfelosnoel?view=photos" target="_blank">
             Photography
           </Link>
-          , Machine Learning
+          , Machine Learning, and video games
         </Paragraph>
       </Section>
 
@@ -162,13 +153,25 @@ const Home = () => (
             </Link>
           </ListItem>
           <ListItem>
-            <Link href="https://twitter.com/inkdrop_app" target="_blank">
+            <Link href="https://www.linkedin.com/in/felipe-solorzano-61b639247/" target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="teal"
-                leftIcon={<IoLogoTwitter />}
+                leftIcon={<IoLogoLinkedin />}
               >
-                @Email
+                @Felipe Solorzano
+              </Button>
+            </Link>
+          </ListItem>
+
+          <ListItem>
+            <Link href="https://mail.google.com" target="_blank">
+              <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<IoLogoGoogle />}
+              >
+                @sol.felipenoel@felipenoel.tech
               </Button>
             </Link>
           </ListItem>
