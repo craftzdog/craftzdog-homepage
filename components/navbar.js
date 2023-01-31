@@ -21,7 +21,7 @@ import { IoLogoGithub } from 'react-icons/io5'
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href
-  const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
+  const inactiveColor = useColorModeValue('gray.800', 'whiteAlpha.900')
   return (
     <Link
       as={NextLink}
@@ -78,7 +78,7 @@ const Navbar = props => {
           mt={{ base: 4, md: 0 }}
         >
           <LinkItem href="/works" path={path}>
-            Works
+            Worksss
           </LinkItem>
           <LinkItem href="/posts" path={path}>
             Posts
