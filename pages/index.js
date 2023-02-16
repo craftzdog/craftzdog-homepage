@@ -11,7 +11,7 @@ import {
   useColorModeValue,
   chakra
 } from '@chakra-ui/react'
-import { ChevronRightIcon } from '@chakra-ui/icons'
+import { ChevronRightIcon, EmailIcon } from '@chakra-ui/icons'
 import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
@@ -222,15 +222,23 @@ const Home = () => (
           </GridItem>
         </SimpleGrid>
 
+        <Heading as="h3" variant="section-title">
+          Newsletter
+        </Heading>
+        <p>
+          Join me on a behind-the-scenes coding journey. Weekly updates on
+          projects, tutorials, and videos
+        </p>
+
         <Box align="center" my={4}>
           <Button
             as={NextLink}
-            href="/posts"
+            href="https://www.devas.life/"
             scroll={false}
-            rightIcon={<ChevronRightIcon />}
+            leftIcon={<EmailIcon />}
             colorScheme="teal"
           >
-            Popular posts
+            Sign up my newsletter here
           </Button>
         </Box>
       </Section>
