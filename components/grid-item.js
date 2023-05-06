@@ -1,6 +1,18 @@
+import {
+  Box,
+  Text,
+  LinkBox,
+  LinkOverlay,
+  Button,
+  FormControl,
+  Input,
+  Textarea,
+  SimpleGrid,
+} from '@chakra-ui/react'
 import NextLink from 'next/link'
 import Image from 'next/image'
-import { Box, Text, LinkBox, LinkOverlay } from '@chakra-ui/react'
+import { React } from "react";
+import { useForm } from 'react-hook-form'
 import { Global } from '@emotion/react'
 
 export const GridItem = ({ children, href, title, thumbnail }) => (
@@ -44,6 +56,78 @@ export const WorkGridItem = ({ children, id, title, thumbnail }) => (
     </LinkBox>
   </Box>
 )
+
+export const ContactForm = () => {
+
+  const {
+    handleSubmit,
+    register,
+    formState: { errors, isSubmitting },
+  } = useForm()
+
+  function onSubmit(values) {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        alert(JSON.stringify(values, null, 2))
+        resolve()
+      }, 3000)
+    })
+  }
+
+  return (
+
+    <SimpleGrid columns={1} spacing={3}>
+      <FormControl isRequired id="name" isInvalid={errors.name}>
+        <Input
+          id='name'
+          type='text'
+          name='text'
+          placeholder='Name'
+          _focusVisible="none"
+          border="none"
+        />
+      </FormControl>
+      <FormControl isRequired id="email">
+        <Input
+          id='email'
+          type="email"
+          name="email"
+          placeholder="E-mail"
+          _focusVisible="none"
+          border="none"
+        />
+      </FormControl>
+      <FormControl isRequired>
+        <Textarea
+          id='message'
+          type='text'
+          name="message"
+          placeholder="Your Message"
+          columm={1}
+          rows={6}
+          resize="none"
+          _focusVisible="none"
+          border="none"
+          variant="outline"
+        />
+      </FormControl>
+      <Button
+        id='submit'
+        type='submit'
+        name='submit'
+        fontWeight='bold'
+        _focusVisible="none"
+        _focus="none"
+        _hover="none"
+        bg="null"
+        variant="teal"
+        colorScheme='none'
+      >
+        Send Message
+      </Button>
+    </SimpleGrid>
+  );
+}
 
 export const GridItemStyle = () => (
   <Global

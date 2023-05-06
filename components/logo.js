@@ -8,8 +8,8 @@ const LogoBox = styled.span`
   font-size: 18px;
   display: inline-flex;
   align-items: center;
-  height: 30px;
-  line-height: 20px;
+  height: 40px;
+  line-height: 40px;
   padding: 10px;
 
   > svg {
@@ -33,7 +33,7 @@ const Logo = () => {
           fontWeight="bold"
           ml={3}
         >
-          Takuya Matsuyama
+          Rodrigo Trindade
         </Text>
       </LogoBox>
 

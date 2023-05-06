@@ -12,7 +12,7 @@ const VoxelDog = () => {
   const refContainer = useRef()
   const [loading, setLoading] = useState(true)
   const refRenderer = useRef()
-  const urlDogGLB = (process.env.NODE_ENV === 'production' ? 'https://craftzdog.global.ssl.fastly.net/homepage' : '') + '/dog.glb'
+  const urlDogGLB = '/computer.glb'
 
   const handleWindowResize = useCallback(() => {
     const { current: renderer } = refRenderer
@@ -52,7 +52,7 @@ const VoxelDog = () => {
 
       // 640 -> 240
       // 8   -> 6
-      const scale = scH * 0.005 + 4.8
+      const scale = scH * 0.002 + 4.8
       const camera = new THREE.OrthographicCamera(
         -scale,
         scale,
@@ -123,4 +123,8 @@ const VoxelDog = () => {
   )
 }
 
+
 export default VoxelDog
+
+
+// "Smol Ame in an Upcycled Terrarium [HololiveEn]" (https://skfb.ly/ooJO8) by Seafoam is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
