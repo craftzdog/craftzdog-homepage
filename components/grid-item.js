@@ -60,19 +60,9 @@ export const WorkGridItem = ({ children, id, title, thumbnail }) => (
 export const ContactForm = () => {
 
   const {
-    handleSubmit,
-    register,
-    formState: { errors, isSubmitting },
+    formState: { errors },
   } = useForm()
 
-  function onSubmit(values) {
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        alert(JSON.stringify(values, null, 2))
-        resolve()
-      }, 3000)
-    })
-  }
 
   return (
 
