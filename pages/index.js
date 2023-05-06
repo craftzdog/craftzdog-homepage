@@ -79,7 +79,7 @@ const Home = () => (
           Work
         </Heading>
         <Paragraph>
-          Hi there, I'm Rodrigo, a beginner Data Scientist with a passion for solving problems
+          Hi there, I&apos;m Rodrigo, a beginner Data Scientist with a passion for solving problems
           using data. I recently completed a Systems Developer Associate Degree and i am proficient in Python, R and SQL. I have self experience in data cleaning,
           exploratory data analysis, and data visualization, and I am currently learning more advanced
           topics such as machine learning in my Data Science & Analytics Especialization at Universidade de São Paulo.
