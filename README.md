@@ -4,7 +4,7 @@
 
 ## Tutorial
 
-Watch how the develop tutorial of this website on YouTube:
+Watch the develop tutorial of this website on YouTube:
 
 [![YouTube thumbnail](./doc/thumb.png)](https://www.youtube.com/watch?v=bSMZgXzC9AA)
 
