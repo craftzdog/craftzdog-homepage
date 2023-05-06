@@ -27,6 +27,7 @@ const Logo = () => {
 
       <LogoBox>
         <FootprintIcon />
+        <Text>&nbsp;</Text>
         <Text
           color={useColorModeValue('gray.800', 'whiteAlpha.900')}
           fontFamily='M PLUS Rounded 1c", sans-serif'

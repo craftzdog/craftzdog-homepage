@@ -74,6 +74,7 @@ const Navbar = props => {
           display={{ base: 'none', md: 'flex' }}
           width={{ base: 'full', md: 'auto' }}
           alignItems="center"
+          justify="space-evenly"
           flexGrow={1}
           mt={{ base: 4, md: 0 }}
         >
@@ -88,7 +89,7 @@ const Navbar = props => {
           </LinkItem>
           <LinkItem
             target="_blank"
-            href="https://github.com/craftzdog/craftzdog-homepage"
+            href="https://github.com/elir0d/rodrigo-trindade-portifolio"
             path={path}
             display="inline-flex"
             alignItems="center"
@@ -126,7 +127,7 @@ const Navbar = props => {
                 </MenuItem>
                 <MenuItem
                   as={Link}
-                  href="https://github.com/craftzdog/craftzdog-homepage"
+                  href="https://github.com/elir0d/rodrigo-trindade-portifolio"
                 >
                   View Source
                 </MenuItem>

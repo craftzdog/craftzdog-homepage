@@ -1,9 +1,15 @@
-import { Box } from '@chakra-ui/react'
+import { Box, Link, Text } from '@chakra-ui/react'
 
 const Footer = () => {
   return (
     <Box align="center" opacity={0.4} fontSize="sm">
-      &copy; {new Date().getFullYear()} <a href='https://www.craftz.dog/' target='_blank'>Takuya Matsuyama's website</a>. All Rights Reserved.
+      <Text>
+        &copy; {new Date().getFullYear()} This website is built based on the {' '}
+        <Link href='https://www.craftz.dog/' target='_blank' color="teal">
+          Takuya Matsuyama&apos;s website.  
+        </Link> 
+        &nbsp;All Rights Reserved.
+      </Text>
     </Box>
   )
 }
