@@ -2,7 +2,7 @@ const FootprintIcon = props => {
   return (
 <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
  width="25" height="25" viewBox="0 8 100 100"
->
+ {...props}>
 <g transform="translate(0.000000,100.000000) scale(0.100000,-0.100000)"
 fill="CurrentColor" stroke="none">
 <path d="M248 852 c-9 -13 -31 -21 -69 -25 -134 -16 -215 -72 -162 -113 17
