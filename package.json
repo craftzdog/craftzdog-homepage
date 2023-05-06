@@ -23,7 +23,8 @@
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.43.9",
     "react-icons": "^4.7.1",
-    "three": "^0.148.0"
+    "three": "^0.148.0",
+    "update": "^0.7.4"
   },
   "devDependencies": {
     "eslint": "^8.31.0",
