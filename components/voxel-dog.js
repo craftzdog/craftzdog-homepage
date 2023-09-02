@@ -12,7 +12,7 @@ const VoxelDog = () => {
   const refContainer = useRef()
   const [loading, setLoading] = useState(true)
   const refRenderer = useRef()
-  const urlDogGLB = (process.env.NODE_ENV === 'production' ? 'https://craftzdog.global.ssl.fastly.net/homepage' : '') + '/dog.glb'
+  //const urlDogGLB = (process.env.NODE_ENV === 'production' ? 'https://craftzdog.global.ssl.fastly.net/homepage' : '') + '/dog.glb'
 
   const handleWindowResize = useCallback(() => {
     const { current: renderer } = refRenderer
@@ -31,7 +31,6 @@ const VoxelDog = () => {
     if (container) {
       const scW = container.clientWidth
       const scH = container.clientHeight
-
       const renderer = new THREE.WebGLRenderer({
         antialias: true,
         alpha: true
@@ -43,23 +42,25 @@ const VoxelDog = () => {
       refRenderer.current = renderer
       const scene = new THREE.Scene()
 
-      const target = new THREE.Vector3(-0.5, 1.2, 0)
+      const target = new THREE.Vector3()
       const initialCameraPosition = new THREE.Vector3(
         20 * Math.sin(0.2 * Math.PI),
-        10,
-        20 * Math.cos(0.2 * Math.PI)
+        100,
+        200 * Math.cos(0.2 * Math.PI)
       )
 
       // 640 -> 240
       // 8   -> 6
-      const scale = scH * 0.005 + 4.8
+      const zoom_factor = 2
+      const scale = scH / zoom_factor + 4.8
+      const scaleW = scW  / zoom_factor + 4.8
       const camera = new THREE.OrthographicCamera(
-        -scale,
-        scale,
-        scale,
-        -scale,
-        0.01,
-        50000
+        -scaleW/2,
+        scaleW/2,
+        scale/2,
+        -scale/2,
+        100,
+        5000 
       )
       camera.position.copy(initialCameraPosition)
       camera.lookAt(target)
@@ -71,7 +72,7 @@ const VoxelDog = () => {
       controls.autoRotate = true
       controls.target = target
 
-      loadGLTFModel(scene, urlDogGLB, {
+      loadGLTFModel(scene, '/saitama.glb', {
         receiveShadow: false,
         castShadow: false
       }).then(() => {
