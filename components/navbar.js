@@ -46,7 +46,7 @@ const Navbar = props => {
   const { path } = props
 
   return (
-    <Box
+  <Box
       position="fixed"
       as="nav"
       w="100%"
@@ -69,7 +69,7 @@ const Navbar = props => {
           </Heading>
         </Flex>
 
-        <Stack
+        {/* <Stack
           direction={{ base: 'column', md: 'row' }}
           display={{ base: 'none', md: 'flex' }}
           width={{ base: 'full', md: 'auto' }}
@@ -96,12 +96,11 @@ const Navbar = props => {
             <IoLogoGithub />
             Source
           </LinkItem>
-        </Stack>
+        </Stack> */}
 
         <Box flex={1} align="right">
           <ThemeToggleButton />
-
-          <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
+          {/* <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
             <Menu isLazy id="navbar-menu">
               <MenuButton
                 as={IconButton}
@@ -130,7 +129,7 @@ const Navbar = props => {
                 </MenuItem>
               </MenuList>
             </Menu>
-          </Box>
+          </Box> */}
         </Box>
       </Container>
     </Box>

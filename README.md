@@ -1,12 +1,10 @@
-# Takuya's Homepage
+# German's Homepage
 
-[https://www.craftz.dog/](https://www.craftz.dog/)
+[https://german-leontiev.com/](https://german-leontiev.com/)
 
-## Tutorial
+## About
 
-Watch how I built this website on YouTube:
-
-[![YouTube thumbnail](./doc/thumb.png)](https://www.youtube.com/watch?v=bSMZgXzC9AA)
+This is my homepage
 
 ## Stack
 
@@ -33,15 +31,8 @@ $PROJECT_ROOT
 
 MIT License.
 
-You can create your own homepage for free without notifying me by forking this project under the following conditions:
-
-- Add a link to [my homepage](https://www.craftz.dog/)
-- Do not use the 3d voxel dog
+This homepage is modified version of [Takuya's Homepage](https://github.com/craftzdog/craftzdog-homepage)
+Saitama's model is under CC Attribution. It was downloaded from [this source](https://sketchfab.com/3d-models/saitama-one-punch-man-revised-5933d345ad9441d499c93eb655a9b214)
 
 Check out [LICENSE](./LICENSE) for more detail.
 
----
-
-Looking for a Markdown note-taking app? Check out my app called Inkdrop:
-
-[![Inkdrop](https://github.com/craftzdog/dotfiles-public/raw/master/images/inkdrop.png)](https://www.inkdrop.app/)

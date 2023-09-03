@@ -26,6 +26,7 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
     "sharp": "^0.32.5",
+    "test": "^3.3.0",
     "three": "^0.148.0",
     "web-streams-node": "^0.4.0"
   },
