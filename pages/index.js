@@ -41,7 +41,13 @@ const Home = () => (
       </Box>
 
       <Box display={{ md: 'flex' }}>
-        <Box flexGrow={1}>
+        <Box 
+          flexGrow={1} 
+          mb={6}
+          p={3}
+          bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
+          borderRadius="lg"
+        >
           <Heading as="h2" variant="page-title">
            German Leontiev 
           </Heading>
