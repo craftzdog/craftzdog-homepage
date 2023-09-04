@@ -69,7 +69,7 @@ const Navbar = props => {
           </Heading>
         </Flex>
 
-        {/* <Stack
+        <Stack
           direction={{ base: 'column', md: 'row' }}
           display={{ base: 'none', md: 'flex' }}
           width={{ base: 'full', md: 'auto' }}
@@ -77,30 +77,17 @@ const Navbar = props => {
           flexGrow={1}
           mt={{ base: 4, md: 0 }}
         >
-          <LinkItem href="/works" path={path}>
-            Works
+          <LinkItem href="/services" path={path}>
+            Services
           </LinkItem>
-          <LinkItem href="/posts" path={path}>
-            Posts
+          <LinkItem href="/portfolio" path={path}>
+            Portfolio
           </LinkItem>
-          <LinkItem href="https://uses.craftz.dog/">Uses</LinkItem>
-          <LinkItem
-            target="_blank"
-            href="https://github.com/craftzdog/craftzdog-homepage"
-            path={path}
-            display="inline-flex"
-            alignItems="center"
-            style={{ gap: 4 }}
-            pl={2}
-          >
-            <IoLogoGithub />
-            Source
-          </LinkItem>
-        </Stack> */}
+        </Stack>
 
         <Box flex={1} align="right">
           <ThemeToggleButton />
-          {/* <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
+          <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
             <Menu isLazy id="navbar-menu">
               <MenuButton
                 as={IconButton}
@@ -112,24 +99,15 @@ const Navbar = props => {
                 <MenuItem as={MenuLink} href="/">
                   About
                 </MenuItem>
-                <MenuItem as={MenuLink} href="/works">
-                  Works
+                <MenuItem as={MenuLink} href="/services">
+                  Services
                 </MenuItem>
-                <MenuItem as={MenuLink} href="/posts">
-                  Posts
-                </MenuItem>
-                <MenuItem as={MenuLink} href="https://uses.craftz.dog/">
-                  Uses
-                </MenuItem>
-                <MenuItem
-                  as={Link}
-                  href="https://github.com/craftzdog/craftzdog-homepage"
-                >
-                  View Source
+                <MenuItem as={MenuLink} href="/portfolio">
+                  Portfolio
                 </MenuItem>
               </MenuList>
             </Menu>
-          </Box> */}
+          </Box>
         </Box>
       </Container>
     </Box>

@@ -4,7 +4,6 @@ import {
   Container,
   Heading,
   Box,
-  SimpleGrid,
   Button,
   List,
   ListItem,
@@ -16,10 +15,7 @@ import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
-import { GridItem } from '../components/grid-item'
 import { IoLogoGithub, IoLogoYoutube, IoSend, IoLogoLinkedin } from 'react-icons/io5'
-import thumbYouTube from '../public/images/links/youtube.png'
-import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
 import Image from 'next/image'
 
 const ProfileImage = chakra(Image, {
@@ -85,10 +81,7 @@ const Home = () => (
           Work
         </Heading>
         <Paragraph>
-          German is a machine learning engeneer based in Saint-Petersburg with a
-          passion for creating AI-powered services. He helps business to solve 
-          ML-specific tasks and takes responsibility for all stages of project
-          from ML System Design to deploying and integrating with production.
+        German is a Saint-Petersburg-based Machine Learning Engineer committed to delivering AI solutions that drive business success. He manages projects end-to-end, from crafting the ML architecture to seamless deployment and integration into production workflows.
         </Paragraph>
         <Box align="center" my={4}>
           <Button
