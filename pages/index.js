@@ -116,7 +116,7 @@ const Home = () => (
         
         <BioSection>
           <BioYear>2021</BioYear>
-          Launched his own internetional online-shop 
+          Launched his own international online-shop 
         </BioSection>
         <BioSection>
           <BioYear>2022 to present</BioYear>
