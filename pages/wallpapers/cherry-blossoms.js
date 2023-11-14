@@ -37,7 +37,7 @@ const Wallpaper = () => (
             tools to create high-quality content 💪🙏
           </em>
         </Box>
-        <BuyButton productId="65jPS" price={49} />
+        <BuyButton productId="65jPS" price={19} />
       </Box>
 
       <AspectRatio maxW="640px" ratio={1.7} my={4}>
