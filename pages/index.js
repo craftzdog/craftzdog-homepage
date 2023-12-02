@@ -150,18 +150,7 @@ const Home = () => (
             </Link>
           </ListItem>
           <ListItem>
-            <Link href="https://linkedin.com/in/german-leontiev/" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoLinkedin/>}
-              >
-                @german-leontiev
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://t.me/german_leoontiev" target="_blank">
+            <Link href="https://t.me/german_leontiev" target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="teal"
