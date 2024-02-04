@@ -10,7 +10,7 @@ const LogoBox = styled.span`
   align-items: center;
   height: 30px;
   line-height: 20px;
-  padding: 10px;
+  padding: 5px;
 
   > svg {
     transition: 200ms ease;
@@ -26,14 +26,14 @@ const Logo = () => {
     (<Link href="/" scroll={false}>
 
       <LogoBox>
-        <FootprintIcon />
+        
         <Text
           color={useColorModeValue('gray.800', 'whiteAlpha.900')}
           fontFamily='M PLUS Rounded 1c", sans-serif'
           fontWeight="bold"
           ml={3}
         >
-          Takuya Matsuyama
+          Yoseph Rafael B
         </Text>
       </LogoBox>
 

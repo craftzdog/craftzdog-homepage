@@ -16,9 +16,9 @@ import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
-import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
+import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub, IoLogoMedium } from 'react-icons/io5'
 import thumbYouTube from '../public/images/links/youtube.png'
-import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
+import thumbPianist1 from '../public/images/works/14juara1.jpg'
 import Image from 'next/image'
 
 const Home = () => (
@@ -32,15 +32,15 @@ const Home = () => (
         bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
         css={{ backdropFilter: 'blur(10px)' }}
       >
-        Hello, I&apos;m an indie app developer based in Japan!
+        Hi, I&apos;m an UX Designer based in Jakarta!
       </Box>
 
       <Box display={{ md: 'flex' }}>
         <Box flexGrow={1}>
           <Heading as="h2" variant="page-title">
-            Takuya Matsuyama
+            Yoseph Rafael Bonar Clinton R.
           </Heading>
-          <p>Digital Craftsman ( Artist / Developer / Designer )</p>
+          <p>UX Designer - Frontend Web Developer</p>
         </Box>
         <Box
           flexShrink={0}
@@ -59,7 +59,7 @@ const Home = () => (
             overflow="hidden"
           >
             <Image
-              src="/images/takuya.jpg"
+              src="/images/yosep.jpg"
               alt="Profile image"
               width="100"
               height="100"
@@ -73,26 +73,18 @@ const Home = () => (
           Work
         </Heading>
         <Paragraph>
-          Takuya is a freelance and a full-stack developer based in Osaka with a
-          passion for building digital services/stuff he wants. He has a knack
-          for all things launching products, from planning and designing all the
-          way to solving real-life problems with code. When not online, he loves
-          hanging out with his camera. Currently, he is living off of his own
-          product called{' '}
-          <Link as={NextLink} href="/works/inkdrop" passHref scroll={false}>
-            Inkdrop
-          </Link>
-          . He publishes content for marketing his products and his YouTube
-          channel called &quot;
+        -- Beginner in UI/UX Designer and Frontend WebDev who are working in this field for last 2 years. I’m ready to give you my best and atleast im trying. When not online, he loves
+          hanging out with his cat.
+          . i'd love to write sometimes on my blog &quot;
           <Link
             as={NextLink}
             href="https://www.youtube.com/devaslife"
             passHref
             target="_blank"
           >
-            Dev as Life
+            Blogseph
           </Link>
-          &quot; has more than 100k subscribers.
+          &quot; anyway god is great all the time
         </Paragraph>
         <Box align="center" my={4}>
           <Button
@@ -112,39 +104,32 @@ const Home = () => (
           Bio
         </Heading>
         <BioSection>
-          <BioYear>1984</BioYear>
-          Born in Osaka (大阪), Japan.
+          <BioYear>2006</BioYear>
+          Born in Jakarta (Джакарта), Indonesia.
         </BioSection>
         <BioSection>
-          <BioYear>2010</BioYear>
-          Completed the Master&apos;s Program in the Graduate School of
-          Information Science at Nara Institute of Science and Technology
-          (奈良先端科学技術大学院大学情報科学研究科修士課程)
+          <BioYear>2023</BioYear>
+          6 Month Intern Web Dev at Karamelgroup
         </BioSection>
         <BioSection>
-          <BioYear>2010</BioYear>
-          Worked at Yahoo! Japan (ヤフー株式会社入社)
+          <BioYear>2024</BioYear>
+          I'm still in school in grade 12
+          (СМКН 14 Джакарта)
         </BioSection>
         <BioSection>
-          <BioYear>2012 to present</BioYear>
-          Working as a freelancer
+          <BioYear>2028</BioYear>
+          i wish i can work for google soon :)
         </BioSection>
       </Section>
 
       <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
-          I ♥
+          I like to do 
         </Heading>
         <Paragraph>
-          Art, Music,{' '}
-          <Link href="https://illust.odoruinu.net/" target="_blank">
-            Drawing
-          </Link>
-          , Playing Drums,{' '}
-          <Link href="https://500px.com/p/craftzdog" target="_blank">
-            Photography
-          </Link>
-          , Leica, Machine Learning
+          Arranging Music, playing Piano,
+            playing Guitar, playing bass, 
+            basketball, volleyball, badminton sometimes, and coding.
         </Paragraph>
       </Section>
 
@@ -154,39 +139,39 @@ const Home = () => (
         </Heading>
         <List>
           <ListItem>
-            <Link href="https://github.com/craftzdog" target="_blank">
+            <Link href="https://github.com/JosephCETH30" target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="teal"
                 leftIcon={<IoLogoGithub />}
               >
-                @craftzdog
+                @JosephCETH30
               </Button>
             </Link>
           </ListItem>
           <ListItem>
-            <Link href="https://twitter.com/inkdrop_app" target="_blank">
+            <Link href="https://pyoseph.medium.com" target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="teal"
-                leftIcon={<IoLogoTwitter />}
+                leftIcon={<IoLogoMedium />}
               >
-                @inkdrop_app (English)
+                @Joseph Rafael B. (Indo)
               </Button>
             </Link>
           </ListItem>
           <ListItem>
-            <Link href="https://twitter.com/craftzdog" target="_blank">
+            <Link href="https://instagram.com/_yoseph28" target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="teal"
-                leftIcon={<IoLogoTwitter />}
+                leftIcon={<IoLogoInstagram />}
               >
-                @craftzdog (日本語)
+                @_yoseph28
               </Button>
             </Link>
           </ListItem>
-          <ListItem>
+          {/* <ListItem>
             <Link href="https://instagram.com/craftzdog" target="_blank">
               <Button
                 variant="ghost"
@@ -196,43 +181,42 @@ const Home = () => (
                 @craftzdog
               </Button>
             </Link>
-          </ListItem>
+          </ListItem> */}
         </List>
 
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
-          <GridItem
+          {/* <GridItem
             href="https://www.youtube.com/devaslife"
             title="Dev as Life"
             thumbnail={thumbYouTube}
           >
             My YouTube channel (&gt;150k subs)
-          </GridItem>
+          </GridItem> */}
           <GridItem
             href="https://www.inkdrop.app/"
-            title="Inkdrop"
-            thumbnail={thumbInkdrop}
+            title="Pianist - Padus"
+            thumbnail={thumbPianist1}
           >
-            A Markdown note-taking app
+            Mengiringi Peserta juara 1 Paduan Suara se JP
           </GridItem>
         </SimpleGrid>
 
         <Heading as="h3" variant="section-title">
-          Newsletter
+          Contact Me
         </Heading>
         <p>
-          Join me on a behind-the-scenes coding journey. Weekly updates on
-          projects, tutorials, and videos
+        Work inquiry, Job oportunities? Send Message.
         </p>
 
         <Box align="center" my={4}>
           <Button
             as={NextLink}
-            href="https://www.devas.life/"
+            href="mailto:yoseph@skiff.com"
             scroll={false}
             leftIcon={<EmailIcon />}
             colorScheme="teal"
           >
-            Sign up my newsletter here
+            Click here to Email me
           </Button>
         </Box>
       </Section>

@@ -80,14 +80,14 @@ const Navbar = props => {
           <LinkItem href="/works" path={path}>
             Works
           </LinkItem>
-          <LinkItem href="/wallpapers" path={path}>
-            Wallpapers
-          </LinkItem>
+          {/* <LinkItem href="/wallpapers" path={path}>
+           Free music sheet
+          </LinkItem> */}
           <LinkItem href="/posts" path={path}>
             Posts
           </LinkItem>
-          <LinkItem href="https://uses.craftz.dog/">Uses</LinkItem>
-          <LinkItem
+          <LinkItem href="https://blogseph.vercel.app">Blog</LinkItem>
+          {/* <LinkItem
             target="_blank"
             href="https://github.com/craftzdog/craftzdog-homepage"
             path={path}
@@ -98,7 +98,7 @@ const Navbar = props => {
           >
             <IoLogoGithub />
             Source
-          </LinkItem>
+          </LinkItem> */}
         </Stack>
 
         <Box flex={1} align="right">
@@ -108,7 +108,7 @@ const Navbar = props => {
             <Menu isLazy id="navbar-menu">
               <MenuButton
                 as={IconButton}
-                icon={<HamburgerIcon />}
+ icon={<HamburgerIcon />}
                 variant="outline"
                 aria-label="Options"
               />
@@ -119,21 +119,21 @@ const Navbar = props => {
                 <MenuItem as={MenuLink} href="/works">
                   Works
                 </MenuItem>
-                <MenuItem as={MenuLink} href="/wallpapers">
-                  Wallpapers
-                </MenuItem>
+                {/* <MenuItem as={MenuLink} href="/musicsheet">
+                  Free Wallpapers
+                </MenuItem> */}
                 <MenuItem as={MenuLink} href="/posts">
                   Posts
                 </MenuItem>
                 <MenuItem as={MenuLink} href="https://uses.craftz.dog/">
-                  Uses
+                  Blog
                 </MenuItem>
-                <MenuItem
+                {/* <MenuItem
                   as={Link}
                   href="https://github.com/craftzdog/craftzdog-homepage"
                 >
                   View Source
-                </MenuItem>
+                </MenuItem> */}
               </MenuList>
             </Menu>
           </Box>

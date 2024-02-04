@@ -18,41 +18,36 @@ const Work = () => (
   <Layout title="freeDBTagger">
     <Container>
       <Title>
-        freeDBTagger <Badge>2004-2009</Badge>
+        Urusizin.co <Badge>2023</Badge>
       </Title>
-      <Center my={6}>
-        <Image src="/images/works/freedbtagger_icon.gif" alt="icon" />
-      </Center>
-      <P>Automatic audio file tagging tool using FreeDB for Windows</P>
-      <P>楽曲長の組み合わせでアルバムを特定して楽曲情報を自動入力</P>
       <P>
-        アルバム内楽曲の再生時間の組み合わせで、CDDBサーバー“freeDB.org”を検索してアルバムを特定、楽曲情報を取得できるID3タグ一括編集ソフト。本ソフトを起動し、読み込んだアルバム1枚分の音楽ファイルの曲順を整えて［アルバム検索］を実行すれば、あとは本ソフトが、オープンソースで運営されているCDDBサーバー“freeDB.org”で再生時間の組み合わせからアルバムを特定して、アルバム名や曲名、アーチスト名などの情報を取得してくれる。MP3/WMA/Ogg
-        Vorbis/AAC/Monkey&apos;s Audio/MPEGplus/FLAC/Twin
-        VQ/WavPackファイルの楽曲情報を取得・編集できるほか、CDAファイルの楽曲情報を表示可能。MP3ファイルのタグに登録する場合のタグ形式は、ID3v1・ID3v2に対応しており、設定画面で選択可能。タグ項目内の文字数が30文字以上の場合のみ、ID3v2に登録する機能も備えている。
+      Website Penyelia Halal menyediakan Informasi yang akurat sesuai dengan subject pelayanan yang diberikan
       </P>
-
       <List ml={4} my={4}>
         <ListItem>
-          <Meta>Platform</Meta>
-          <span>Windows 2000/XP</span>
-        </ListItem>
-        <ListItem>
-          <Meta>Stack</Meta>
-          <span>Delphi</span>
-        </ListItem>
-        <ListItem>
-          <Meta>Download</Meta>
-          <Link href="http://odoruinu.net.s3.amazonaws.com/software/freedbtagger/fdbt105.zip">
-            v1.0.5
+          <Meta>Website</Meta>
+          <Link href="https://urusizin.co">
+            https://urusizin.co <ExternalLinkIcon mx="2px" />
           </Link>
         </ListItem>
         <ListItem>
-          <Meta>Last update</Meta>
-          <span>2009/02/16</span>
+          <Meta>Affiliated with</Meta>
+          <span>halalhero.id/karamelgroup.com/Urushalal.co/PTSP Halal/Halal Indonesia/Keluharan Jakarta Timur/Walikota Jakarta Timur</span>
+        </ListItem>
+        <ListItem>
+          <Meta>Stack</Meta>
+          <span>CSS, JS, Bootstrap5</span>
+        </ListItem>
+        <ListItem>
+          <Meta>Blogpost</Meta>
+          <Link href="#">
+            Mengapa Harus memilih Urusizin.co Sebagai platform urus izin usaha di 2024 ini?<ExternalLinkIcon mx="2px" />
+          </Link>
         </ListItem>
       </List>
 
-      <Heading as="h4" fontSize={16} my={6}>
+
+      {/* <Heading as="h4" fontSize={16} my={6}>
         <Center>Media coverage</Center>
       </Heading>
 
@@ -115,9 +110,9 @@ const Work = () => (
             ただ、ほんのちょっと不安定さを感じたので４つ...
           </span>
         </ListItem>
-      </UnorderedList>
+      </UnorderedList> */}
 
-      <WorkImage src="/images/works/freedbtagger_01.jpg" alt="freeDBTagger" />
+      <WorkImage src="/images/works/urusizinco.jpg" alt="urusizin.co" />
     </Container>
   </Layout>
 )

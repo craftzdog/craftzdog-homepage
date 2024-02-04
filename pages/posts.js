@@ -3,14 +3,9 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
 
-import thumbPortfolio from '../public/images/contents/youtube-how-to-build-portfolio.jpg'
-import thumbHowToUseInkdrop from '../public/images/contents/youtube-how-to-use-inkdrop.jpg'
-import thumbFishWorkflow from '../public/images/contents/youtube-fish-workflow.jpg'
-import thumbMyDeskSetup from '../public/images/contents/youtube-my-desk-setup.jpg'
-import thumb500PaidUsers from '../public/images/contents/blog-500-paid-users.jpg'
-import thumbFinancialGoal from '../public/images/contents/blog-financial-goal.png'
-import thumbHowToPriceYourself from '../public/images/contents/blog-how-to-price-yourself.jpg'
-import thumb50xFaster from '../public/images/contents/youtube-50x-faster.jpg'
+import gsw1 from '../public/images/contents/gsw2.jpg'
+import figma1 from '../public/images/contents/figma1.jpg'
+import netlifymedium from '../public/images/contents/netlifymedium.jpg'
 
 const Posts = () => (
   <Layout title="Posts">
@@ -22,29 +17,29 @@ const Posts = () => (
       <Section delay={0.1}>
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
           <GridItem
-            title="How to build a portfolio website"
-            thumbnail={thumbPortfolio}
-            href="https://www.youtube.com/watch?v=bSMZgXzC9AA"
+            title="Golden State Warriors Kalah 2x dengan margin point yang bikin sakit kepala"
+            thumbnail={gsw1}
+            href="https://pyoseph.medium.com/golden-state-warriors-kalah-2x-dengan-margin-point-yang-bikin-sakit-kepala-f33ce8979499"
           />
           <GridItem
-            title="How to take notes in Markdown efficiently with Inkdrop"
-            thumbnail={thumbHowToUseInkdrop}
-            href="https://www.youtube.com/watch?v=-qBavwqc_mY"
+            title="Emang bener Figma Berbayar? Rudi Gong!"
+            thumbnail={figma1}
+            href="https://pyoseph.medium.com/emang-bener-figma-berbayar-rudi-gong-3208c10915a6"
           />
           <GridItem
-            title="My Fish workflow"
-            thumbnail={thumbFishWorkflow}
-            href="https://www.youtube.com/watch?v=KKxhf50FIPI"
+            title="Cara Upload Website dengan Mudah ke Netlify"
+            thumbnail={netlifymedium}
+            href="https://pyoseph.medium.com/cara-upload-website-dengan-mudah-ke-netlify-2396aa597ad5"
           />
-          <GridItem
+          {/* <GridItem
             title="My desk setup (Late 2020)"
             thumbnail={thumbMyDeskSetup}
             href="https://www.youtube.com/watch?v=1OFDMwDlnOE"
-          />
+          /> */}
         </SimpleGrid>
       </Section>
 
-      <Section delay={0.3}>
+      {/* <Section delay={0.3}>
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
           <GridItem
             title="How I’ve Attracted The First 500 Paid Users For My SaaS That Costs $5/mo"
@@ -72,7 +67,7 @@ const Posts = () => (
             href="https://www.youtube.com/watch?v=vj723NlrIQc"
           />
         </SimpleGrid>
-      </Section>
+      </Section> */}
     </Container>
   </Layout>
 )
