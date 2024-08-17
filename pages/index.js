@@ -205,7 +205,7 @@ const Home = () => (
             title="Dev as Life"
             thumbnail={thumbYouTube}
           >
-            My YouTube channel (&gt;150k subs)
+            My YouTube channel (&gt;200k subs)
           </GridItem>
           <GridItem
             href="https://www.inkdrop.app/"
