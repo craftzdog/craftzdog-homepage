@@ -10,10 +10,10 @@ import thumbBgRem from '../public/images/works/bgrem.jpg'
 import thumbEmotion from '../public/images/works/emotion.jpg'
 
 const Works = () => (
-  <Layout title="Works">
+  <Layout title="Pet projects">
     <Container>
       <Heading as="h3" fontSize={20} mb={4}>
-        Works
+        Pet projects
       </Heading>
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>

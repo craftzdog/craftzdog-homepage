@@ -19,17 +19,17 @@ const Posts = () => (
           <GridItem
             title="AI web apps development"
             thumbnail={thumbAIWebDev}
-            href="mailto:mail@german-leontiev.com&subject=AI web apps development"
+            href="mailto:german_leontiev@mail.ru&subject=AI web apps development"
           />
           <GridItem
             title="ML-model training"
             thumbnail={thumbMlTrain}
-            href="mailto:mail@german-leontiev.com&subject=ML-model training"
+            href="mailto:german_leontiev@mail.ru&subject=ML-model training"
           />
           <GridItem
             title="Consulting"
             thumbnail={thumbAIConsult}
-            href="mailto:mail@german-leontiev.com&subject=AI Consulting"
+            href="mailto:german_leontiev@mail.ru&subject=AI Consulting"
           />
         </SimpleGrid>
       </Section>

@@ -15,7 +15,7 @@ import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
-import { IoLogoGithub, IoLogoYoutube, IoSend, IoLogoLinkedin } from 'react-icons/io5'
+import { IoLogoGithub, IoLogoYoutube, IoSend } from 'react-icons/io5'
 import Image from 'next/image'
 
 const ProfileImage = chakra(Image, {
@@ -129,7 +129,7 @@ const Home = () => (
           I ♥
         </Heading>
         <Paragraph>
-          Self-improvement, psychology, music, games and machile learning.
+          Self-improvement, psychology, music, games and machine learning.
         </Paragraph>
       </Section>
 
@@ -156,7 +156,7 @@ const Home = () => (
                 colorScheme="teal"
                 leftIcon={<IoSend/>}
               >
-                @german_leoontiev
+                @german_leontiev
               </Button>
             </Link>
           </ListItem>
