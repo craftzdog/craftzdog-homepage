@@ -89,3 +89,4 @@ jobs:
             docker rm one-punch-ml || true
             echo "Starting a new container..."
             docker run -dit --name one-punch-ml -p 3000:80 ${{ secrets.DOCKER_HUB_USERNAME }}/one-punch-ml:latest
+          debug: true
