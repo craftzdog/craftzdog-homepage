@@ -10,28 +10,33 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Шаг 1: Клонируем репозиторий
       - name: Checkout
         uses: actions/checkout@v2
 
+      # Шаг 2: Настраиваем Docker Buildx
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v1
+        uses: docker/setup-buildx-action@v2
 
+      # Шаг 3: Кэширование Docker-слоев
       - name: Cache Docker layers
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: /tmp/.buildx-cache
           key: ${{ runner.os }}-buildx-${{ github.sha }}
           restore-keys: |
             ${{ runner.os }}-buildx-
 
+      # Шаг 4: Логин в Docker Hub
       - name: Login to Docker Hub
-        uses: docker/login-action@v1
+        uses: docker/login-action@v2
         with:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
 
-      - name: Build and push
-        uses: docker/build-push-action@v2
+      # Шаг 5: Сборка и отправка Docker-образа
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v4
         with:
           context: .
           file: ./Dockerfile
@@ -40,39 +45,47 @@ jobs:
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache-new
 
+      # Шаг 6: Перемещение кэша
       - name: Move cache
         run: |
           rm -rf /tmp/.buildx-cache
           mv /tmp/.buildx-cache-new /tmp/.buildx-cache
 
   deploy:
-
     needs: build
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      # Шаг 1: Клонируем репозиторий
+      - name: Checkout
+        uses: actions/checkout@v2
 
+      # Шаг 2: Устанавливаем SSH-ключ
       - name: Install SSH Key
         uses: shimataro/ssh-key-action@v2
         with:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          known_hosts: unnecessary
+          known_hosts: |
+            ${{ secrets.SSH_HOST }}
 
-      - name: Adding Known Hosts
-        run: ssh-keyscan -p ${{ secrets.SSH_PORT}} -H ${{ secrets.SSH_HOST }}  >> ~/.ssh/known_hosts
+      # Шаг 3: Добавляем хост в known_hosts
+      - name: Add Known Hosts
+        run: |
+          ssh-keyscan -p ${{ secrets.SSH_PORT }} -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
 
+      # Шаг 4: Перезапуск Docker-контейнера через SSH
       - name: Restart Docker container
-        uses: appleboy/ssh-action@master
+        uses: appleboy/ssh-action@v0.1.9
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.SSH_PORT }}
           script: |
-            docker pull ${{ secrets.DOCKER_HUB_USERNAME }}/one-punch-ml
-            CONTAINER=`docker ps | grep :3000`
-            docker stop ${CONTAINER::12}
-            docker run -dit -p 3000:80 ${{ secrets.DOCKER_HUB_USERNAME }}/one-punch-ml
-            docker rm ${CONTAINER::12}
+            echo "Pulling the latest Docker image..."
+            docker pull ${{ secrets.DOCKER_HUB_USERNAME }}/one-punch-ml:latest
+            echo "Stopping existing container..."
+            docker stop one-punch-ml || true
+            docker rm one-punch-ml || true
+            echo "Starting a new container..."
+            docker run -dit --name one-punch-ml -p 3000:80 ${{ secrets.DOCKER_HUB_USERNAME }}/one-punch-ml:latest

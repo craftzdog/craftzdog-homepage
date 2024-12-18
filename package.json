@@ -19,7 +19,7 @@
     "@emotion/styled": "^11.11.0",
     "electron": "^26.1.0",
     "framer-motion": "^8.5.5",
-    "next": "^13.4.19",
+    "next": "^13.5.7",
     "package-lock.json": "^1.0.0",
     "package.json": "^0.0.0",
     "react": "^18.2.0",
