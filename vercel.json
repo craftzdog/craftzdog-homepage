@@ -1,5 +1,17 @@
 {
   "github": {
     "silent": true
-  }
+  },
+  "redirects": [
+    {
+      "source": "/wallpapers/machiya",
+      "destination": "https://store.craftz.dog/b/mPTOX",
+      "statusCode": 302
+    },
+    {
+      "source": "/wallpapers/cherry-blossoms",
+      "destination": "https://store.craftz.dog/b/65jPS",
+      "statusCode": 302
+    }
+  ]
 }
