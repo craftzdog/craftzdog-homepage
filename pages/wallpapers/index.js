@@ -4,6 +4,7 @@ import Layout from '../../components/layouts/article'
 import Section from '../../components/section'
 import { WorkGridItem } from '../../components/grid-item'
 
+import thumbKyoto from '../../public/images/wallpapers/kyoto/ls_084.jpg'
 import thumbCherryBlossoms from '../../public/images/wallpapers/cherry-blossoms/ls-13.jpg'
 import thumbMachiya from '../../public/images/wallpapers/machiya/ls-03.jpg'
 
@@ -25,6 +26,16 @@ const Wallpapers = () => (
 
       <Section>
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
+          <WorkGridItem
+            category="wallpapers"
+            id="kyoto"
+            title="Textures of Kyoto"
+            thumbnail={thumbKyoto}
+          >
+            This pack highlights the tactile details of Kyoto&apos;s cultural
+            essence, featuring moss-covered stones, aged wooden walls, rock
+            garden patterns, and temple architecture,
+          </WorkGridItem>
           <WorkGridItem
             category="wallpapers"
             id="machiya"

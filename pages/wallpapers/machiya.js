@@ -1,15 +1,9 @@
-import {
-  Container,
-  Heading,
-  AspectRatio,
-  Box,
-  useColorModeValue
-} from '@chakra-ui/react'
+import { Container, Heading, AspectRatio } from '@chakra-ui/react'
 import { Title, LegalLinks } from '../../components/wallpaper'
-import { BuyButton } from '../../components/payhip'
 import P from '../../components/paragraph'
 import Layout from '../../components/layouts/article'
 import WallpaperThumbnailList from '../../components/wallpaper-thumbnail-list'
+import { WallpaperProductBox } from '../../components/wallpaper-product-box'
 
 const Wallpaper = () => (
   <Layout title="Machiya coding wallpaper pack">
@@ -26,21 +20,7 @@ const Wallpaper = () => (
         of serene tradition to digital workspaces.
       </P>
 
-      <Box
-        align="center"
-        my={4}
-        p={4}
-        borderRadius="lg"
-        bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
-      >
-        <Box mb={4}>
-          <em>
-            Buying the wallpaper pack will greatly help me invest in gear and
-            tools to create high-quality content 💪🙏
-          </em>
-        </Box>
-        <BuyButton productId="mPTOX" price={19} />
-      </Box>
+      <WallpaperProductBox productId="mPTOX" price={19} />
 
       <AspectRatio maxW="640px" ratio={1.7} my={4}>
         <iframe
