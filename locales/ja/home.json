@@ -1,0 +1,83 @@
+{
+  "greeting": "こんにちは、日本を拠点とするインディーアプリ開発者です！",
+  "profile": {
+    "name": "中川 幸樹",
+    "title": "デジタル職人（アーティスト / 開発者 / デザイナー）"
+  },
+  "sections": {
+    "work": {
+      "title": "仕事",
+      "description": "中川幸樹は大阪を拠点とするフリーランスのフルスタック開発者で、自分が作りたいデジタルサービスや製品を構築することに情熱を注いでいます。計画や設計から、コードで実際の問題を解決するまで、製品のローンチに関するあらゆることに精通しています。オンラインでないときは、カメラを持って出かけるのが大好きです。現在、{inkdrop}という自社製品で生計を立てています。製品のマーケティングのためのコンテンツを公開しており、{devaslife}というYouTubeチャンネルは10万人以上の登録者がいます。",
+      "inkdrop": "Inkdrop",
+      "devaslife": "Dev as Life"
+    },
+    "bio": {
+      "title": "経歴",
+      "items": [
+        {
+          "year": "1984",
+          "description": "大阪生まれ"
+        },
+        {
+          "year": "2010",
+          "description": "奈良先端科学技術大学院大学情報科学研究科修士課程修了"
+        },
+        {
+          "year": "2010",
+          "description": "ヤフー株式会社入社"
+        },
+        {
+          "year": "2012〜現在",
+          "description": "フリーランスとして活動"
+        }
+      ]
+    },
+    "interests": {
+      "title": "好きなもの ♥",
+      "description": "アート、音楽、{drawing}、ドラム演奏、{photography}、ライカ、機械学習",
+      "drawing": "イラスト",
+      "photography": "写真"
+    },
+    "onTheWeb": {
+      "title": "ウェブ上で",
+      "social": [
+        {
+          "platform": "GitHub",
+          "handle": "@craftzdog",
+          "url": "https://github.com/craftzdog"
+        },
+        {
+          "platform": "Twitter",
+          "handle": "@inkdrop_app (English)",
+          "url": "https://twitter.com/inkdrop_app"
+        },
+        {
+          "platform": "Twitter",
+          "handle": "@craftzdog (日本語)",
+          "url": "https://twitter.com/craftzdog"
+        },
+        {
+          "platform": "Instagram",
+          "handle": "@craftzdog",
+          "url": "https://instagram.com/craftzdog"
+        }
+      ],
+      "featured": [
+        {
+          "title": "Dev as Life",
+          "description": "私のYouTubeチャンネル（20万人以上の登録者）",
+          "url": "https://www.youtube.com/devaslife"
+        },
+        {
+          "title": "Inkdrop",
+          "description": "Markdownノートアプリ",
+          "url": "https://www.inkdrop.app/"
+        }
+      ]
+    },
+    "newsletter": {
+      "title": "ニュースレター",
+      "description": "コーディングの舞台裏を一緒に見ていきましょう。プロジェクト、チュートリアル、動画の週次アップデート"
+    }
+  }
+}

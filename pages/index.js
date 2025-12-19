@@ -12,233 +12,228 @@ import {
 } from '@chakra-ui/react'
 import Image from 'next/image'
 import NextLink from 'next/link'
+import { useEffect, useState } from 'react'
 import { IoLogoGithub, IoLogoInstagram, IoLogoTwitter } from 'react-icons/io5'
 import { BioSection, BioYear } from '../components/bio'
 import { GridItem } from '../components/grid-item'
 import Layout from '../components/layouts/article'
 import Paragraph from '../components/paragraph'
 import Section from '../components/section'
+import { useLanguage } from '../contexts/LanguageContext'
+import { t, tWithLinks } from '../lib/i18n'
 import thumbYouTube from '../public/images/links/youtube.png'
 import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
 
-const Home = () => (
-  <Layout>
-    <Container>
-      <Box
-        borderRadius="lg"
-        mb={6}
-        p={3}
-        textAlign="center"
-        bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
-        css={{ backdropFilter: 'blur(10px)' }}
-      >
-        Hello, I&apos;m an indie app developer based in Japan!
-      </Box>
+const Home = () => {
+  const { locale, loadTranslations } = useLanguage()
+  const [content, setContent] = useState(null)
 
-      <Box display={{ md: 'flex' }}>
-        <Box flexGrow={1}>
-          <Heading as="h2" variant="page-title">
-            Koki Nakagawa
-          </Heading>
-          <p>Digital Craftsman ( Artist / Developer / Designer )</p>
-        </Box>
+  useEffect(() => {
+    const load = async () => {
+      const homeTranslations = await loadTranslations('home')
+      setContent(homeTranslations)
+    }
+    load()
+  }, [locale, loadTranslations])
+
+  if (!content) {
+    return <Layout><Container>Loading...</Container></Layout>
+  }
+
+  return (
+    <Layout>
+      <Container>
         <Box
-          flexShrink={0}
-          mt={{ base: 4, md: 0 }}
-          ml={{ md: 6 }}
+          borderRadius="lg"
+          mb={6}
+          p={3}
           textAlign="center"
+          bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
+          css={{ backdropFilter: 'blur(10px)' }}
         >
+          {t(content, 'greeting')}
+        </Box>
+
+        <Box display={{ md: 'flex' }}>
+          <Box flexGrow={1}>
+            <Heading as="h2" variant="page-title">
+              {t(content, 'profile.name')}
+            </Heading>
+            <p>{t(content, 'profile.title')}</p>
+          </Box>
           <Box
-            borderColor="whiteAlpha.800"
-            borderWidth={2}
-            borderStyle="solid"
-            w="100px"
-            h="100px"
-            display="inline-block"
-            borderRadius="full"
-            overflow="hidden"
+            flexShrink={0}
+            mt={{ base: 4, md: 0 }}
+            ml={{ md: 6 }}
+            textAlign="center"
           >
-            <Image
-              src="/images/koki_face.jpg"
-              alt="Profile image"
-              width="100"
-              height="100"
-            />
+            <Box
+              borderColor="whiteAlpha.800"
+              borderWidth={2}
+              borderStyle="solid"
+              w="100px"
+              h="100px"
+              display="inline-block"
+              borderRadius="full"
+              overflow="hidden"
+            >
+              <Image
+                src="/images/koki_face.jpg"
+                alt="Profile image"
+                width="100"
+                height="100"
+              />
+            </Box>
           </Box>
         </Box>
-      </Box>
 
-      <Section delay={0.1}>
-        <Heading as="h3" variant="section-title">
-          Work
-        </Heading>
-        <Paragraph>
-          Koki is a freelance and a full-stack developer based in Osaka with a
-          passion for building digital services/stuff he wants. He has a knack
-          for all things launching products, from planning and designing all the
-          way to solving real-life problems with code. When not online, he loves
-          hanging out with his camera. Currently, he is living off of his own
-          product called{' '}
-          <Link as={NextLink} href="/works/inkdrop" passHref scroll={false}>
-            Inkdrop
-          </Link>
-          . He publishes content for marketing his products and his YouTube
-          channel called &quot;
-          <Link
-            as={NextLink}
-            href="https://www.youtube.com/devaslife"
-            passHref
-            target="_blank"
-          >
-            Dev as Life
-          </Link>
-          &quot; has more than 100k subscribers.
-        </Paragraph>
-        <Box align="center" my={4}>
-          <Button
-            as={NextLink}
-            href="/works"
-            scroll={false}
-            rightIcon={<ChevronRightIcon />}
-            colorScheme="teal"
-          >
-            My portfolio
-          </Button>
-        </Box>
-      </Section>
+        <Section delay={0.1}>
+          <Heading as="h3" variant="section-title">
+            {t(content, 'sections.work.title')}
+          </Heading>
+          <Paragraph>
+            {tWithLinks(t(content, 'sections.work.description'), {
+              inkdrop: (
+                <Link
+                  key="inkdrop"
+                  as={NextLink}
+                  href="/works/inkdrop"
+                  passHref
+                  scroll={false}
+                >
+                  {t(content, 'sections.work.inkdrop')}
+                </Link>
+              ),
+              devaslife: (
+                <Link
+                  key="devaslife"
+                  as={NextLink}
+                  href="https://www.youtube.com/devaslife"
+                  passHref
+                  target="_blank"
+                >
+                  {t(content, 'sections.work.devaslife')}
+                </Link>
+              )
+            })}
+          </Paragraph>
+          <Box align="center" my={4}>
+            <Button
+              as={NextLink}
+              href="/works"
+              scroll={false}
+              rightIcon={<ChevronRightIcon />}
+              colorScheme="teal"
+            >
+              {locale === 'ja' ? 'ポートフォリオ' : 'My portfolio'}
+            </Button>
+          </Box>
+        </Section>
 
-      <Section delay={0.2}>
-        <Heading as="h3" variant="section-title">
-          Bio
-        </Heading>
-        <BioSection>
-          <BioYear>1984</BioYear>
-          Born in Osaka (大阪), Japan.
-        </BioSection>
-        <BioSection>
-          <BioYear>2010</BioYear>
-          Completed the Master&apos;s Program in the Graduate School of
-          Information Science at Nara Institute of Science and Technology
-          (奈良先端科学技術大学院大学情報科学研究科修士課程)
-        </BioSection>
-        <BioSection>
-          <BioYear>2010</BioYear>
-          Worked at Yahoo! Japan (ヤフー株式会社入社)
-        </BioSection>
-        <BioSection>
-          <BioYear>2012 to present</BioYear>
-          Working as a freelancer
-        </BioSection>
-      </Section>
+        <Section delay={0.2}>
+          <Heading as="h3" variant="section-title">
+            {t(content, 'sections.bio.title')}
+          </Heading>
+          {content.sections.bio.items.map((item, index) => (
+            <BioSection key={index}>
+              <BioYear>{item.year}</BioYear>
+              {item.description}
+            </BioSection>
+          ))}
+        </Section>
 
-      <Section delay={0.3}>
-        <Heading as="h3" variant="section-title">
-          I ♥
-        </Heading>
-        <Paragraph>
-          Art, Music,{' '}
-          <Link href="https://illust.odoruinu.net/" target="_blank">
-            Drawing
-          </Link>
-          , Playing Drums,{' '}
-          <Link href="https://500px.com/p/craftzdog" target="_blank">
-            Photography
-          </Link>
-          , Leica, Machine Learning
-        </Paragraph>
-      </Section>
+        <Section delay={0.3}>
+          <Heading as="h3" variant="section-title">
+            {t(content, 'sections.interests.title')}
+          </Heading>
+          <Paragraph>
+            {tWithLinks(t(content, 'sections.interests.description'), {
+              drawing: (
+                <Link
+                  key="drawing"
+                  href="https://illust.odoruinu.net/"
+                  target="_blank"
+                >
+                  {t(content, 'sections.interests.drawing')}
+                </Link>
+              ),
+              photography: (
+                <Link
+                  key="photography"
+                  href="https://500px.com/p/craftzdog"
+                  target="_blank"
+                >
+                  {t(content, 'sections.interests.photography')}
+                </Link>
+              )
+            })}
+          </Paragraph>
+        </Section>
 
-      <Section delay={0.3}>
-        <Heading as="h3" variant="section-title">
-          On the web
-        </Heading>
-        <List>
-          <ListItem>
-            <Link href="https://github.com/craftzdog" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoGithub />}
+        <Section delay={0.3}>
+          <Heading as="h3" variant="section-title">
+            {t(content, 'sections.onTheWeb.title')}
+          </Heading>
+          <List>
+            {content.sections.onTheWeb.social.map((social, index) => {
+              const icons = {
+                GitHub: IoLogoGithub,
+                Twitter: IoLogoTwitter,
+                Instagram: IoLogoInstagram
+              }
+              const Icon = icons[social.platform]
+              return (
+                <ListItem key={index}>
+                  <Link href={social.url} target="_blank">
+                    <Button
+                      variant="ghost"
+                      colorScheme="teal"
+                      leftIcon={<Icon />}
+                    >
+                      {social.handle}
+                    </Button>
+                  </Link>
+                </ListItem>
+              )
+            })}
+          </List>
+
+          <SimpleGrid columns={[1, 2, 2]} gap={6}>
+            {content.sections.onTheWeb.featured.map((item, index) => (
+              <GridItem
+                key={index}
+                href={item.url}
+                title={item.title}
+                thumbnail={index === 0 ? thumbYouTube : thumbInkdrop}
               >
-                @craftzdog
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://twitter.com/inkdrop_app" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoTwitter />}
-              >
-                @inkdrop_app (English)
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://twitter.com/craftzdog" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoTwitter />}
-              >
-                @craftzdog (日本語)
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://instagram.com/craftzdog" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoInstagram />}
-              >
-                @craftzdog
-              </Button>
-            </Link>
-          </ListItem>
-        </List>
+                {item.description}
+              </GridItem>
+            ))}
+          </SimpleGrid>
 
-        <SimpleGrid columns={[1, 2, 2]} gap={6}>
-          <GridItem
-            href="https://www.youtube.com/devaslife"
-            title="Dev as Life"
-            thumbnail={thumbYouTube}
-          >
-            My YouTube channel (&gt;200k subs)
-          </GridItem>
-          <GridItem
-            href="https://www.inkdrop.app/"
-            title="Inkdrop"
-            thumbnail={thumbInkdrop}
-          >
-            A Markdown note-taking app
-          </GridItem>
-        </SimpleGrid>
+          <Heading as="h3" variant="section-title">
+            {t(content, 'sections.newsletter.title')}
+          </Heading>
+          <p>{t(content, 'sections.newsletter.description')}</p>
 
-        <Heading as="h3" variant="section-title">
-          Newsletter
-        </Heading>
-        <p>
-          Join me on a behind-the-scenes coding journey. Weekly updates on
-          projects, tutorials, and videos
-        </p>
-
-        <Box align="center" my={4}>
-          <Button
-            as={NextLink}
-            href="https://www.devas.life/"
-            scroll={false}
-            leftIcon={<EmailIcon />}
-            colorScheme="teal"
-          >
-            Sign up my newsletter here
-          </Button>
-        </Box>
-      </Section>
-    </Container>
-  </Layout>
-)
+          <Box align="center" my={4}>
+            <Button
+              as={NextLink}
+              href="https://www.devas.life/"
+              scroll={false}
+              leftIcon={<EmailIcon />}
+              colorScheme="teal"
+            >
+              {locale === 'ja'
+                ? 'ニュースレターに登録'
+                : 'Sign up my newsletter here'}
+            </Button>
+          </Box>
+        </Section>
+      </Container>
+    </Layout>
+  )
+}
 
 export default Home
 export { getServerSideProps } from '../components/chakra'

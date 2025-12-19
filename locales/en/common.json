@@ -1,0 +1,15 @@
+{
+  "nav": {
+    "works": "Works",
+    "posts": "Posts",
+    "source": "Source",
+    "personal": "Personal"
+  },
+  "buttons": {
+    "myPortfolio": "My portfolio",
+    "signUpNewsletter": "Sign up my newsletter here"
+  },
+  "theme": {
+    "toggleColorMode": "Toggle theme"
+  }
+}

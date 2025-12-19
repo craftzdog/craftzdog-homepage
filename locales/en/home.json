@@ -1,0 +1,83 @@
+{
+  "greeting": "Hello, I'm an indie app developer based in Japan!",
+  "profile": {
+    "name": "Koki Nakagawa",
+    "title": "Digital Craftsman ( Artist / Developer / Designer )"
+  },
+  "sections": {
+    "work": {
+      "title": "Work",
+      "description": "Koki is a freelance and a full-stack developer based in Osaka with a passion for building digital services/stuff he wants. He has a knack for all things launching products, from planning and designing all the way to solving real-life problems with code. When not online, he loves hanging out with his camera. Currently, he is living off of his own product called {inkdrop}. He publishes content for marketing his products and his YouTube channel called {devaslife} has more than 100k subscribers.",
+      "inkdrop": "Inkdrop",
+      "devaslife": "\"Dev as Life\""
+    },
+    "bio": {
+      "title": "Bio",
+      "items": [
+        {
+          "year": "1984",
+          "description": "Born in Osaka (大阪), Japan."
+        },
+        {
+          "year": "2010",
+          "description": "Completed the Master's Program in the Graduate School of Information Science at Nara Institute of Science and Technology (奈良先端科学技術大学院大学情報科学研究科修士課程)"
+        },
+        {
+          "year": "2010",
+          "description": "Worked at Yahoo! Japan (ヤフー株式会社入社)"
+        },
+        {
+          "year": "2012 to present",
+          "description": "Working as a freelancer"
+        }
+      ]
+    },
+    "interests": {
+      "title": "I ♥",
+      "description": "Art, Music, {drawing}, Playing Drums, {photography}, Leica, Machine Learning",
+      "drawing": "Drawing",
+      "photography": "Photography"
+    },
+    "onTheWeb": {
+      "title": "On the web",
+      "social": [
+        {
+          "platform": "GitHub",
+          "handle": "@craftzdog",
+          "url": "https://github.com/craftzdog"
+        },
+        {
+          "platform": "Twitter",
+          "handle": "@inkdrop_app (English)",
+          "url": "https://twitter.com/inkdrop_app"
+        },
+        {
+          "platform": "Twitter",
+          "handle": "@craftzdog (日本語)",
+          "url": "https://twitter.com/craftzdog"
+        },
+        {
+          "platform": "Instagram",
+          "handle": "@craftzdog",
+          "url": "https://instagram.com/craftzdog"
+        }
+      ],
+      "featured": [
+        {
+          "title": "Dev as Life",
+          "description": "My YouTube channel (>200k subs)",
+          "url": "https://www.youtube.com/devaslife"
+        },
+        {
+          "title": "Inkdrop",
+          "description": "A Markdown note-taking app",
+          "url": "https://www.inkdrop.app/"
+        }
+      ]
+    },
+    "newsletter": {
+      "title": "Newsletter",
+      "description": "Join me on a behind-the-scenes coding journey. Weekly updates on projects, tutorials, and videos"
+    }
+  }
+}
