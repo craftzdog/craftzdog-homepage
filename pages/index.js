@@ -1,25 +1,25 @@
-import NextLink from 'next/link'
+import { ChevronRightIcon, EmailIcon } from '@chakra-ui/icons'
 import {
-  Link,
+  Box,
+  Button,
   Container,
   Heading,
-  Box,
-  SimpleGrid,
-  Button,
+  Link,
   List,
   ListItem,
+  SimpleGrid,
   useColorModeValue
 } from '@chakra-ui/react'
-import { ChevronRightIcon, EmailIcon } from '@chakra-ui/icons'
-import Paragraph from '../components/paragraph'
+import Image from 'next/image'
+import NextLink from 'next/link'
+import { IoLogoGithub, IoLogoInstagram, IoLogoTwitter } from 'react-icons/io5'
 import { BioSection, BioYear } from '../components/bio'
-import Layout from '../components/layouts/article'
-import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
-import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
+import Layout from '../components/layouts/article'
+import Paragraph from '../components/paragraph'
+import Section from '../components/section'
 import thumbYouTube from '../public/images/links/youtube.png'
 import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
-import Image from 'next/image'
 
 const Home = () => (
   <Layout>
@@ -38,7 +38,7 @@ const Home = () => (
       <Box display={{ md: 'flex' }}>
         <Box flexGrow={1}>
           <Heading as="h2" variant="page-title">
-            Takuya Matsuyama
+            Koki Nakagawa
           </Heading>
           <p>Digital Craftsman ( Artist / Developer / Designer )</p>
         </Box>
@@ -59,7 +59,7 @@ const Home = () => (
             overflow="hidden"
           >
             <Image
-              src="/images/takuya.jpg"
+              src="/images/koki_face.jpg"
               alt="Profile image"
               width="100"
               height="100"
@@ -73,7 +73,7 @@ const Home = () => (
           Work
         </Heading>
         <Paragraph>
-          Takuya is a freelance and a full-stack developer based in Osaka with a
+          Koki is a freelance and a full-stack developer based in Osaka with a
           passion for building digital services/stuff he wants. He has a knack
           for all things launching products, from planning and designing all the
           way to solving real-life problems with code. When not online, he loves

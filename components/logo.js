@@ -1,7 +1,7 @@
-import Link from 'next/link'
 import { Text, useColorModeValue } from '@chakra-ui/react'
-import FootprintIcon from './icons/footprint'
 import styled from '@emotion/styled'
+import Link from 'next/link'
+import FootprintIcon from './icons/footprint'
 
 const LogoBox = styled.span`
   font-weight: bold;
@@ -33,7 +33,7 @@ const Logo = () => {
           fontWeight="bold"
           ml={3}
         >
-          Takuya Matsuyama
+          Koki Nakagawa
         </Text>
       </LogoBox>
 
