@@ -1,15 +1,5 @@
 import { ChevronRightIcon, EmailIcon } from '@chakra-ui/icons'
-import {
-  Box,
-  Button,
-  Container,
-  Heading,
-  Link,
-  List,
-  ListItem,
-  SimpleGrid,
-  useColorModeValue
-} from '@chakra-ui/react'
+import { Box, Button, Container, Heading, Link, List, ListItem, SimpleGrid, useColorModeValue } from '@chakra-ui/react'
 import Image from 'next/image'
 import NextLink from 'next/link'
 import { useEffect, useState } from 'react'
