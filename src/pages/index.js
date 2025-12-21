@@ -1,13 +1,13 @@
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import {
-    Box,
-    Button,
-    Container,
-    Heading,
-    Link,
-    List,
-    ListItem,
-    useColorModeValue
+  Box,
+  Button,
+  Container,
+  Heading,
+  Link,
+  List,
+  ListItem,
+  useColorModeValue
 } from '@chakra-ui/react'
 import styled from '@emotion/styled'
 import Image from 'next/image'
@@ -137,40 +137,40 @@ const Home = () => {
           </Heading>
           <List>
             <ListItem>
-              <Link href="https://github.com/yourusername" target="_blank">
+              <Link href="https://github.com/Minimalist-00" target="_blank">
                 <Button
                   variant="ghost"
                   colorScheme="teal"
                   leftIcon={<IoLogoGithub />}
                 >
-                  @yourusername
+                  GitHub
                 </Button>
               </Link>
             </ListItem>
             <ListItem>
-              <Link href="https://twitter.com/yourusername" target="_blank">
+              <Link href="https://x.com/Minimalist_30" target="_blank">
                 <Button
                   variant="ghost"
                   colorScheme="teal"
                   leftIcon={<IoLogoTwitter />}
                 >
-                  @yourusername
+                  x / Twitter
                 </Button>
               </Link>
             </ListItem>
             <ListItem>
-              <Link href="https://instagram.com/yourusername" target="_blank">
+              <Link href="https://www.instagram.com/koki.n.0_0/" target="_blank">
                 <Button
                   variant="ghost"
                   colorScheme="teal"
                   leftIcon={<IoLogoInstagram />}
                 >
-                  @yourusername
+                  Instagram
                 </Button>
               </Link>
             </ListItem>
             <ListItem>
-              <Link href="https://linkedin.com/in/yourusername" target="_blank">
+              <Link href="https://www.linkedin.com/in/koki-nakagawa-236443292/" target="_blank">
                 <Button
                   variant="ghost"
                   colorScheme="teal"
@@ -181,7 +181,7 @@ const Home = () => {
               </Link>
             </ListItem>
             <ListItem>
-              <Link href="https://note.com/yourusername" target="_blank">
+              <Link href="https://note.com/minimalist30" target="_blank">
                 <Button
                   variant="ghost"
                   colorScheme="teal"
