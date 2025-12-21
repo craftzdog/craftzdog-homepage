@@ -14,7 +14,6 @@ import {
   useColorModeValue
 } from '@chakra-ui/react'
 import NextLink from 'next/link'
-import LanguageToggleButton from './language-toggle-button'
 import Logo from './logo'
 import ThemeToggleButton from './theme-toggle-button'
 
@@ -88,7 +87,6 @@ const Navbar = props => {
         </Stack>
 
         <Box flex={1} align="right">
-          <LanguageToggleButton />
           <ThemeToggleButton />
 
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>

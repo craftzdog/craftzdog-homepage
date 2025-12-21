@@ -1,38 +1,27 @@
-import { ChevronRightIcon, EmailIcon } from '@chakra-ui/icons'
-import { Box, Button, Container, Heading, Link, List, ListItem, SimpleGrid, useColorModeValue } from '@chakra-ui/react'
+import { ChevronRightIcon } from '@chakra-ui/icons'
+import {
+  Box,
+  Button,
+  Container,
+  Heading,
+  Link,
+  List,
+  ListItem,
+  useColorModeValue
+} from '@chakra-ui/react'
 import Image from 'next/image'
 import NextLink from 'next/link'
-import { useEffect, useState } from 'react'
-import { IoLogoGithub, IoLogoInstagram, IoLogoTwitter } from 'react-icons/io5'
+import { IoLogoGithub, IoLogoInstagram, IoLogoLinkedin, IoLogoTwitter, IoNewspaper } from 'react-icons/io5'
 import { BioSection, BioYear } from '../components/bio'
-import { GridItem } from '../components/grid-item'
 import Layout from '../components/layouts/article'
 import Paragraph from '../components/paragraph'
 import Section from '../components/section'
-import { useLanguage } from '../contexts/LanguageContext'
-import { t, tWithLinks } from '../lib/i18n'
-import thumbYouTube from '../public/images/links/youtube.png'
-import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
 
 const Home = () => {
-  const { locale, loadTranslations } = useLanguage()
-  const [content, setContent] = useState(null)
-
-  useEffect(() => {
-    const load = async () => {
-      const homeTranslations = await loadTranslations('home')
-      setContent(homeTranslations)
-    }
-    load()
-  }, [locale, loadTranslations])
-
-  if (!content) {
-    return <Layout><Container>Loading...</Container></Layout>
-  }
-
   return (
     <Layout>
       <Container>
+        {/* 挨拶 */}
         <Box
           borderRadius="lg"
           mb={6}
@@ -41,15 +30,16 @@ const Home = () => {
           bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
           css={{ backdropFilter: 'blur(10px)' }}
         >
-          {t(content, 'greeting')}
+          こんにちは、Koki Nakagawaのポートフォリオサイトへようこそ！
         </Box>
 
+        {/* プロフィール */}
         <Box display={{ md: 'flex' }}>
           <Box flexGrow={1}>
             <Heading as="h2" variant="page-title">
-              {t(content, 'profile.name')}
+              Koki Nakagawa
             </Heading>
-            <p>{t(content, 'profile.title')}</p>
+            <p>学生 / Developer</p>
           </Box>
           <Box
             flexShrink={0}
@@ -77,35 +67,14 @@ const Home = () => {
           </Box>
         </Box>
 
+        {/* 自己紹介 */}
         <Section delay={0.1}>
           <Heading as="h3" variant="section-title">
-            {t(content, 'sections.work.title')}
+            自己紹介
           </Heading>
           <Paragraph>
-            {tWithLinks(t(content, 'sections.work.description'), {
-              inkdrop: (
-                <Link
-                  key="inkdrop"
-                  as={NextLink}
-                  href="/works/inkdrop"
-                  passHref
-                  scroll={false}
-                >
-                  {t(content, 'sections.work.inkdrop')}
-                </Link>
-              ),
-              devaslife: (
-                <Link
-                  key="devaslife"
-                  as={NextLink}
-                  href="https://www.youtube.com/devaslife"
-                  passHref
-                  target="_blank"
-                >
-                  {t(content, 'sections.work.devaslife')}
-                </Link>
-              )
-            })}
+            テクノロジーとデザインに情熱を持つ学生開発者です。
+            様々なプロジェクトに取り組み、新しい技術を学び続けています。
           </Paragraph>
           <Box align="center" my={4}>
             <Button
@@ -115,110 +84,103 @@ const Home = () => {
               rightIcon={<ChevronRightIcon />}
               colorScheme="teal"
             >
-              {locale === 'ja' ? 'ポートフォリオ' : 'My portfolio'}
+              作品を見る
             </Button>
           </Box>
         </Section>
 
+        {/* Bio（経歴） */}
         <Section delay={0.2}>
           <Heading as="h3" variant="section-title">
-            {t(content, 'sections.bio.title')}
+            Bio
           </Heading>
-          {content.sections.bio.items.map((item, index) => (
-            <BioSection key={index}>
-              <BioYear>{item.year}</BioYear>
-              {item.description}
-            </BioSection>
-          ))}
+          <BioSection>
+            <BioYear>2000</BioYear>
+            日本で生まれる
+          </BioSection>
+          <BioSection>
+            <BioYear>2020</BioYear>
+            大学入学
+          </BioSection>
+          <BioSection>
+            <BioYear>2024</BioYear>
+            研究室配属
+          </BioSection>
         </Section>
 
+        {/* できること */}
         <Section delay={0.3}>
           <Heading as="h3" variant="section-title">
-            {t(content, 'sections.interests.title')}
+            できること
           </Heading>
           <Paragraph>
-            {tWithLinks(t(content, 'sections.interests.description'), {
-              drawing: (
-                <Link
-                  key="drawing"
-                  href="https://illust.odoruinu.net/"
-                  target="_blank"
-                >
-                  {t(content, 'sections.interests.drawing')}
-                </Link>
-              ),
-              photography: (
-                <Link
-                  key="photography"
-                  href="https://500px.com/p/craftzdog"
-                  target="_blank"
-                >
-                  {t(content, 'sections.interests.photography')}
-                </Link>
-              )
-            })}
+            Web開発、モバイルアプリ開発、UI/UXデザイン、
+            機械学習など幅広い分野に興味を持っています。
           </Paragraph>
         </Section>
 
+        {/* SNSリンク */}
         <Section delay={0.3}>
           <Heading as="h3" variant="section-title">
-            {t(content, 'sections.onTheWeb.title')}
+            SNS
           </Heading>
           <List>
-            {content.sections.onTheWeb.social.map((social, index) => {
-              const icons = {
-                GitHub: IoLogoGithub,
-                Twitter: IoLogoTwitter,
-                Instagram: IoLogoInstagram
-              }
-              const Icon = icons[social.platform]
-              return (
-                <ListItem key={index}>
-                  <Link href={social.url} target="_blank">
-                    <Button
-                      variant="ghost"
-                      colorScheme="teal"
-                      leftIcon={<Icon />}
-                    >
-                      {social.handle}
-                    </Button>
-                  </Link>
-                </ListItem>
-              )
-            })}
+            <ListItem>
+              <Link href="https://github.com/yourusername" target="_blank">
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<IoLogoGithub />}
+                >
+                  @yourusername
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="https://twitter.com/yourusername" target="_blank">
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<IoLogoTwitter />}
+                >
+                  @yourusername
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="https://instagram.com/yourusername" target="_blank">
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<IoLogoInstagram />}
+                >
+                  @yourusername
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="https://linkedin.com/in/yourusername" target="_blank">
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<IoLogoLinkedin />}
+                >
+                  LinkedIn
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="https://note.com/yourusername" target="_blank">
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<IoNewspaper />}
+                >
+                  note
+                </Button>
+              </Link>
+            </ListItem>
           </List>
-
-          <SimpleGrid columns={[1, 2, 2]} gap={6}>
-            {content.sections.onTheWeb.featured.map((item, index) => (
-              <GridItem
-                key={index}
-                href={item.url}
-                title={item.title}
-                thumbnail={index === 0 ? thumbYouTube : thumbInkdrop}
-              >
-                {item.description}
-              </GridItem>
-            ))}
-          </SimpleGrid>
-
-          <Heading as="h3" variant="section-title">
-            {t(content, 'sections.newsletter.title')}
-          </Heading>
-          <p>{t(content, 'sections.newsletter.description')}</p>
-
-          <Box align="center" my={4}>
-            <Button
-              as={NextLink}
-              href="https://www.devas.life/"
-              scroll={false}
-              leftIcon={<EmailIcon />}
-              colorScheme="teal"
-            >
-              {locale === 'ja'
-                ? 'ニュースレターに登録'
-                : 'Sign up my newsletter here'}
-            </Button>
-          </Box>
         </Section>
       </Container>
     </Layout>
