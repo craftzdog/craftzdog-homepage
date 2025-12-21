@@ -1,21 +1,32 @@
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import {
-  Box,
-  Button,
-  Container,
-  Heading,
-  Link,
-  List,
-  ListItem,
-  useColorModeValue
+    Box,
+    Button,
+    Container,
+    Heading,
+    Link,
+    List,
+    ListItem,
+    useColorModeValue
 } from '@chakra-ui/react'
+import styled from '@emotion/styled'
 import Image from 'next/image'
 import NextLink from 'next/link'
 import { IoLogoGithub, IoLogoInstagram, IoLogoLinkedin, IoLogoTwitter, IoNewspaper } from 'react-icons/io5'
-import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Paragraph from '../components/paragraph'
 import Section from '../components/section'
+
+// Bio styles (統合)
+const BioSection = styled(Box)`
+  padding-left: 3.4em;
+  text-indent: -3.4em;
+`
+
+const BioYear = styled.span`
+  font-weight: bold;
+  margin-right: 1em;
+`
 
 const Home = () => {
   return (
