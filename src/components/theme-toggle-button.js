@@ -1,28 +1,66 @@
-import { AnimatePresence, motion } from 'framer-motion'
-import { IconButton, useColorMode, useColorModeValue } from '@chakra-ui/react'
-import { SunIcon, MoonIcon } from '@chakra-ui/icons'
+import { MoonIcon, SunIcon } from '@chakra-ui/icons'
+import { Box, useColorMode, useColorModeValue } from '@chakra-ui/react'
 
 const ThemeToggleButton = () => {
   const { toggleColorMode } = useColorMode()
+  const isDark = useColorModeValue(false, true)
 
   return (
-    <AnimatePresence mode='wait' initial={false}>
-      <motion.div
-        style={{ display: 'inline-block' }}
-        key={useColorModeValue('light', 'dark')}
-        initial={{ y: -20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        exit={{ y: 20, opacity: 0 }}
-        transition={{ duration: 0.2 }}
+    <Box
+      as="button"
+      onClick={toggleColorMode}
+      position="relative"
+      display="flex"
+      alignItems="center"
+      gap={0}
+      bg={useColorModeValue('#FFA500', '#4A5568')}
+      borderRadius="full"
+      p={1}
+      cursor="pointer"
+      transition="background-color 0.3s ease"
+      _hover={{
+        opacity: 0.8
+      }}
+      aria-label="Toggle theme"
+    >
+      {/* Sun Icon */}
+      <Box
+        position="relative"
+        zIndex={2}
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        w="32px"
+        h="32px"
+        borderRadius="full"
+        bg={!isDark ? 'white' : 'transparent'}
+        transition="background-color 0.3s ease"
       >
-        <IconButton
-          aria-label="Toggle theme"
-          colorScheme={useColorModeValue('purple', 'orange')}
-          icon={useColorModeValue(<MoonIcon />, <SunIcon />)}
-          onClick={toggleColorMode}
-        ></IconButton>
-      </motion.div>
-    </AnimatePresence>
+        <SunIcon 
+          boxSize={4} 
+          color={!isDark ? '#FFA500' : 'whiteAlpha.700'}
+        />
+      </Box>
+
+      {/* Moon Icon */}
+      <Box
+        position="relative"
+        zIndex={2}
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        w="32px"
+        h="32px"
+        borderRadius="full"
+        bg={isDark ? 'white' : 'transparent'}
+        transition="background-color 0.3s ease"
+      >
+        <MoonIcon 
+          boxSize={4} 
+          color={isDark ? '#4A5568' : 'whiteAlpha.700'}
+        />
+      </Box>
+    </Box>
   )
 }
 
