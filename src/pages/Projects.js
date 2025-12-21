@@ -1,6 +1,6 @@
 import { Container, Divider, Heading } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
-import ProjectGrid from '../components/project-grid'
+import ProjectCardList from '../components/project-card-list'
 import Section from '../components/section'
 
 // メインプロジェクトのデータ
@@ -54,7 +54,7 @@ const Projects = () => (
         Projects
       </Heading>
 
-      <ProjectGrid projects={mainProjects} delay={0} />
+      <ProjectCardList projects={mainProjects} delay={0} />
 
       <Section delay={0.2}>
         <Divider my={6} />
@@ -64,7 +64,7 @@ const Projects = () => (
         </Heading>
       </Section>
 
-      <ProjectGrid projects={otherProjects} delay={0.3} />
+      <ProjectCardList projects={otherProjects} delay={0.3} />
     </Container>
   </Layout>
 )

@@ -3,13 +3,13 @@ import { WorkGridItem } from './grid-item'
 import Section from './section'
 
 /**
- * プロジェクトグリッドコンポーネント
- * プロジェクトの一覧をグリッド形式で表示する再利用可能なコンポーネント
+ * プロジェクトカード一覧コンポーネント
+ * プロジェクトをカード形式で一覧表示する再利用可能なコンポーネント
  * 
  * @param {Array} projects - プロジェクトデータの配列
  * @param {number} delay - アニメーション遅延の基準値（デフォルト: 0）
  */
-const ProjectGrid = ({ projects, delay = 0 }) => {
+const ProjectCardList = ({ projects, delay = 0 }) => {
   return (
     <SimpleGrid columns={[1, 1, 2]} gap={6}>
       {projects.map((project, index) => (
@@ -27,4 +27,4 @@ const ProjectGrid = ({ projects, delay = 0 }) => {
   )
 }
 
-export default ProjectGrid
+export default ProjectCardList
