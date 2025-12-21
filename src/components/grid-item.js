@@ -34,7 +34,8 @@ export const WorkGridItem = ({
         alt={title}
         className="grid-item-thumbnail"
         width={400}
-        height={300}
+        height={225}
+        style={{ objectFit: 'cover' }}
       />
       <Text mt={2} fontSize={20}>
         {title}
@@ -49,6 +50,10 @@ export const GridItemStyle = () => (
     styles={`
       .grid-item-thumbnail {
         border-radius: 12px;
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
       }
     `}
   />
