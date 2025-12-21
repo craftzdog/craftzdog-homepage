@@ -41,7 +41,7 @@ const Home = () => {
           bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
           css={{ backdropFilter: 'blur(10px)' }}
         >
-          こんにちは、Koki Nakagawaのポートフォリオサイトへようこそ！
+          こんにちは！スプラトゥーン5000時間プレイヤーの修士生です💪
         </Box>
 
         {/* プロフィール */}
@@ -50,7 +50,7 @@ const Home = () => {
             <Heading as="h2" variant="page-title">
               Koki Nakagawa
             </Heading>
-            <p>学生 / Developer</p>
+            <p>学生 / Web Developer</p>
           </Box>
           <Box
             flexShrink={0}
