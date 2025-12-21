@@ -19,10 +19,10 @@ import ThemeToggleButton from './theme-toggle-button'
 
 // メニュー項目の定義
 const menuItems = [
-  { href: '/works', label: 'Works' },
-  { href: '/personal', label: 'Personal' },
-  { href: '/posts', label: 'Projects' },
-  { href: 'https://uses.craftz.dog/', label: 'Development' }
+  { href: '/Life', label: 'Life' },
+  { href: '/AboutMe', label: 'About Me' },
+  { href: '/Projects', label: 'Projects' },
+  { href: '/Development', label: 'Development' }
 ]
 
 const LinkItem = ({ href, path, target, children, ...props }) => {

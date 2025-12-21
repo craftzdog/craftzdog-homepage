@@ -3,11 +3,11 @@ import { WorkGridItem } from '../components/grid-item'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 
-const Works = () => (
-  <Layout title="Works">
+const Projects = () => (
+  <Layout title="Projects">
     <Container>
       <Heading as="h3" fontSize={20} mb={4}>
-        Works
+        Projects
       </Heading>
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
@@ -82,5 +82,5 @@ const Works = () => (
   </Layout>
 )
 
-export default Works
+export default Projects
 export { getServerSideProps } from '../components/chakra'
