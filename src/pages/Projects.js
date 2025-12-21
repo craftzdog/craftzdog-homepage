@@ -15,7 +15,7 @@ const Projects = () => (
           <WorkGridItem 
             id="project1" 
             title="プロジェクト1" 
-            thumbnail="/images/koki_face.jpg"
+            thumbnail="/images/project1.png"
           >
             プロジェクト1の説明文がここに入ります
           </WorkGridItem>
@@ -24,7 +24,7 @@ const Projects = () => (
           <WorkGridItem
             id="project2"
             title="プロジェクト2"
-            thumbnail="/images/koki_face.jpg"
+            thumbnail="/images/project2.png"
           >
             プロジェクト2の説明文がここに入ります
           </WorkGridItem>
@@ -34,7 +34,7 @@ const Projects = () => (
           <WorkGridItem
             id="project3"
             title="プロジェクト3"
-            thumbnail="/images/koki_face.jpg"
+            thumbnail="/images/project3.png"
           >
             プロジェクト3の説明文がここに入ります
           </WorkGridItem>
@@ -42,7 +42,7 @@ const Projects = () => (
         <Section delay={0.1}>
           <WorkGridItem 
             id="project4" 
-            thumbnail="/images/koki_face.jpg" 
+            thumbnail="/images/project4.png" 
             title="プロジェクト4"
           >
             プロジェクト4の説明文がここに入ります
@@ -62,7 +62,7 @@ const Projects = () => (
         <Section delay={0.3}>
           <WorkGridItem 
             id="project5" 
-            thumbnail="/images/koki_face.jpg" 
+            thumbnail="/images/project5.png" 
             title="プロジェクト5"
           >
             プロジェクト5の説明文がここに入ります
@@ -71,7 +71,7 @@ const Projects = () => (
         <Section delay={0.3}>
           <WorkGridItem
             id="project6"
-            thumbnail="/images/koki_face.jpg"
+            thumbnail="/images/project6.png"
             title="プロジェクト6"
           >
             プロジェクト6の説明文がここに入ります
