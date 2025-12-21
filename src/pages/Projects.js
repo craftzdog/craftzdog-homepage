@@ -1,7 +1,51 @@
-import { Container, Divider, Heading, SimpleGrid } from '@chakra-ui/react'
-import { WorkGridItem } from '../components/grid-item'
+import { Container, Divider, Heading } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
+import ProjectGrid from '../components/project-grid'
 import Section from '../components/section'
+
+// メインプロジェクトのデータ
+const mainProjects = [
+  {
+    id: 'project1',
+    title: 'プロジェクト1',
+    thumbnail: '/images/project1.png',
+    description: 'プロジェクト1の説明文がここに入ります'
+  },
+  {
+    id: 'project2',
+    title: 'プロジェクト2',
+    thumbnail: '/images/project2.png',
+    description: 'プロジェクト2の説明文がここに入ります'
+  },
+  {
+    id: 'project3',
+    title: 'プロジェクト3',
+    thumbnail: '/images/project3.png',
+    description: 'プロジェクト3の説明文がここに入ります'
+  },
+  {
+    id: 'project4',
+    title: 'プロジェクト4',
+    thumbnail: '/images/project4.png',
+    description: 'プロジェクト4の説明文がここに入ります'
+  }
+]
+
+// その他のプロジェクトのデータ
+const otherProjects = [
+  {
+    id: 'project5',
+    title: 'プロジェクト5',
+    thumbnail: '/images/project5.png',
+    description: 'プロジェクト5の説明文がここに入ります'
+  },
+  {
+    id: 'project6',
+    title: 'プロジェクト6',
+    thumbnail: '/images/project6.png',
+    description: 'プロジェクト6の説明文がここに入ります'
+  }
+]
 
 const Projects = () => (
   <Layout title="Projects">
@@ -10,45 +54,7 @@ const Projects = () => (
         Projects
       </Heading>
 
-      <SimpleGrid columns={[1, 1, 2]} gap={6}>
-        <Section>
-          <WorkGridItem 
-            id="project1" 
-            title="プロジェクト1" 
-            thumbnail="/images/project1.png"
-          >
-            プロジェクト1の説明文がここに入ります
-          </WorkGridItem>
-        </Section>
-        <Section>
-          <WorkGridItem
-            id="project2"
-            title="プロジェクト2"
-            thumbnail="/images/project2.png"
-          >
-            プロジェクト2の説明文がここに入ります
-          </WorkGridItem>
-        </Section>
-
-        <Section delay={0.1}>
-          <WorkGridItem
-            id="project3"
-            title="プロジェクト3"
-            thumbnail="/images/project3.png"
-          >
-            プロジェクト3の説明文がここに入ります
-          </WorkGridItem>
-        </Section>
-        <Section delay={0.1}>
-          <WorkGridItem 
-            id="project4" 
-            thumbnail="/images/project4.png" 
-            title="プロジェクト4"
-          >
-            プロジェクト4の説明文がここに入ります
-          </WorkGridItem>
-        </Section>
-      </SimpleGrid>
+      <ProjectGrid projects={mainProjects} delay={0} />
 
       <Section delay={0.2}>
         <Divider my={6} />
@@ -58,26 +64,7 @@ const Projects = () => (
         </Heading>
       </Section>
 
-      <SimpleGrid columns={[1, 1, 2]} gap={6}>
-        <Section delay={0.3}>
-          <WorkGridItem 
-            id="project5" 
-            thumbnail="/images/project5.png" 
-            title="プロジェクト5"
-          >
-            プロジェクト5の説明文がここに入ります
-          </WorkGridItem>
-        </Section>
-        <Section delay={0.3}>
-          <WorkGridItem
-            id="project6"
-            thumbnail="/images/project6.png"
-            title="プロジェクト6"
-          >
-            プロジェクト6の説明文がここに入ります
-          </WorkGridItem>
-        </Section>
-      </SimpleGrid>
+      <ProjectGrid projects={otherProjects} delay={0.3} />
     </Container>
   </Layout>
 )
