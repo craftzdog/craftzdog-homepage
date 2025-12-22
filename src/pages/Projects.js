@@ -2,72 +2,90 @@ import { Container, Divider, Heading } from '@chakra-ui/react'
 import CardList from '../components/card-list'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
+import { getProjects } from '../lib/notion'
 
-// メインプロジェクトのデータ
-const mainProjects = [
-  {
-    id: 'project1',
-    title: 'プロジェクト1',
-    thumbnail: '/images/project1.png',
-    description: 'プロジェクト1の説明文がここに入ります'
-  },
-  {
-    id: 'project2',
-    title: 'プロジェクト2',
-    thumbnail: '/images/project2.png',
-    description: 'プロジェクト2の説明文がここに入ります'
-  },
-  {
-    id: 'project3',
-    title: 'プロジェクト3',
-    thumbnail: '/images/project3.png',
-    description: 'プロジェクト3の説明文がここに入ります'
-  },
-  {
-    id: 'project4',
-    title: 'プロジェクト4',
-    thumbnail: '/images/project4.png',
-    description: 'プロジェクト4の説明文がここに入ります'
+const Projects = ({ mainProjects, otherProjects, error }) => {
+  // エラーがある場合は表示
+  if (error) {
+    return (
+      <Layout title="Projects">
+        <Container>
+          <Heading as="h3" fontSize={20} mb={4} color="red.500">
+            データの取得に失敗しました
+          </Heading>
+          <p>{error}</p>
+        </Container>
+      </Layout>
+    )
   }
-]
 
-// その他のプロジェクトのデータ
-const otherProjects = [
-  {
-    id: 'project5',
-    title: 'プロジェクト5',
-    thumbnail: '/images/project5.png',
-    description: 'プロジェクト5の説明文がここに入ります'
-  },
-  {
-    id: 'project6',
-    title: 'プロジェクト6',
-    thumbnail: '/images/project6.png',
-    description: 'プロジェクト6の説明文がここに入ります'
-  }
-]
-
-const Projects = () => (
-  <Layout title="Projects">
-    <Container>
-      <Heading as="h3" fontSize={20} mb={4}>
-        研究室での活動
-      </Heading>
-
-      <CardList items={mainProjects} delay={0} />
-
-      <Section delay={0.2}>
-        <Divider my={6} />
-
+  return (
+    <Layout title="Projects">
+      <Container>
         <Heading as="h3" fontSize={20} mb={4}>
-          その他の活動
+          研究室での活動
         </Heading>
-      </Section>
 
-      <CardList items={otherProjects} delay={0.3} />
-    </Container>
-  </Layout>
-)
+        <CardList items={mainProjects} delay={0} />
+
+        <Section delay={0.2}>
+          <Divider my={6} />
+
+          <Heading as="h3" fontSize={20} mb={4}>
+            その他の活動
+          </Heading>
+        </Section>
+
+        <CardList items={otherProjects} delay={0.3} />
+      </Container>
+    </Layout>
+  )
+}
+
+// サーバーサイドでNotionからデータを取得
+export async function getServerSideProps() {
+  try {
+    const projects = await getProjects()
+
+    // プロジェクトを2つのグループに分ける
+    // 最初の4つを「研究室での活動」、残りを「その他の活動」とする
+    const mainProjects = projects.slice(0, 4)
+    const otherProjects = projects.slice(4)
+
+    return {
+      props: {
+        mainProjects,
+        otherProjects,
+        error: null
+      }
+    }
+  } catch (error) {
+    console.error('Projects page error:', error)
+
+    // エラー時はモックデータを返す
+    const mockMainProjects = [
+      {
+        id: 'project1',
+        title: 'プロジェクト1',
+        thumbnail: '/images/project1.png',
+        description: 'プロジェクト1の説明文がここに入ります'
+      },
+      {
+        id: 'project2',
+        title: 'プロジェクト2',
+        thumbnail: '/images/project2.png',
+        description: 'プロジェクト2の説明文がここに入ります'
+      }
+    ]
+
+    return {
+      props: {
+        mainProjects: mockMainProjects,
+        otherProjects: [],
+        error: error.message || 'データの取得に失敗しました'
+      }
+    }
+  }
+}
 
 export default Projects
-export { getServerSideProps } from '../components/chakra'
