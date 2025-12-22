@@ -1,10 +1,74 @@
-import { Container, Divider, Heading } from '@chakra-ui/react'
+import { Center, Container, Divider, Heading, Spinner } from '@chakra-ui/react'
+import { useEffect, useState } from 'react'
 import CardList from '../components/card-list'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
-import { getProjects } from '../lib/notion'
 
-const Projects = ({ mainProjects, otherProjects, error }) => {
+const Projects = () => {
+  const [mainProjects, setMainProjects] = useState([])
+  const [otherProjects, setOtherProjects] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        const response = await fetch('/api/projects')
+        const data = await response.json()
+
+        if (!response.ok) {
+          throw new Error(data.error || 'データの取得に失敗しました')
+        }
+
+        // プロジェクトを2つのグループに分ける
+        const main = data.projects.slice(0, 4)
+        const other = data.projects.slice(4)
+
+        setMainProjects(main)
+        setOtherProjects(other)
+      } catch (err) {
+        console.error('Projects fetch error:', err)
+        setError(err.message)
+
+        // エラー時はモックデータを表示
+        setMainProjects([
+          {
+            id: 'project1',
+            title: 'プロジェクト1',
+            thumbnail: '/images/project1.png',
+            description: 'プロジェクト1の説明文がここに入ります'
+          },
+          {
+            id: 'project2',
+            title: 'プロジェクト2',
+            thumbnail: '/images/project2.png',
+            description: 'プロジェクト2の説明文がここに入ります'
+          }
+        ])
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    fetchProjects()
+  }, [])
+
+  // ローディング中の表示
+  if (loading) {
+    return (
+      <Layout title="Projects">
+        <Container>
+          <Heading as="h3" fontSize={20} mb={4}>
+            研究室での活動
+          </Heading>
+          <Center py={10}>
+            <Spinner size="xl" />
+          </Center>
+        </Container>
+      </Layout>
+    )
+  }
+
   // エラーがある場合は表示
   if (error) {
     return (
@@ -42,52 +106,5 @@ const Projects = ({ mainProjects, otherProjects, error }) => {
   )
 }
 
-// サーバーサイドでNotionからデータを取得
-export async function getServerSideProps({ req }) {
-  try {
-    const projects = await getProjects()
-
-    // プロジェクトを2つのグループに分ける
-    // 最初の4つを「研究室での活動」、残りを「その他の活動」とする
-    const mainProjects = projects.slice(0, 4)
-    const otherProjects = projects.slice(4)
-
-    return {
-      props: {
-        cookies: req.headers.cookie ?? '',
-        mainProjects,
-        otherProjects,
-        error: null
-      }
-    }
-  } catch (error) {
-    console.error('Projects page error:', error)
-
-    // エラー時はモックデータを返す
-    const mockMainProjects = [
-      {
-        id: 'project1',
-        title: 'プロジェクト1',
-        thumbnail: '/images/project1.png',
-        description: 'プロジェクト1の説明文がここに入ります'
-      },
-      {
-        id: 'project2',
-        title: 'プロジェクト2',
-        thumbnail: '/images/project2.png',
-        description: 'プロジェクト2の説明文がここに入ります'
-      }
-    ]
-
-    return {
-      props: {
-        cookies: req.headers.cookie ?? '',
-        mainProjects: mockMainProjects,
-        otherProjects: [],
-        error: error.message || 'データの取得に失敗しました'
-      }
-    }
-  }
-}
-
 export default Projects
+export { getServerSideProps } from '../components/chakra'
