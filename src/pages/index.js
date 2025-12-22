@@ -29,6 +29,15 @@ const BioYear = styled.span`
 `
 
 const Home = () => {
+  // Bioデータの配列
+  const bioData = [
+    { year: '2002', description: '日本で生まれる' },
+    { year: '2021', description: '富山県立大学 入学' },
+    { year: '2025', description: '富山県立大学 卒業' },
+    { year: '2025', description: '富山県立大学修士課程 入学' },
+    { year: '2026', description: '休学（1年間、留学のため）' },
+  ]
+
   return (
     <Layout>
       <Container>
@@ -50,7 +59,7 @@ const Home = () => {
             <Heading as="h2" variant="page-title">
               Koki Nakagawa
             </Heading>
-            <p>学生 / Web Developer</p>
+            <p>大学院生 / Web Developer</p>
           </Box>
           <Box
             flexShrink={0}
@@ -84,8 +93,7 @@ const Home = () => {
             自己紹介
           </Heading>
           <Paragraph>
-            テクノロジーとデザインに情熱を持つ学生開発者です。
-            様々なプロジェクトに取り組み、新しい技術を学び続けています。
+            ほげほげです
           </Paragraph>
           <Box align="center" my={4}>
             <Button
@@ -105,18 +113,12 @@ const Home = () => {
           <Heading as="h3" variant="section-title">
             Bio
           </Heading>
-          <BioSection>
-            <BioYear>2000</BioYear>
-            日本で生まれる
-          </BioSection>
-          <BioSection>
-            <BioYear>2020</BioYear>
-            大学入学
-          </BioSection>
-          <BioSection>
-            <BioYear>2024</BioYear>
-            研究室配属
-          </BioSection>
+          {bioData.map((bio, index) => (
+            <BioSection key={index}>
+              <BioYear>{bio.year}</BioYear>
+              {bio.description}
+            </BioSection>
+          ))}
         </Section>
 
         {/* できること */}
