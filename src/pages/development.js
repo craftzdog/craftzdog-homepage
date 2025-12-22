@@ -31,12 +31,13 @@ const Development = ({ projects, error }) => {
 }
 
 // サーバーサイドでNotionからデータを取得
-export async function getServerSideProps() {
+export async function getServerSideProps({ req }) {
   try {
     const projects = await getDevelopmentProjects()
 
     return {
       props: {
+        cookies: req.headers.cookie ?? '',
         projects,
         error: null
       }
@@ -62,6 +63,7 @@ export async function getServerSideProps() {
 
     return {
       props: {
+        cookies: req.headers.cookie ?? '',
         projects: mockProjects,
         error: error.message || 'データの取得に失敗しました'
       }

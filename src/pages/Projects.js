@@ -43,7 +43,7 @@ const Projects = ({ mainProjects, otherProjects, error }) => {
 }
 
 // サーバーサイドでNotionからデータを取得
-export async function getServerSideProps() {
+export async function getServerSideProps({ req }) {
   try {
     const projects = await getProjects()
 
@@ -54,6 +54,7 @@ export async function getServerSideProps() {
 
     return {
       props: {
+        cookies: req.headers.cookie ?? '',
         mainProjects,
         otherProjects,
         error: null
@@ -80,6 +81,7 @@ export async function getServerSideProps() {
 
     return {
       props: {
+        cookies: req.headers.cookie ?? '',
         mainProjects: mockMainProjects,
         otherProjects: [],
         error: error.message || 'データの取得に失敗しました'
