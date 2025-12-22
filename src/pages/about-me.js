@@ -135,18 +135,9 @@ const TimelineItem = ({ date, title, isLast }) => {
 
 const AboutMe = () => (
   <Layout title="About Me">
-    <Container maxW="container.lg" pt={14} pb={14}>
-      {/* ヘッダー */}
-      <Heading as="h2" fontSize={28} mb={6} display="flex" alignItems="center">
-        <Box
-          as="span"
-          display="inline-block"
-          w="8px"
-          h="28px"
-          bg="blue.500"
-          mr={3}
-        />
-        経歴
+    <Container>
+      <Heading as="h3" fontSize={20} mb={4}>
+        Experience
       </Heading>
 
       {/* タイムラインリスト */}
@@ -163,17 +154,8 @@ const AboutMe = () => (
         ))}
       </Box>
 
-      {/* 実績セクション */}
-      <Heading as="h2" fontSize={28} mb={6} mt={12} display="flex" alignItems="center">
-        <Box
-          as="span"
-          display="inline-block"
-          w="8px"
-          h="28px"
-          bg="blue.500"
-          mr={3}
-        />
-        実績
+      <Heading as="h3" fontSize={20} mb={4}>
+        Awards
       </Heading>
 
       {/* 実績タイムラインリスト */}
