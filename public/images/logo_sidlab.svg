@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 176 176">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+      }
+
+      .cls-3 {
+        font-family: PlusJakartaSansRoman-Medium, 'Plus Jakarta Sans';
+        font-variation-settings: 'wght' 500;
+        font-weight: 500;
+      }
+
+      .cls-2 {
+        stroke: #00b290;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 4px;
+      }
+
+      .cls-4 {
+        font-family: PlusJakartaSansRoman-ExtraBold, 'Plus Jakarta Sans';
+        font-variation-settings: 'wght' 800;
+        font-weight: 700;
+      }
+
+      .cls-5 {
+        fill: #00b290;
+        font-size: 24.78px;
+        letter-spacing: .05em;
+      }
+    </style>
+  </defs>
+  <g id="_レイヤー_1-2" data-name="レイヤー 1">
+    <circle class="cls-1" cx="88" cy="88" r="88"/>
+    <text class="cls-5" transform="translate(41.51 145.99)"><tspan class="cls-4" x="0" y="0">SID</tspan><tspan class="cls-3" x="45.18" y="0">Lab</tspan></text>
+    <path class="cls-2" d="m65.07,54.37c-4.13-1.88-14.08-.56-15.77,5.07-2.33,7.76,8.43,8.91,12.95,7.88,6.17-1.4,10.4-7.25,15.21-12.95,9.01-10.7,14.08-16.9,25.91-20.84,7.44-2.48,23.65-.56,23.65,11.26,0,15.21-28.69,13.42-42.24,13.52v52.94h0c16.29,2.14,19.88-10.12,3.94-8.45"/>
+  </g>
+</svg>
