@@ -231,7 +231,7 @@ const TimelineItem = ({ date, title, isLast }) => {
       </Box>
 
       {/* 中央: 日付 */}
-      <Box w={{ base: '120px', md: '192px' }}>
+      <Box w={{ base: '80px', md: '120px' }}>
         <Text fontSize="15px">{date}</Text>
       </Box>
 

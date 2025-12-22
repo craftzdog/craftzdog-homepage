@@ -15,16 +15,28 @@ const developmentProjects = [
     title: '開発プロジェクト2',
     thumbnail: '/images/no-image.png',
     description: '開発プロジェクト2の説明文がここに入ります'
+  },
+  {
+    id: 'dev2',
+    title: '開発プロジェクト2',
+    thumbnail: '/images/no-image.png',
+    description: '開発プロジェクト2の説明文がここに入ります'
+  },
+  {
+    id: 'dev2',
+    title: '開発プロジェクト2',
+    thumbnail: '/images/no-image.png',
+    description: '開発プロジェクト2の説明文がここに入ります'
   }
 ]
 
 const Development = () => (
   <Layout title="Development">
-    <Container maxW="container.lg" pt={8} pb={14}>
+    <Container>
       <Heading as="h3" fontSize={20} mb={4}>
         開発活動
       </Heading>
-      <CardList items={developmentProjects} delay={0} />
+      <CardList items={developmentProjects} delay={0.3} />
     </Container>
   </Layout>
 )
