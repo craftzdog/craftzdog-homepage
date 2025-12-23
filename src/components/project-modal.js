@@ -30,9 +30,16 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
   if (!project) return null
 
   return (
-    <Modal isOpen={isOpen} onClose={onClose} size="xl" scrollBehavior="inside">
+    <Modal isOpen={isOpen} onClose={onClose} scrollBehavior="inside" isCentered>
       <ModalOverlay bg={overlayBg} backdropFilter="blur(4px)" />
-      <ModalContent bg={bgColor} maxH="80vh">
+      <ModalContent
+        bg={bgColor}
+        maxH="80vh"
+        maxW="container.md"
+        mx="auto"
+        my="auto"
+        borderRadius="2xl"
+      >
         <ModalHeader>{project.title}</ModalHeader>
         <ModalCloseButton />
         <ModalBody pb={6}>
