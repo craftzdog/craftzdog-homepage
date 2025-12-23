@@ -198,9 +198,11 @@ const ProjectModal = ({ isOpen, onClose, project, isLoading = false }) => {
                         }
                       },
                       '& img': {
-                        maxWidth: '60%',
+                        maxWidth: '70%',
                         height: 'auto',
                         my: 3,
+                        mx: 'auto',
+                        display: 'block',
                         borderRadius: 'md'
                       },
                       '& code': {
