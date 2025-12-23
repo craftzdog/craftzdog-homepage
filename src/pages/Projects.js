@@ -29,22 +29,6 @@ const Projects = () => {
       } catch (err) {
         console.error('Projects fetch error:', err)
         setError(err.message)
-
-        // エラー時はモックデータを表示
-        setMainProjects([
-          {
-            id: 'project1',
-            title: 'プロジェクト1',
-            thumbnail: '/images/project1.png',
-            description: 'プロジェクト1の説明文がここに入ります'
-          },
-          {
-            id: 'project2',
-            title: 'プロジェクト2',
-            thumbnail: '/images/project2.png',
-            description: 'プロジェクト2の説明文がここに入ります'
-          }
-        ])
       } finally {
         setLoading(false)
       }

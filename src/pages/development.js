@@ -22,22 +22,6 @@ const Development = () => {
       } catch (err) {
         console.error('Development fetch error:', err)
         setError(err.message)
-
-        // エラー時はモックデータを表示
-        setProjects([
-          {
-            id: 'dev1',
-            title: '開発プロジェクト1',
-            thumbnail: '/images/no-image.png',
-            description: '開発プロジェクト1の説明文がここに入ります'
-          },
-          {
-            id: 'dev2',
-            title: '開発プロジェクト2',
-            thumbnail: '/images/no-image.png',
-            description: '開発プロジェクト2の説明文がここに入ります'
-          }
-        ])
       } finally {
         setLoading(false)
       }

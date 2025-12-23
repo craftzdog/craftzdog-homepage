@@ -25,10 +25,20 @@ export const WorkGridItem = ({
   category = 'projects',
   id,
   title,
-  thumbnail
+  thumbnail,
+  onClick
 }) => (
   <Box w="100%" textAlign="center">
-    <Box cursor="pointer">
+    <Box
+      cursor="pointer"
+      onClick={onClick}
+      transition="all 0.3s"
+      _hover={{
+        transform: 'translateY(-4px)',
+        boxShadow: 'lg'
+      }}
+      borderRadius="12px"
+    >
       <Image
         src={thumbnail}
         alt={title}
