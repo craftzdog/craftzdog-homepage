@@ -66,7 +66,7 @@ const Development = () => {
         <Heading as="h3" fontSize={20} mb={4}>
           開発活動
         </Heading>
-        <CardList items={projects} delay={0.3} />
+        <CardList items={projects} delay={0.3} apiEndpoint="/api/development" />
       </Container>
     </Layout>
   )

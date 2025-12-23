@@ -1,4 +1,5 @@
 import { Client } from '@notionhq/client'
+import { NotionToMarkdown } from 'notion-to-md'
 
 /**
  * Notionクライアントを取得（環境変数を使用して初期化）
@@ -11,6 +12,14 @@ function getNotionClient() {
   })
 
   return client
+}
+
+/**
+ * NotionToMarkdownインスタンスを取得
+ */
+function getNotionToMarkdown() {
+  const notion = getNotionClient()
+  return new NotionToMarkdown({ notionClient: notion })
 }
 
 /**
@@ -114,4 +123,158 @@ export async function getDevelopmentProjects() {
     throw new Error('NOTION_DEVELOPMENT_DATABASE_IDが設定されていません')
   }
   return await getProjectsFromNotion(databaseId)
+}
+
+/**
+ * Notionページのコンテンツをマークダウンとして取得
+ * @param {string} pageId - NotionページのID
+ * @returns {Promise<string>} マークダウン形式のコンテンツ
+ */
+export async function getPageContent(pageId) {
+  try {
+    const n2m = getNotionToMarkdown()
+
+    // ページのブロックを取得してマークダウンに変換
+    const mdblocks = await n2m.pageToMarkdown(pageId)
+
+    // 目次ブロックを除外
+    const filteredBlocks = mdblocks.filter(block => {
+      // table_of_contentsブロックを除外
+      return block.type !== 'table_of_contents'
+    })
+
+    const mdString = n2m.toMarkdownString(filteredBlocks)
+    let content = mdString.parent || ''
+
+    // デバッグ: 最初の200文字をログ出力
+    console.log(
+      'Original content (first 200 chars):',
+      content.substring(0, 200)
+    )
+
+    // マークダウンから「目次」を含む行を削除（複数パターンに対応）
+    // パターン1: 見出しとしての目次
+    content = content.replace(/^#+\s*目次.*$/gm, '')
+    // パターン2: 目次セクション全体（見出し + その後のリンク）
+    content = content.replace(/^#+\s*目次.*\n([\s\S]*?)(?=\n#+\s|\n\n|$)/m, '')
+    // パターン3: 単独の「目次」を含むテキスト行（コールアウトなど）
+    content = content.replace(/^>\s*.*目次.*$/gm, '')
+    // パターン4: 任意の「目次」を含む行
+    content = content.replace(/^.*目次.*$/gm, '')
+
+    // マークダウンから「詳細」を含む行を削除（複数パターンに対応）
+    // パターン1: 見出しとしての詳細（任意のレベル、前後の空白も含む）
+    content = content.replace(/^#+\s*詳細\s*$/gm, '')
+    // パターン2: 見出しとしての詳細（任意の文字が続く場合も）
+    content = content.replace(/^##\s*詳細$/gm, '')
+    // パターン3: 単独の「詳細」テキスト行
+    content = content.replace(/^\s*詳細\s*$/gm, '')
+    // パターン4: コールアウトなどの「詳細」
+    content = content.replace(/^>\s*.*詳細.*$/gm, '')
+    // パターン5: 行全体をチェックして「詳細」のみの行を削除
+    const lines = content.split('\n')
+    const filteredLines = lines.filter((line, index) => {
+      const trimmed = line.trim()
+      // 「## 詳細」または「詳細」のみの行を除外
+      if (
+        trimmed === '## 詳細' ||
+        trimmed === '### 詳細' ||
+        trimmed === '# 詳細' ||
+        trimmed === '詳細'
+      ) {
+        console.log(`Removing line ${index}: "${line}"`)
+        return false
+      }
+      return true
+    })
+    content = filteredLines.join('\n')
+
+    // 連続する空行を1つにまとめる
+    content = content.replace(/\n\n\n+/g, '\n\n')
+
+    // デバッグ: 処理後の最初の200文字をログ出力
+    console.log(
+      'Filtered content (first 200 chars):',
+      content.substring(0, 200)
+    )
+
+    return content.trim()
+  } catch (error) {
+    console.error('ページコンテンツ取得エラー:', error)
+    return ''
+  }
+}
+
+/**
+ * ページの基本情報とコンテンツを取得
+ * @param {string} pageId - NotionページのID
+ * @returns {Promise<object>} ページ情報とコンテンツ
+ */
+export async function getPageWithContent(pageId) {
+  try {
+    const notion = getNotionClient()
+
+    // ページの基本情報を取得
+    const page = await notion.pages.retrieve({ page_id: pageId })
+
+    // コンテンツを取得
+    const content = await getPageContent(pageId)
+
+    const properties = page.properties
+
+    // タイトルの取得
+    const title =
+      properties.Name?.title?.[0]?.plain_text ||
+      properties.Title?.title?.[0]?.plain_text ||
+      '無題'
+
+    // 説明文の取得
+    const description =
+      properties.Description?.rich_text?.[0]?.plain_text ||
+      properties.説明?.rich_text?.[0]?.plain_text ||
+      ''
+
+    // 画像の取得
+    let thumbnail = '/images/no-image.png'
+
+    if (page.cover) {
+      if (page.cover.type === 'external') {
+        thumbnail = page.cover.external.url
+      } else if (page.cover.type === 'file') {
+        thumbnail = page.cover.file.url
+      }
+    } else if (properties.Image?.files?.[0]) {
+      const imageFile = properties.Image.files[0]
+      if (imageFile.type === 'external') {
+        thumbnail = imageFile.external.url
+      } else if (imageFile.type === 'file') {
+        thumbnail = imageFile.file.url
+      }
+    } else if (properties.ImageURL?.url) {
+      thumbnail = properties.ImageURL.url
+    }
+
+    // タグの取得（もしあれば）
+    const tags = []
+    if (properties.Tags?.multi_select) {
+      properties.Tags.multi_select.forEach(tag => {
+        tags.push({
+          name: tag.name,
+          color: tag.color
+        })
+      })
+    }
+
+    return {
+      id: page.id,
+      title,
+      thumbnail,
+      description,
+      content,
+      tags
+    }
+  } catch (error) {
+    console.error('ページ情報取得エラー:', error)
+    throw new Error(`ページ情報を取得できませんでした: ${error.message}`)
+  }
 }

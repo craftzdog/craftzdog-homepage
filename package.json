@@ -28,6 +28,7 @@
     "dotenv": "^17.2.3",
     "framer-motion": "^10.16.4",
     "next": "^13.5.6",
+    "notion-to-md": "^3.1.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.11.0",

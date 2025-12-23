@@ -74,7 +74,7 @@ const Projects = () => {
           研究室での活動
         </Heading>
 
-        <CardList items={mainProjects} delay={0} />
+        <CardList items={mainProjects} delay={0} apiEndpoint="/api/projects" />
 
         <Section delay={0.2}>
           <Divider my={6} />
@@ -84,7 +84,11 @@ const Projects = () => {
           </Heading>
         </Section>
 
-        <CardList items={otherProjects} delay={0.3} />
+        <CardList
+          items={otherProjects}
+          delay={0.3}
+          apiEndpoint="/api/projects"
+        />
       </Container>
     </Layout>
   )
