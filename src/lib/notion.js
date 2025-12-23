@@ -16,10 +16,29 @@ function getNotionClient() {
 
 /**
  * NotionToMarkdownインスタンスを取得
+ * ブックマークブロック用のカスタムトランスフォーマーを設定
  */
 function getNotionToMarkdown() {
   const notion = getNotionClient()
-  return new NotionToMarkdown({ notionClient: notion })
+  const n2m = new NotionToMarkdown({ notionClient: notion })
+
+  // ブックマークブロック用のカスタムトランスフォーマー
+  // URLを直接表示（長い場合は省略）
+  n2m.setCustomTransformer('bookmark', async block => {
+    const { bookmark } = block
+    if (!bookmark || !bookmark.url) {
+      return ''
+    }
+
+    const url = bookmark.url
+    // URLが長い場合は省略表示用のテキストを生成
+    const displayUrl = url.length > 80 ? url.substring(0, 77) + '...' : url
+
+    // マークダウンのリンク形式で返す
+    return `[${displayUrl}](${url})\n`
+  })
+
+  return n2m
 }
 
 /**
@@ -146,12 +165,6 @@ export async function getPageContent(pageId) {
     const mdString = n2m.toMarkdownString(filteredBlocks)
     let content = mdString.parent || ''
 
-    // デバッグ: 最初の200文字をログ出力
-    console.log(
-      'Original content (first 200 chars):',
-      content.substring(0, 200)
-    )
-
     // マークダウンから「目次」を含む行を削除（複数パターンに対応）
     // パターン1: 見出しとしての目次
     content = content.replace(/^#+\s*目次.*$/gm, '')
@@ -182,7 +195,6 @@ export async function getPageContent(pageId) {
         trimmed === '# 詳細' ||
         trimmed === '詳細'
       ) {
-        console.log(`Removing line ${index}: "${line}"`)
         return false
       }
       return true
@@ -191,12 +203,6 @@ export async function getPageContent(pageId) {
 
     // 連続する空行を1つにまとめる
     content = content.replace(/\n\n\n+/g, '\n\n')
-
-    // デバッグ: 処理後の最初の200文字をログ出力
-    console.log(
-      'Filtered content (first 200 chars):',
-      content.substring(0, 200)
-    )
 
     return content.trim()
   } catch (error) {

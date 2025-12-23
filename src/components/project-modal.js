@@ -24,6 +24,7 @@ import ReactMarkdown from 'react-markdown'
 /**
  * カスタムマークダウンレンダラー
  * 箇条書きの黒丸を表示するためのカスタムコンポーネント
+ * ブックマークブロックの処理も含む
  */
 const customTheme = {
   p: props => {
