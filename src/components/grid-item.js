@@ -29,24 +29,25 @@ export const WorkGridItem = ({
   onClick
 }) => (
   <Box w="100%" textAlign="center">
-    <Box
-      cursor="pointer"
-      onClick={onClick}
-      transition="all 0.3s"
-      _hover={{
-        transform: 'translateY(-4px)',
-        boxShadow: 'lg'
-      }}
-      borderRadius="12px"
-    >
-      <Image
-        src={thumbnail}
-        alt={title}
-        className="grid-item-thumbnail"
-        width={400}
-        height={225}
-        style={{ objectFit: 'cover' }}
-      />
+    <Box cursor="pointer" onClick={onClick}>
+      <Box
+        overflow="hidden"
+        borderRadius="12px"
+        transition="all 0.3s"
+        _hover={{
+          transform: 'translateY(-4px)',
+          boxShadow: 'lg'
+        }}
+      >
+        <Image
+          src={thumbnail}
+          alt={title}
+          className="grid-item-thumbnail"
+          width={400}
+          height={225}
+          style={{ objectFit: 'cover' }}
+        />
+      </Box>
       <Text mt={2} fontSize={20}>
         {title}
       </Text>
