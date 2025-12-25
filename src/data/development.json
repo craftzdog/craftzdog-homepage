@@ -1,0 +1,23 @@
+[
+  {
+    "id": "dev-1",
+    "title": "開発プロジェクト1",
+    "thumbnail": "/images/no-image.png",
+    "description": "開発プロジェクト1の説明文です。",
+    "contentFile": "development/dev-1.md",
+    "tags": [
+      { "name": "Web", "color": "cyan" },
+      { "name": "React", "color": "blue" }
+    ]
+  },
+  {
+    "id": "dev-2",
+    "title": "開発プロジェクト2",
+    "thumbnail": "/images/no-image.png",
+    "description": "開発プロジェクト2の説明文です。",
+    "contentFile": "development/dev-2.md",
+    "tags": [
+      { "name": "Backend", "color": "orange" }
+    ]
+  }
+]

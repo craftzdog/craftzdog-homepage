@@ -1,0 +1,23 @@
+[
+  {
+    "id": "project-1",
+    "title": "プロジェクト1",
+    "thumbnail": "/images/no-image.png",
+    "description": "プロジェクト1の説明文です。",
+    "contentFile": "projects/project-1.md",
+    "tags": [
+      { "name": "研究", "color": "blue" },
+      { "name": "AI", "color": "green" }
+    ]
+  },
+  {
+    "id": "project-2",
+    "title": "プロジェクト2",
+    "thumbnail": "/images/no-image.png",
+    "description": "プロジェクト2の説明文です。",
+    "contentFile": "projects/project-2.md",
+    "tags": [
+      { "name": "実験", "color": "purple" }
+    ]
+  }
+]
