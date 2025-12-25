@@ -1,23 +1,74 @@
 [
   {
-    "id": "dev-1",
-    "title": "開発プロジェクト1",
-    "thumbnail": "/images/no-image.png",
-    "description": "開発プロジェクト1の説明文です。",
-    "contentFile": "development/dev-1.md",
+    "id": "seichi-cross-over",
+    "title": "Seichi Cross Over",
+    "thumbnail": "/images/development/seichi-cross-over/SeichiCrossOver.png",
+    "description": "アニメ好きな外国人観光客が日本人と繋がって聖地巡礼ができるマッチングサービス",
+    "contentFile": "development/seichi-cross-over.md",
     "tags": [
-      { "name": "Web", "color": "cyan" },
-      { "name": "React", "color": "blue" }
+      { "name": "React", "color": "blue" },
+      { "name": "Recoil", "color": "purple" },
+      { "name": "UI/UX", "color": "green" }
     ]
   },
   {
-    "id": "dev-2",
-    "title": "開発プロジェクト2",
-    "thumbnail": "/images/no-image.png",
-    "description": "開発プロジェクト2の説明文です。",
-    "contentFile": "development/dev-2.md",
+    "id": "zundamon-x",
+    "title": "ZUNDAMON-X",
+    "thumbnail": "/images/development/zundamon-x/ずんだもん.png",
+    "description": "海外のYouTubeの動画を可愛い声でリアルタイム吹き替えする",
+    "contentFile": "development/zundamon-x.md",
     "tags": [
-      { "name": "Backend", "color": "orange" }
+      { "name": "Chrome拡張", "color": "cyan" },
+      { "name": "TypeScript", "color": "blue" },
+      { "name": "YouTube API", "color": "red" }
+    ]
+  },
+  {
+    "id": "quest-board",
+    "title": "Quest Board",
+    "thumbnail": "/images/development/quest-board/QuestBoard.png",
+    "description": "学生団体POLYGONでプロジェクト管理・参加ができる掲示板サービス",
+    "contentFile": "development/quest-board.md",
+    "tags": [
+      { "name": "React", "color": "blue" },
+      { "name": "掲示板", "color": "orange" }
+    ]
+  },
+  {
+    "id": "oya-class",
+    "title": "Oya class",
+    "thumbnail": "/images/development/oya-class/Oyaclass.png",
+    "description": "小学校の先生と保護者に向けた「学校のお便りが机の奥に詰まること」を解決したサービス",
+    "contentFile": "development/oya-class.md",
+    "tags": [
+      { "name": "React", "color": "blue" },
+      { "name": "Azure", "color": "cyan" },
+      { "name": "公共サービス", "color": "green" }
+    ]
+  },
+  {
+    "id": "spring-iot",
+    "title": "春プロジェクト IoT班",
+    "thumbnail": "/images/development/spring-iot/SensingDXCenter.png",
+    "description": "IoT（センサ）を活用して、当学施設「DXセンター」の情報を表示するWebアプリ",
+    "contentFile": "development/spring-iot.md",
+    "tags": [
+      { "name": "IoT", "color": "purple" },
+      { "name": "React", "color": "blue" },
+      { "name": "Firebase", "color": "orange" },
+      { "name": "Python", "color": "green" }
+    ]
+  },
+  {
+    "id": "keycaps",
+    "title": "KeyCaps",
+    "thumbnail": "/images/development/keycaps/KeyCaps.png",
+    "description": "初めて制作したショッピングサイトを模倣したWebアプリ",
+    "contentFile": "development/keycaps.md",
+    "tags": [
+      { "name": "React", "color": "blue" },
+      { "name": "Bootstrap", "color": "purple" },
+      { "name": "Material-UI", "color": "cyan" }
     ]
   }
 ]
