@@ -7,6 +7,7 @@ import {
   Link,
   List,
   ListItem,
+  SimpleGrid,
   useColorModeValue
 } from '@chakra-ui/react'
 import styled from '@emotion/styled'
@@ -23,25 +24,34 @@ import Layout from '../components/layouts/article'
 import Paragraph from '../components/paragraph'
 import Section from '../components/section'
 
-// Bio styles (統合)
-const BioSection = styled(Box)`
-  padding-left: 3.4em;
-  text-indent: -3.4em;
-`
-
-const BioYear = styled.span`
+// Bio styles (2カラムレイアウト用)
+const BioYear = styled(Box)`
   font-weight: bold;
-  margin-right: 1em;
 `
 
 const Home = () => {
   // Bioデータの配列
   const bioData = [
-    { year: '2002', description: '日本で生まれる' },
-    { year: '2021', description: '富山県立大学 入学' },
-    { year: '2025', description: '富山県立大学 卒業' },
-    { year: '2025', description: '富山県立大学修士課程 入学' },
-    { year: '2026', description: '休学（1年間、留学のため）' }
+    {
+      year: '2021',
+      description: '富山県立高岡工芸高等学校 電子機械科 卒業'
+    },
+    {
+      year: '2021',
+      description: '富山県立大学 工学部 情報システム工学科 入学'
+    },
+    {
+      year: '2025',
+      description: '富山県立大学 工学部 情報システム工学科 卒業'
+    },
+    {
+      year: '2025',
+      description: '富山県立大学 研究工学科 電子・情報工学専攻 入学'
+    },
+    {
+      year: '2026',
+      description: '休学し、フィリピンとカナダに留学（予定）'
+    }
   ]
 
   return (
@@ -126,10 +136,12 @@ const Home = () => {
             Bio
           </Heading>
           {bioData.map((bio, index) => (
-            <BioSection key={index}>
-              <BioYear>{bio.year}</BioYear>
-              {bio.description}
-            </BioSection>
+            <Box key={index} mb={2}>
+              <SimpleGrid templateColumns="4em 1fr">
+                <BioYear>{bio.year}</BioYear>
+                <Box>{bio.description}</Box>
+              </SimpleGrid>
+            </Box>
           ))}
         </Section>
 
