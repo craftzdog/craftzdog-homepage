@@ -89,11 +89,15 @@ const awardData = [
   },
   {
     date: '2023.06.17',
-    title: 'サポーターズ 技育CAMPキャラバン@福岡 優秀賞'
+    title: 'サポーターズ 技育CAMPキャラバン@福岡 優秀賞',
+    description:
+      'YouTubeの海外の動画を、リアルタイムで日本語の音声に変換して再生するChrome拡張「ZUNDAMON-X」を開発'
   },
   {
     date: '2023.07.29',
-    title: 'サポーターズ 技育CAMPキャラバン@金沢 登壇'
+    title: 'サポーターズ 技育CAMPキャラバン@金沢 登壇',
+    description:
+      '学生団体POLYGONでプロジェクトの管理･参加をするための掲示板「QuestBoard」を開発'
   },
   {
     date: '2023.08.07 - 08.25',
@@ -102,19 +106,20 @@ const awardData = [
   },
   {
     date: '2023.08.12',
-    title: 'サポーターズ 技育展 登壇'
+    title: 'サポーターズ 技育展 登壇',
+    description: '「QuestBoard」をブラッシュアップして出場'
   },
   {
     date: '2023.09.02',
-    title: 'サポーターズ 技育CAMPアドバンス Vol.3 大賞(優勝)'
-  },
-  {
-    date: '2023.09.04 - 09.08',
-    title: 'エキサイト株式会社 インターンシップ 参加'
+    title: 'サポーターズ 技育CAMPアドバンス Vol.3 大賞(優勝)',
+    description:
+      'YouTube吹き替え翻訳「ZUNDAMON-X」をブラッシュアップして出場。プレゼンを担当し、優勝（大賞）を受賞'
   },
   {
     date: '2025.02.26',
-    title: 'UBI研究会 Japan UBI Symposium2025 研究発表'
+    title: 'UBI研究会 Japan UBI Symposium2025 研究発表',
+    description:
+      '「音楽嗜好の共有を通じた自己開示が受容性に及ぼす影響」というテーマでポスター発表'
   }
 ]
 
@@ -205,7 +210,7 @@ const ExTimelineItem = ({ date, title, description, logo, isLast }) => {
 }
 
 // シンプルなタイムラインアイテムコンポーネント（実績用）
-const TimelineItem = ({ date, title, isLast }) => {
+const TimelineItem = ({ date, title, description, isLast }) => {
   return (
     <Flex ml={5} position="relative" pb={isLast ? 0 : 8}>
       {/* 左側: ドットと縦線 */}
@@ -235,11 +240,12 @@ const TimelineItem = ({ date, title, isLast }) => {
         <Text fontSize="15px">{date}</Text>
       </Box>
 
-      {/* 右側: タイトルのみ */}
+      {/* 右側: タイトルと説明 */}
       <Box w={{ base: 'full', md: '510px' }} flex="1">
-        <Text fontSize="17px" fontWeight="bold">
+        <Text fontSize="17px" fontWeight="bold" pb={description ? 1 : 0}>
           {title}
         </Text>
+        {description && <Text fontSize="15px">{description}</Text>}
       </Box>
     </Flex>
   )
@@ -377,6 +383,7 @@ const AboutMe = () => (
             key={index}
             date={item.date}
             title={item.title}
+            description={item.description}
             isLast={index === awardData.length - 1}
           />
         ))}

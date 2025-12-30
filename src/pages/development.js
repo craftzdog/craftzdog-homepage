@@ -36,7 +36,7 @@ const Development = () => {
       <Layout title="Development">
         <Container>
           <Heading as="h3" fontSize={20} mb={4}>
-            開発活動
+            制作物
           </Heading>
           <Center py={10}>
             <Spinner size="xl" />

@@ -12,7 +12,13 @@ import {
 import styled from '@emotion/styled'
 import Image from 'next/image'
 import NextLink from 'next/link'
-import { IoLogoGithub, IoLogoInstagram, IoLogoLinkedin, IoLogoTwitter, IoNewspaper } from 'react-icons/io5'
+import {
+  IoLogoGithub,
+  IoLogoInstagram,
+  IoLogoLinkedin,
+  IoLogoTwitter,
+  IoNewspaper
+} from 'react-icons/io5'
 import Layout from '../components/layouts/article'
 import Paragraph from '../components/paragraph'
 import Section from '../components/section'
@@ -35,7 +41,7 @@ const Home = () => {
     { year: '2021', description: '富山県立大学 入学' },
     { year: '2025', description: '富山県立大学 卒業' },
     { year: '2025', description: '富山県立大学修士課程 入学' },
-    { year: '2026', description: '休学（1年間、留学のため）' },
+    { year: '2026', description: '休学（1年間、留学のため）' }
   ]
 
   return (
@@ -50,7 +56,7 @@ const Home = () => {
           bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
           css={{ backdropFilter: 'blur(10px)' }}
         >
-          こんにちは！スプラトゥーン5000時間プレイヤーの修士生です💪
+          こんにちは！自分の弱みを糧にして生きている修士1年生です！💪
         </Box>
 
         {/* プロフィール */}
@@ -92,9 +98,7 @@ const Home = () => {
           <Heading as="h3" variant="section-title">
             自己紹介
           </Heading>
-          <Paragraph>
-            ほげほげです
-          </Paragraph>
+          <Paragraph>ほげほげです</Paragraph>
           <Box align="center" my={4}>
             <Button
               as={NextLink}
@@ -161,7 +165,10 @@ const Home = () => {
               </Link>
             </ListItem>
             <ListItem>
-              <Link href="https://www.instagram.com/koki.n.0_0/" target="_blank">
+              <Link
+                href="https://www.instagram.com/koki.n.0_0/"
+                target="_blank"
+              >
                 <Button
                   variant="ghost"
                   colorScheme="teal"
@@ -172,7 +179,10 @@ const Home = () => {
               </Link>
             </ListItem>
             <ListItem>
-              <Link href="https://www.linkedin.com/in/koki-nakagawa-236443292/" target="_blank">
+              <Link
+                href="https://www.linkedin.com/in/koki-nakagawa-236443292/"
+                target="_blank"
+              >
                 <Button
                   variant="ghost"
                   colorScheme="teal"
