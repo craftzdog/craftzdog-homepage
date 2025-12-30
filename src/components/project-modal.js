@@ -118,7 +118,13 @@ const ProjectModal = ({ isOpen, onClose, project, isLoading = false }) => {
                                       ? 'bg-yellow-100 text-yellow-800'
                                       : tag.color === 'purple'
                                         ? 'bg-purple-100 text-purple-800'
-                                        : 'bg-gray-100 text-gray-800'
+                                        : tag.color === 'pink'
+                                          ? 'bg-pink-100 text-pink-800'
+                                          : tag.color === 'orange'
+                                            ? 'bg-orange-100 text-orange-800'
+                                            : tag.color === 'cyan'
+                                              ? 'bg-cyan-100 text-cyan-800'
+                                              : 'bg-gray-100 text-gray-800'
                             }`}
                           >
                             {tag.name}

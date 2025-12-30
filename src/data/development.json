@@ -7,7 +7,7 @@
     "contentFile": "development/grant-finder.md",
     "tags": [
       { "name": "Backend", "color": "green" },
-      { "name": "個人開発", "color": "blue" }
+      { "name": "個人開発", "color": "cyan" }
     ],
     "skills": ["python", "azure"]
   },
@@ -19,7 +19,7 @@
     "contentFile": "development/class-todo-app.md",
     "tags": [
       { "name": "Backend", "color": "green" },
-      { "name": "授業", "color": "gray" }
+      { "name": "個人開発", "color": "cyan" }
     ],
     "skills": ["nextjs", "js", "azure"]
   },
@@ -44,7 +44,8 @@
     "tags": [
       { "name": "Frontend", "color": "blue" },
       { "name": "UI/UX", "color": "pink" },
-      { "name": "個人開発", "color": "cyan" }
+      { "name": "チーム開発", "color": "orange" },
+      { "name": "ハッカソン", "color": "red" }
     ],
     "skills": ["react", "graphql", "figma"]
   },
@@ -56,8 +57,9 @@
     "contentFile": "development/zundamon-x.md",
     "tags": [
       { "name": "Frontend", "color": "blue" },
-      { "name": "Chrome拡張", "color": "green" },
-      { "name": "個人開発", "color": "cyan" }
+      { "name": "Chrome拡張", "color": "purple" },
+      { "name": "チーム開発", "color": "orange" },
+      { "name": "ハッカソン", "color": "red" }
     ],
     "skills": ["react", "ts", "recoil"]
   },
@@ -69,7 +71,8 @@
     "contentFile": "development/quest-board.md",
     "tags": [
       { "name": "Backend", "color": "green" },
-      { "name": "チーム開発", "color": "orange" }
+      { "name": "チーム開発", "color": "orange" },
+      { "name": "ハッカソン", "color": "red" }
     ],
     "skills": ["go", "postgres", "docker", "react"]
   },
