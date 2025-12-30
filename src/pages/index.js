@@ -65,7 +65,7 @@ const Home = () => {
             <Heading as="h2" variant="page-title">
               Koki Nakagawa
             </Heading>
-            <p>大学院生 / Web Developer</p>
+            <p>Japan / Graduate Student / Developer</p>
           </Box>
           <Box
             flexShrink={0}
@@ -98,7 +98,15 @@ const Home = () => {
           <Heading as="h3" variant="section-title">
             自己紹介
           </Heading>
-          <Paragraph>ほげほげです</Paragraph>
+          <Paragraph>
+            富山県立大学で情報工学を専攻する修士1年生
+            <br />
+            中学から高校時代、スプラトゥーンというゲームを5000時間プレイ。授業中は爆睡、家に帰ってからは朝までゲームをしていた元ダメ人間（自称）
+            <br />
+            そんな自分に嫌気がさし、「自分を変えよう」と決心。
+            <br />
+            2025年に大学院進学し、2026年に夢の実現のため1年の海外留学を予定
+          </Paragraph>
           <Box align="center" my={4}>
             <Button
               as={NextLink}
