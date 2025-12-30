@@ -59,7 +59,7 @@ const customTheme = {
       </Heading>
     )
   },
-  hr: props => {
+  hr: _props => {
     return <Box as="hr" my={4} borderColor="gray.300" />
   },
   u: props => {
@@ -108,6 +108,8 @@ const customTheme = {
 const ProjectModal = ({ isOpen, onClose, project, isLoading = false }) => {
   const bgColor = useColorModeValue('white', 'gray.800')
   const overlayBg = useColorModeValue('blackAlpha.600', 'blackAlpha.800')
+  const codeBg = useColorModeValue('gray.100', 'gray.700')
+  const preBg = useColorModeValue('gray.100', 'gray.700')
 
   if (!project) return null
 
@@ -206,7 +208,7 @@ const ProjectModal = ({ isOpen, onClose, project, isLoading = false }) => {
                         borderRadius: 'md'
                       },
                       '& code': {
-                        bg: useColorModeValue('gray.100', 'gray.700'),
+                        bg: codeBg,
                         px: 1.5,
                         py: 0.5,
                         borderRadius: 'md',
@@ -215,7 +217,7 @@ const ProjectModal = ({ isOpen, onClose, project, isLoading = false }) => {
                         display: 'inline'
                       },
                       '& pre': {
-                        bg: useColorModeValue('gray.100', 'gray.700'),
+                        bg: preBg,
                         p: 3,
                         borderRadius: 'md',
                         overflowX: 'auto',

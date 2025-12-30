@@ -22,8 +22,8 @@ export const GridItem = ({ children, href, title, thumbnail }) => (
 
 export const WorkGridItem = ({
   children,
-  category = 'projects',
-  id,
+  _category = 'projects',
+  _id,
   title,
   thumbnail,
   onClick
