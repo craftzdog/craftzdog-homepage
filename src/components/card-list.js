@@ -1,4 +1,3 @@
-import { SimpleGrid, useDisclosure } from '@chakra-ui/react'
 import { useState } from 'react'
 import { WorkGridItem } from './grid-item'
 import ProjectModal from './project-modal'
@@ -21,14 +20,14 @@ const CardList = ({
   gap = 6,
   apiEndpoint = '/api/development'
 }) => {
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  const [isOpen, setIsOpen] = useState(false)
   const [selectedProject, setSelectedProject] = useState(null)
   const [isLoadingContent, setIsLoadingContent] = useState(false)
 
   const handleCardClick = async item => {
     // モーダルを開く
     setSelectedProject(item)
-    onOpen()
+    setIsOpen(true)
 
     // ページIDがある場合は、詳細コンテンツを取得
     if (item.id) {
@@ -53,7 +52,7 @@ const CardList = ({
 
   return (
     <>
-      <SimpleGrid columns={columns} gap={gap}>
+      <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6">
         {items.map((item, index) => (
           <Section key={item.id} delay={delay + index * 0.1}>
             <WorkGridItem
@@ -66,11 +65,11 @@ const CardList = ({
             </WorkGridItem>
           </Section>
         ))}
-      </SimpleGrid>
+      </div>
 
       <ProjectModal
         isOpen={isOpen}
-        onClose={onClose}
+        onClose={() => setIsOpen(false)}
         project={selectedProject}
         isLoading={isLoadingContent}
       />

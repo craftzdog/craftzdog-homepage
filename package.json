@@ -13,28 +13,23 @@
   "author": "Koki Nakagawa",
   "license": "MIT",
   "dependencies": {
-    "@chakra-ui/checkbox": "^2.3.2",
-    "@chakra-ui/icons": "^2.1.1",
-    "@chakra-ui/image": "^2.1.0",
-    "@chakra-ui/layout": "^2.3.1",
-    "@chakra-ui/react": "^2.8.1",
-    "@chakra-ui/system": "^2.6.2",
-    "@chakra-ui/table": "^2.1.0",
-    "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.0",
     "@vercel/analytics": "^1.1.1",
-    "chakra-ui-markdown-renderer": "^4.1.0",
     "dotenv": "^17.2.3",
     "framer-motion": "^10.16.4",
     "next": "^13.5.6",
+    "next-themes": "^0.4.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.11.0",
     "react-markdown": "^8.0.7"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.18",
+    "autoprefixer": "^10.4.23",
     "eslint": "^8.52.0",
     "eslint-config-next": "^13.5.6",
-    "prettier": "^3.0.3"
+    "postcss": "^8.5.6",
+    "prettier": "^3.0.3",
+    "tailwindcss": "^4.1.18"
   }
 }

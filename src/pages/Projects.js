@@ -1,4 +1,3 @@
-import { Center, Container, Divider, Heading, Spinner } from '@chakra-ui/react'
 import { useEffect, useState } from 'react'
 import CardList from '../components/card-list'
 import Layout from '../components/layouts/article'
@@ -41,14 +40,12 @@ const Projects = () => {
   if (loading) {
     return (
       <Layout title="Projects">
-        <Container>
-          <Heading as="h3" fontSize={20} mb={4}>
-            研究室での活動
-          </Heading>
-          <Center py={10}>
-            <Spinner size="xl" />
-          </Center>
-        </Container>
+        <div className="max-w-3xl mx-auto px-4">
+          <h3 className="text-xl mb-4">研究室での活動</h3>
+          <div className="flex justify-center py-10">
+            <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-teal-500"></div>
+          </div>
+        </div>
       </Layout>
     )
   }
@@ -57,31 +54,27 @@ const Projects = () => {
   if (error) {
     return (
       <Layout title="Projects">
-        <Container>
-          <Heading as="h3" fontSize={20} mb={4} color="red.500">
+        <div className="max-w-3xl mx-auto px-4">
+          <h3 className="text-xl mb-4 text-red-500">
             データの取得に失敗しました
-          </Heading>
+          </h3>
           <p>{error}</p>
-        </Container>
+        </div>
       </Layout>
     )
   }
 
   return (
     <Layout title="Projects">
-      <Container>
-        <Heading as="h3" fontSize={20} mb={4}>
-          研究室での活動
-        </Heading>
+      <div className="max-w-3xl mx-auto px-4">
+        <h3 className="text-xl mb-4">研究室での活動</h3>
 
         <CardList items={mainProjects} delay={0} apiEndpoint="/api/projects" />
 
         <Section delay={0.2}>
-          <Divider my={6} />
+          <hr className="my-6 border-gray-300 dark:border-gray-600" />
 
-          <Heading as="h3" fontSize={20} mb={4}>
-            その他の活動
-          </Heading>
+          <h3 className="text-xl mb-4">その他の活動</h3>
         </Section>
 
         <CardList
@@ -89,10 +82,9 @@ const Projects = () => {
           delay={0.3}
           apiEndpoint="/api/projects"
         />
-      </Container>
+      </div>
     </Layout>
   )
 }
 
 export default Projects
-export { getServerSideProps } from '../components/chakra'

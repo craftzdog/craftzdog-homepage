@@ -1,6 +1,12 @@
-## プレゼン資料
+大学の学生団体POLYGONで作成した学生同士がプロジェクト（クエスト）を共有・募集できる掲示板システムのバックエンドAPIである。初めてGoLangに挑戦し、JWT認証によるセキュアなユーザー管理と、クエストの作成・参加・管理機能を実装した。
 
-[金沢ハッカソン\_発表スライド](https://www.canva.com/design/DAFp4hyUlW4/8DqzCtuPl7RHO3dcpX2xpQ/view?utm_content=DAFp4hyUlW4&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink)
+## 技術スタック
+
+- **言語**: Go 1.20
+- **Webフレームワーク**: Echo
+- **ORM**: GORM
+- **データベース**: PostgreSQL
+- **環境構築**: Docker
 
 ## アプリ画面
 

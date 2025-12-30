@@ -1,8 +1,5 @@
-import styled from '@emotion/styled'
-
-const Paragraph = styled.p`
-  text-align: justify;
-  hyphens: auto;
-`
+const Paragraph = ({ children }) => (
+  <p className="text-justify hyphens-auto">{children}</p>
+)
 
 export default Paragraph

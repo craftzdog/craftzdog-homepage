@@ -1,0 +1,50 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-heading: 'M PLUS Rounded 1c', sans-serif;
+
+  --color-grassTeal: #88ccca;
+  --color-light-bg: #f0e7db;
+  --color-light-text: #202023;
+  --color-light-link: #3d7aed;
+  --color-dark-bg: #202023;
+  --color-dark-text: #ffffff;
+  --color-dark-link: #ff63c3;
+}
+
+@layer base {
+  html {
+    overflow-y: scroll;
+  }
+
+  body {
+    background-color: light-dark(var(--color-light-bg), var(--color-dark-bg));
+    color: light-dark(var(--color-light-text), var(--color-dark-text));
+    transition: background-color 0.3s ease;
+  }
+}
+
+@layer components {
+  /* Section Title Variant */
+  .section-title {
+    font-size: 1.25rem;
+    text-decoration: underline;
+    text-decoration-color: #525252;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 6px;
+    margin-top: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Link Styles */
+  a {
+    color: light-dark(var(--color-light-link), var(--color-dark-link));
+    text-underline-offset: 3px;
+  }
+
+  /* Glassmorphism effect */
+  .glass {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+}

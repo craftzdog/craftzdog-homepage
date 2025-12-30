@@ -1,12 +1,4 @@
-import {
-  Box,
-  Container,
-  Flex,
-  Heading,
-  Image,
-  SimpleGrid,
-  Text
-} from '@chakra-ui/react'
+import Image from 'next/image'
 import Layout from '../components/layouts/article'
 
 // モックデータ
@@ -163,129 +155,103 @@ const backendSkills = [
 // タイムラインアイテムコンポーネント
 const ExTimelineItem = ({ date, title, description, logo, isLast }) => {
   return (
-    <Flex ml={5} position="relative" pb={isLast ? 0 : 8}>
+    <div className="ml-5 relative pb-8 last:pb-0 flex">
       {/* 左側: ドットと縦線 */}
-      <Box mt={1} w="36px" position="relative">
-        <Box
-          w="15px"
-          h="15px"
-          bg="blue.500"
-          borderRadius="full"
-          zIndex={1}
-          position="relative"
-        />
+      <div className="mt-1 w-9 relative">
+        <div className="w-[15px] h-[15px] bg-blue-500 rounded-full z-[1] relative" />
         {!isLast && (
-          <Box
-            position="absolute"
-            top="20px"
-            left="6px"
-            bottom="-32px"
-            w="3px"
-            bg="blue.500"
-          />
+          <div className="absolute top-5 left-[6px] -bottom-8 w-[3px] bg-blue-500" />
         )}
-      </Box>
+      </div>
 
       {/* 中央: 日付 */}
-      <Box w={{ base: '80px', md: '120px' }}>
-        <Text fontSize="15px">{date}</Text>
-      </Box>
+      <div className="w-20 md:w-[120px]">
+        <p className="text-[15px]">{date}</p>
+      </div>
 
       {/* 右側: タイトルと説明 */}
-      <Box w={{ base: 'full', md: '510px' }} flex="1">
-        <Text fontSize="17px" fontWeight="bold" pb={1}>
-          {title}
-        </Text>
-        <Text fontSize="15px">{description}</Text>
-      </Box>
+      <div className="w-full md:w-[510px] flex-1">
+        <p className="text-[17px] font-bold pb-1">{title}</p>
+        <p className="text-[15px]">{description}</p>
+      </div>
 
       {/* ロゴ（オプション） */}
       {logo && (
-        <Box ml={10} display={{ base: 'none', lg: 'block' }}>
-          <Image src={logo} alt="Logo" w="80px" h="auto" />
-        </Box>
+        <div className="ml-10 hidden lg:block">
+          <Image
+            src={logo}
+            alt="Logo"
+            width={80}
+            height={80}
+            className="w-20 h-auto"
+          />
+        </div>
       )}
-    </Flex>
+    </div>
   )
 }
 
 // シンプルなタイムラインアイテムコンポーネント（実績用）
 const TimelineItem = ({ date, title, description, isLast }) => {
   return (
-    <Flex ml={5} position="relative" pb={isLast ? 0 : 8}>
+    <div className="ml-5 relative pb-8 last:pb-0 flex">
       {/* 左側: ドットと縦線 */}
-      <Box mt={1} w="36px" position="relative">
-        <Box
-          w="15px"
-          h="15px"
-          bg="blue.500"
-          borderRadius="full"
-          zIndex={1}
-          position="relative"
-        />
+      <div className="mt-1 w-9 relative">
+        <div className="w-[15px] h-[15px] bg-blue-500 rounded-full z-[1] relative" />
         {!isLast && (
-          <Box
-            position="absolute"
-            top="20px"
-            left="6px"
-            bottom="-32px"
-            w="3px"
-            bg="blue.500"
-          />
+          <div className="absolute top-5 left-[6px] -bottom-8 w-[3px] bg-blue-500" />
         )}
-      </Box>
+      </div>
 
       {/* 中央: 日付 */}
-      <Box w={{ base: '80px', md: '120px' }}>
-        <Text fontSize="15px">{date}</Text>
-      </Box>
+      <div className="w-20 md:w-[120px]">
+        <p className="text-[15px]">{date}</p>
+      </div>
 
       {/* 右側: タイトルと説明 */}
-      <Box w={{ base: 'full', md: '510px' }} flex="1">
-        <Text fontSize="17px" fontWeight="bold" pb={description ? 1 : 0}>
+      <div className="w-full md:w-[510px] flex-1">
+        <p className={`text-[17px] font-bold ${description ? 'pb-1' : ''}`}>
           {title}
-        </Text>
-        {description && <Text fontSize="15px">{description}</Text>}
-      </Box>
-    </Flex>
+        </p>
+        {description && <p className="text-[15px]">{description}</p>}
+      </div>
+    </div>
   )
 }
 
 // スキルカードコンポーネント
 const SkillCard = ({ skills }) => {
   if (skills.length === 0) {
-    return <Text color="gray.500">準備中...</Text>
+    return <p className="text-gray-500">準備中...</p>
   }
 
   return (
-    <SimpleGrid columns={{ base: 2, md: 3, lg: 4 }} spacing={6}>
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
       {skills.map((card, index) => (
-        <Box
+        <div
           key={index}
-          bg="white"
-          borderRadius="lg"
-          boxShadow="md"
-          textAlign="center"
-          py={5}
-          px={3}
+          className="bg-white rounded-lg shadow-md text-center py-5 px-3"
         >
-          <Image src={card.img} alt={card.title} w="56px" mx="auto" pb={2} />
-          <Text pb={1} fontWeight="medium">
-            {card.title}
-          </Text>
-          <Flex justify="center" gap={0}>
+          <Image
+            src={card.img}
+            alt={card.title}
+            width={56}
+            height={56}
+            className="w-14 mx-auto pb-2"
+          />
+          <p className="pb-1 font-medium">{card.title}</p>
+          <div className="flex justify-center gap-0">
             {generateStars(card.level)}
-          </Flex>
-        </Box>
+          </div>
+        </div>
       ))}
-    </SimpleGrid>
+    </div>
   )
 }
 
 // 星アイコンコンポーネント
 const StarIcon = ({ filled }) => (
-  <Box
-    as="svg"
+  <svg
     width="20px"
     height="19px"
     viewBox="0 0 20 19"
@@ -306,7 +272,7 @@ const StarIcon = ({ filled }) => (
         strokeWidth="2"
       />
     )}
-  </Box>
+  </svg>
 )
 
 // 星を生成する関数
@@ -323,45 +289,33 @@ const generateStars = level => {
 
 const AboutMe = () => (
   <Layout title="About Me">
-    <Container>
-      <Box>
-        <Heading as="h3" fontSize={20} mb={4}>
-          Skills
-        </Heading>
+    <div className="max-w-3xl mx-auto px-4">
+      <div>
+        <h3 className="text-xl mb-4">Skills</h3>
 
-        <Text pb={8}>
+        <p className="pb-8">
           テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります
-        </Text>
+        </p>
 
         {/* Frontend */}
-        <Heading as="h5" fontSize="lg" fontWeight="bold" pb={4}>
-          Frontend
-        </Heading>
+        <h5 className="text-lg font-bold pb-4">Frontend</h5>
         <SkillCard skills={frontendSkills} />
 
         {/* Backend */}
-        <Heading as="h5" fontSize="lg" fontWeight="bold" pb={4} pt={10}>
-          Backend
-        </Heading>
+        <h5 className="text-lg font-bold pb-4 pt-10">Backend</h5>
         <SkillCard skills={backendSkills} />
 
         {/* Design */}
-        <Heading as="h5" fontSize="lg" fontWeight="bold" pb={4} pt={10}>
-          Design
-        </Heading>
+        <h5 className="text-lg font-bold pb-4 pt-10">Design</h5>
         <SkillCard skills={[]} />
 
         {/* Other */}
-        <Heading as="h5" fontSize="lg" fontWeight="bold" pb={4} pt={10}>
-          Other
-        </Heading>
+        <h5 className="text-lg font-bold pb-4 pt-10">Other</h5>
         <SkillCard skills={[]} />
-      </Box>
+      </div>
 
-      <Box mt={10}>
-        <Heading as="h3" fontSize={20} mb={4}>
-          Experience
-        </Heading>
+      <div className="mt-10">
+        <h3 className="text-xl mb-4">Experience</h3>
         {timelineData.map((item, index) => (
           <ExTimelineItem
             key={index}
@@ -372,12 +326,10 @@ const AboutMe = () => (
             isLast={index === timelineData.length - 1}
           />
         ))}
-      </Box>
+      </div>
 
-      <Box mt={10}>
-        <Heading as="h3" fontSize={20} mb={4}>
-          Awards
-        </Heading>
+      <div className="mt-10">
+        <h3 className="text-xl mb-4">Awards</h3>
         {awardData.map((item, index) => (
           <TimelineItem
             key={index}
@@ -387,10 +339,9 @@ const AboutMe = () => (
             isLast={index === awardData.length - 1}
           />
         ))}
-      </Box>
-    </Container>
+      </div>
+    </div>
   </Layout>
 )
 
 export default AboutMe
-export { getServerSideProps } from '../components/chakra'

@@ -1,14 +1,22 @@
-import { useColorModeValue } from '@chakra-ui/react'
+import { useTheme } from 'next-themes'
+import { useEffect, useState } from 'react'
 
 const CameraIcon = () => {
+  const { theme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  // デフォルトはダークモード
+  const isDark = mounted ? theme === 'dark' : true
+
   // ライトモード: 黒、ダークモード: 白
-  const bodyColor = useColorModeValue('#2D3748', '#FFFFFF')
-  const lensStroke = useColorModeValue('#FFFFFF', '#2D3748')
-  const lensInnerColor = useColorModeValue('#FFFFFF', '#2D3748')
-  const lensGlowColor = useColorModeValue(
-    'rgba(255,255,255,0.3)',
-    'rgba(45,55,72,0.3)'
-  )
+  const bodyColor = isDark ? '#FFFFFF' : '#2D3748'
+  const lensStroke = isDark ? '#2D3748' : '#FFFFFF'
+  const lensInnerColor = isDark ? '#2D3748' : '#FFFFFF'
+  const lensGlowColor = isDark ? 'rgba(45,55,72,0.3)' : 'rgba(255,255,255,0.3)'
 
   return (
     <svg

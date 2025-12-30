@@ -1,10 +1,8 @@
-import { Box } from '@chakra-ui/react'
-
 const Footer = () => {
   return (
-    <Box align="center" opacity={0.4} fontSize="sm">
+    <div className="text-center opacity-40 text-sm">
       &copy; {new Date().getFullYear()} Koki Nakagawa. All Rights Reserved.
-    </Box>
+    </div>
   )
 }
 

@@ -1,19 +1,5 @@
-import { HamburgerIcon } from '@chakra-ui/icons'
-import {
-  Box,
-  Container,
-  Flex,
-  Heading,
-  IconButton,
-  Link,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuList,
-  Stack,
-  useColorModeValue
-} from '@chakra-ui/react'
 import NextLink from 'next/link'
+import { useState } from 'react'
 import Logo from './logo'
 import ThemeToggleButton from './theme-toggle-button'
 
@@ -25,93 +11,106 @@ const menuItems = [
   { href: '/development', label: 'Development' }
 ]
 
+const HamburgerIcon = () => (
+  <svg
+    className="w-5 h-5"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M4 6h16M4 12h16M4 18h16"
+    />
+  </svg>
+)
+
 const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href
-  const inactiveColor = useColorModeValue('gray.800', 'whiteAlpha.900')
+
   return (
-    <Link
-      as={NextLink}
+    <NextLink
       href={href}
       scroll={false}
-      p={2}
-      bg={active ? 'grassTeal' : undefined}
-      color={active ? '#202023' : inactiveColor}
+      className={`p-2 rounded transition-colors ${
+        active
+          ? 'bg-grassTeal text-[#202023]'
+          : 'text-gray-800 dark:text-white/90 hover:bg-gray-100 dark:hover:bg-white/10'
+      }`}
       target={target}
       {...props}
     >
       {children}
-    </Link>
+    </NextLink>
   )
 }
 
 const Navbar = props => {
   const { path } = props
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <Box
-      position="fixed"
-      as="nav"
-      w="100%"
-      bg={useColorModeValue('#ffffff40', '#20202380')}
-      css={{ backdropFilter: 'blur(10px)' }}
-      zIndex={2}
+    <nav
+      className="fixed w-full bg-white/25 dark:bg-[#20202380] glass z-[2]"
       {...props}
     >
-      <Container
-        display="flex"
-        p={2}
-        maxW="container.md"
-        wrap="wrap"
-        align="center"
-        justify="space-between"
-      >
-        <Flex align="center" mr={5}>
-          <Heading as="h1" size="lg" letterSpacing="tighter">
+      <div className="max-w-3xl mx-auto flex flex-wrap items-center justify-between p-2">
+        <div className="flex items-center mr-5">
+          <h1 className="text-lg font-bold tracking-tighter">
             <Logo />
-          </Heading>
-        </Flex>
+          </h1>
+        </div>
 
-        <Stack
-          direction={{ base: 'column', md: 'row' }}
-          display={{ base: 'none', md: 'flex' }}
-          width={{ base: 'full', md: 'auto' }}
-          alignItems="center"
-          flexGrow={1}
-          mt={{ base: 4, md: 0 }}
-        >
+        {/* Desktop Menu */}
+        <div className="hidden md:flex flex-row items-center flex-grow mt-0">
           {menuItems.map(item => (
             <LinkItem key={item.href} href={item.href} path={path}>
               {item.label}
             </LinkItem>
           ))}
-        </Stack>
+        </div>
 
-        <Box flex={1} align="right">
+        <div className="flex-1 text-right">
           <ThemeToggleButton />
 
-          <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
-            <Menu isLazy id="navbar-menu">
-              <MenuButton
-                as={IconButton}
-                icon={<HamburgerIcon />}
-                variant="outline"
-                aria-label="Options"
-              />
-              <MenuList>
-                <MenuItem as={Link} href="/">
+          {/* Mobile Menu Button */}
+          <div className="ml-2 inline-block md:hidden relative">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="p-2 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-700"
+              aria-label="Options"
+            >
+              <HamburgerIcon />
+            </button>
+
+            {/* Mobile Menu Dropdown */}
+            {isMenuOpen && (
+              <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg py-1 z-10">
+                <NextLink
+                  href="/"
+                  className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                  onClick={() => setIsMenuOpen(false)}
+                >
                   About
-                </MenuItem>
+                </NextLink>
                 {menuItems.map(item => (
-                  <MenuItem key={item.href} as={Link} href={item.href}>
+                  <NextLink
+                    key={item.href}
+                    href={item.href}
+                    className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
                     {item.label}
-                  </MenuItem>
+                  </NextLink>
                 ))}
-              </MenuList>
-            </Menu>
-          </Box>
-        </Box>
-      </Container>
-    </Box>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </nav>
   )
 }
 
