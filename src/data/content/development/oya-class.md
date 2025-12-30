@@ -28,16 +28,6 @@
 - フロント周り
 - プレゼン進行、スライド作成
 
-## 使用技術
-
-- HTML, css
-  - Bootstrap
-  - Material-UI
-- Javascript
-  - React
-  - Node.js
-- Azure（バックエンド・データベース）
-
 ## 使用したツール
 
 - Notion

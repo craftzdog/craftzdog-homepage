@@ -1,15 +1,52 @@
 [
   {
+    "id": "grant-finder",
+    "title": "Grant Finder",
+    "thumbnail": "/images/no-image.png",
+    "description": "JグランツAPIから補助金情報を自動取得・収集するシステム",
+    "contentFile": "development/grant-finder.md",
+    "tags": [
+      { "name": "Backend", "color": "green" },
+      { "name": "個人開発", "color": "blue" }
+    ],
+    "skills": ["python", "azure"]
+  },
+  {
+    "id": "class-todo-app",
+    "title": "Class Todo App",
+    "thumbnail": "/images/no-image.png",
+    "description": "Azure FunctionsとSQL Databaseを使用したバックエンド学習用Todoアプリ",
+    "contentFile": "development/class-todo-app.md",
+    "tags": [
+      { "name": "Backend", "color": "green" },
+      { "name": "授業", "color": "gray" }
+    ],
+    "skills": ["nextjs", "js", "azure"]
+  },
+  {
+    "id": "game-gallery",
+    "title": "Game Gallery",
+    "thumbnail": "/images/development/game-gallery/gallery_1.png",
+    "description": "自分がプレイしているゲームや好きなゲームをTwitterのフォロワーに紹介するために制作したWebアプリケーション",
+    "contentFile": "development/game-gallery.md",
+    "tags": [
+      { "name": "Frontend", "color": "blue" },
+      { "name": "個人開発", "color": "cyan" }
+    ],
+    "skills": ["nextjs", "ts", "tailwindcss"]
+  },
+  {
     "id": "seichi-cross-over",
     "title": "Seichi Cross Over",
     "thumbnail": "/images/development/seichi-cross-over/SeichiCrossOver.png",
     "description": "アニメ好きな外国人観光客が日本人と繋がって聖地巡礼ができるマッチングサービス",
     "contentFile": "development/seichi-cross-over.md",
     "tags": [
-      { "name": "React", "color": "blue" },
-      { "name": "Recoil", "color": "purple" },
-      { "name": "UI/UX", "color": "green" }
-    ]
+      { "name": "Frontend", "color": "blue" },
+      { "name": "UI/UX", "color": "pink" },
+      { "name": "個人開発", "color": "cyan" }
+    ],
+    "skills": ["react", "graphql", "figma"]
   },
   {
     "id": "zundamon-x",
@@ -18,10 +55,11 @@
     "description": "海外のYouTubeの動画を可愛い声でリアルタイム吹き替えする",
     "contentFile": "development/zundamon-x.md",
     "tags": [
-      { "name": "Chrome拡張", "color": "cyan" },
-      { "name": "TypeScript", "color": "blue" },
-      { "name": "YouTube API", "color": "red" }
-    ]
+      { "name": "Frontend", "color": "blue" },
+      { "name": "Chrome拡張", "color": "green" },
+      { "name": "個人開発", "color": "cyan" }
+    ],
+    "skills": ["react", "ts", "recoil"]
   },
   {
     "id": "quest-board",
@@ -30,9 +68,10 @@
     "description": "学生団体POLYGONでプロジェクト管理・参加ができる掲示板サービス",
     "contentFile": "development/quest-board.md",
     "tags": [
-      { "name": "React", "color": "blue" },
-      { "name": "掲示板", "color": "orange" }
-    ]
+      { "name": "Backend", "color": "green" },
+      { "name": "チーム開発", "color": "orange" }
+    ],
+    "skills": ["go", "postgres", "docker", "react"]
   },
   {
     "id": "oya-class",
@@ -41,10 +80,11 @@
     "description": "小学校の先生と保護者に向けた「学校のお便りが机の奥に詰まること」を解決したサービス",
     "contentFile": "development/oya-class.md",
     "tags": [
-      { "name": "React", "color": "blue" },
-      { "name": "Azure", "color": "cyan" },
-      { "name": "公共サービス", "color": "green" }
-    ]
+      { "name": "Frontend", "color": "blue" },
+      { "name": "Design", "color": "pink" },
+      { "name": "チーム開発", "color": "orange" }
+    ],
+    "skills": ["react", "mui", "azure", "nodejs"]
   },
   {
     "id": "spring-iot",
@@ -53,11 +93,11 @@
     "description": "IoT（センサ）を活用して、当学施設「DXセンター」の情報を表示するWebアプリ",
     "contentFile": "development/spring-iot.md",
     "tags": [
+      { "name": "Frontend", "color": "blue" },
       { "name": "IoT", "color": "purple" },
-      { "name": "React", "color": "blue" },
-      { "name": "Firebase", "color": "orange" },
-      { "name": "Python", "color": "green" }
-    ]
+      { "name": "チーム開発", "color": "orange" }
+    ],
+    "skills": ["react", "firebase", "python", "sass", "raspberrypi"]
   },
   {
     "id": "keycaps",
@@ -66,9 +106,10 @@
     "description": "初めて制作したショッピングサイトを模倣したWebアプリ",
     "contentFile": "development/keycaps.md",
     "tags": [
-      { "name": "React", "color": "blue" },
-      { "name": "Bootstrap", "color": "purple" },
-      { "name": "Material-UI", "color": "cyan" }
-    ]
+      { "name": "Frontend", "color": "blue" },
+      { "name": "Design", "color": "pink" },
+      { "name": "個人開発", "color": "cyan" }
+    ],
+    "skills": ["react", "bootstrap", "mui"]
   }
 ]

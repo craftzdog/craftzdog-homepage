@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { useEffect } from 'react'
 import ReactMarkdown from 'react-markdown'
+import rehypeRaw from 'rehype-raw'
 
 /**
  * プロジェクト詳細モーダルコンポーネント
@@ -127,10 +128,24 @@ const ProjectModal = ({ isOpen, onClose, project, isLoading = false }) => {
                     </div>
                   )}
 
+                  {/* スキルアイコン */}
+                  {project.skills && project.skills.length > 0 && (
+                    <div className="mt-4">
+                      <h3 className="text-sm font-bold mb-2">技術スタック</h3>
+                      <div>
+                        <img
+                          src={`https://skillicons.dev/icons?i=${project.skills.join(',')}`}
+                          alt="Skill Icons"
+                        />
+                      </div>
+                    </div>
+                  )}
+
                   {/* マークダウンコンテンツ */}
                   {project.content && (
                     <div className="prose prose-sm max-w-none markdown-content">
                       <ReactMarkdown
+                        rehypePlugins={[rehypeRaw]}
                         components={{
                           h1: ({ children }) => (
                             <h1 className="text-lg font-bold mt-6 mb-3">
@@ -164,13 +179,17 @@ const ProjectModal = ({ isOpen, onClose, project, isLoading = false }) => {
                             <li className="mb-1">{children}</li>
                           ),
                           hr: () => <hr className="my-4 border-gray-300" />,
-                          img: ({ src, alt }) => (
+                          img: ({ src, alt, className }) => (
                             <img
                               src={src}
                               alt={alt}
-                              className="max-w-[70%] h-auto my-3 mx-auto rounded-md"
+                              className={
+                                className ||
+                                'max-w-[70%] h-auto my-3 mx-auto rounded-md'
+                              }
                             />
                           ),
+                          div: ({ node, ...props }) => <div {...props} />,
                           code: ({ inline, children }) =>
                             inline ? (
                               <code className="bg-gray-100 px-1.5 py-0.5 rounded text-sm whitespace-nowrap">

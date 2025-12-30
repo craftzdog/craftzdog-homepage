@@ -9,11 +9,4 @@
 - PDFファイルなど重いデータを除外して軽量化
 - Azure Functionsによる定期実行
 
-**技術スタック:**
-
-- Python
-- Azure Functions
-- Azure Blob Storage
-- REST API
-
 GitHub: https://github.com/Minimalist-00/get-subsidy-api

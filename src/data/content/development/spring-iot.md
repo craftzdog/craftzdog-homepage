@@ -57,20 +57,6 @@ DXセンターの温度、湿度、気圧、扉の開閉回数、現時刻、会
 
 これらの状況は動的に変化するようになっています。
 
-## 使用技術
-
-- マイコン
-  - python
-- Firebase（バックエンド）
-- SASS
-- Javascript
-  - React
-  - Node.js
-
-- GitHub
-- slack
-- Notion
-
 ![アプリ画面](/images/development/spring-iot/Untitled.png)
 
 ## 工夫した点 + 頑張った点

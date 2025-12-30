@@ -1,13 +1,5 @@
 大学の学生団体POLYGONで作成した学生同士がプロジェクト（クエスト）を共有・募集できる掲示板システムのバックエンドAPIである。初めてGoLangに挑戦し、JWT認証によるセキュアなユーザー管理と、クエストの作成・参加・管理機能を実装した。
 
-## 技術スタック
-
-- **言語**: Go 1.20
-- **Webフレームワーク**: Echo
-- **ORM**: GORM
-- **データベース**: PostgreSQL
-- **環境構築**: Docker
-
 ## アプリ画面
 
 ![画面1](/images/development/quest-board/Untitled.png)
