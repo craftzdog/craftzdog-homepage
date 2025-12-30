@@ -40,7 +40,7 @@ const Home = () => {
     <Layout>
       <div>
         {/* 挨拶 */}
-        <div className="rounded-lg mb-6 p-3 text-center bg-white/50 dark:bg-white/20 glass">
+        <div className="rounded-lg mb-6 p-3 text-center bg-white/50 glass">
           こんにちは！自分の弱みを糧にして生きている修士1年生です！💪
         </div>
 
@@ -130,7 +130,7 @@ const Home = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <button className="inline-flex items-center px-4 py-2 text-teal-600 dark:text-teal-400 hover:bg-teal-50 dark:hover:bg-teal-900/20 rounded transition-colors">
+                <button className="inline-flex items-center px-4 py-2 text-teal-600 hover:bg-teal-50 rounded transition-colors">
                   <IoLogoGithub className="mr-2" />
                   GitHub
                 </button>
@@ -142,7 +142,7 @@ const Home = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <button className="inline-flex items-center px-4 py-2 text-teal-600 dark:text-teal-400 hover:bg-teal-50 dark:hover:bg-teal-900/20 rounded transition-colors">
+                <button className="inline-flex items-center px-4 py-2 text-teal-600 hover:bg-teal-50 rounded transition-colors">
                   <IoLogoTwitter className="mr-2" />x / Twitter
                 </button>
               </a>
@@ -153,7 +153,7 @@ const Home = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <button className="inline-flex items-center px-4 py-2 text-teal-600 dark:text-teal-400 hover:bg-teal-50 dark:hover:bg-teal-900/20 rounded transition-colors">
+                <button className="inline-flex items-center px-4 py-2 text-teal-600 hover:bg-teal-50 rounded transition-colors">
                   <IoLogoInstagram className="mr-2" />
                   Instagram
                 </button>
@@ -165,7 +165,7 @@ const Home = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <button className="inline-flex items-center px-4 py-2 text-teal-600 dark:text-teal-400 hover:bg-teal-50 dark:hover:bg-teal-900/20 rounded transition-colors">
+                <button className="inline-flex items-center px-4 py-2 text-teal-600 hover:bg-teal-50 rounded transition-colors">
                   <IoLogoLinkedin className="mr-2" />
                   LinkedIn
                 </button>
@@ -177,7 +177,7 @@ const Home = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <button className="inline-flex items-center px-4 py-2 text-teal-600 dark:text-teal-400 hover:bg-teal-50 dark:hover:bg-teal-900/20 rounded transition-colors">
+                <button className="inline-flex items-center px-4 py-2 text-teal-600 hover:bg-teal-50 rounded transition-colors">
                   <IoNewspaper className="mr-2" />
                   note
                 </button>

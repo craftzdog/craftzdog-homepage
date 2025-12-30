@@ -5,7 +5,7 @@ const NotFound = () => {
     <div className="max-w-3xl mx-auto px-4">
       <h1 className="text-4xl font-bold">Not found</h1>
       <p className="mt-2">The page you&apos;re looking for was not found.</p>
-      <hr className="my-6 border-gray-300 dark:border-gray-600" />
+      <hr className="my-6 border-gray-300" />
       <div className="my-6 text-center">
         <NextLink
           href="/"

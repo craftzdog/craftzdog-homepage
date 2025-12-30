@@ -1,6 +1,6 @@
 import { Analytics } from '@vercel/analytics/react'
 import { AnimatePresence } from 'framer-motion'
-import { ThemeProvider } from 'next-themes'
+
 import Fonts from '../components/fonts'
 import Layout from '../components/layouts/main'
 import '../styles/globals.css'
@@ -11,7 +11,7 @@ if (typeof window !== 'undefined') {
 
 function Website({ Component, pageProps, router }) {
   return (
-    <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+    <>
       <Fonts />
       <Layout router={router}>
         <AnimatePresence
@@ -27,7 +27,7 @@ function Website({ Component, pageProps, router }) {
         </AnimatePresence>
         <Analytics />
       </Layout>
-    </ThemeProvider>
+    </>
   )
 }
 

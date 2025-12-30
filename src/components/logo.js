@@ -6,7 +6,7 @@ const Logo = () => {
     <Link href="/" scroll={false}>
       <span className="logo-box font-bold text-lg inline-flex items-center h-[30px] leading-5 p-2.5 cursor-pointer relative group">
         <CameraIcon />
-        <span className="text-gray-800 dark:text-white/90 font-heading font-bold ml-3">
+        <span className="text-gray-800 font-heading font-bold ml-3">
           Koki Nakagawa
         </span>
       </span>

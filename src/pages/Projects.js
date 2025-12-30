@@ -72,7 +72,7 @@ const Projects = () => {
         <CardList items={mainProjects} delay={0} apiEndpoint="/api/projects" />
 
         <Section delay={0.2}>
-          <hr className="my-6 border-gray-300 dark:border-gray-600" />
+          <hr className="my-6 border-gray-300" />
 
           <h3 className="text-xl mb-4">その他の活動</h3>
         </Section>

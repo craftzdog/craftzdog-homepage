@@ -1,6 +1,3 @@
-import { useTheme } from 'next-themes'
-import { useEffect, useState } from 'react'
-
 const SunIcon = () => (
   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
     <path
@@ -18,25 +15,11 @@ const MoonIcon = () => (
 )
 
 const ThemeToggleButton = () => {
-  const { theme, setTheme } = useTheme()
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  if (!mounted) {
-    return null
-  }
-
-  const isDark = theme === 'dark'
-
   return (
     <button
-      onClick={() => setTheme(isDark ? 'light' : 'dark')}
       className="relative flex items-center gap-0 rounded-full p-1 cursor-pointer transition-all duration-300 hover:opacity-80"
       style={{
-        backgroundColor: isDark ? '#4A5568' : '#FFA500'
+        backgroundColor: '#FFA500'
       }}
       aria-label="Toggle theme"
     >
@@ -44,8 +27,8 @@ const ThemeToggleButton = () => {
       <div
         className="relative z-[2] flex items-center justify-center w-8 h-8 rounded-full transition-all duration-300"
         style={{
-          backgroundColor: !isDark ? 'white' : 'transparent',
-          color: !isDark ? '#FFA500' : 'rgba(255, 255, 255, 0.7)'
+          backgroundColor: 'white',
+          color: '#FFA500'
         }}
       >
         <SunIcon />
@@ -55,8 +38,8 @@ const ThemeToggleButton = () => {
       <div
         className="relative z-[2] flex items-center justify-center w-8 h-8 rounded-full transition-all duration-300"
         style={{
-          backgroundColor: isDark ? 'white' : 'transparent',
-          color: isDark ? '#4A5568' : 'rgba(255, 255, 255, 0.7)'
+          backgroundColor: 'transparent',
+          color: 'rgba(255, 255, 255, 0.7)'
         }}
       >
         <MoonIcon />

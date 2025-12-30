@@ -37,7 +37,7 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
       className={`p-2 rounded transition-colors ${
         active
           ? 'bg-grassTeal text-[#202023]'
-          : 'text-gray-800 dark:text-white/90 hover:bg-gray-100 dark:hover:bg-white/10'
+          : 'text-gray-800 hover:bg-gray-100'
       }`}
       target={target}
       {...props}
@@ -52,10 +52,7 @@ const Navbar = props => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <nav
-      className="fixed w-full bg-white/25 dark:bg-[#20202380] glass z-[2]"
-      {...props}
-    >
+    <nav className="fixed w-full bg-white/25 glass z-[2]" {...props}>
       <div className="max-w-3xl mx-auto flex flex-wrap items-center justify-between py-2 pl-1.5 pr-2 md:pr-3">
         <div className="flex items-center mr-5">
           <h1 className="text-lg font-bold tracking-tighter">
@@ -79,7 +76,7 @@ const Navbar = props => {
           <div className="ml-2 inline-block md:hidden relative">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-700"
+              className="p-2 border border-gray-300 rounded hover:bg-gray-100"
               aria-label="Options"
             >
               <HamburgerIcon />
@@ -87,10 +84,10 @@ const Navbar = props => {
 
             {/* Mobile Menu Dropdown */}
             {isMenuOpen && (
-              <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg py-1 z-10">
+              <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10">
                 <NextLink
                   href="/"
-                  className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   About
@@ -99,7 +96,7 @@ const Navbar = props => {
                   <NextLink
                     key={item.href}
                     href={item.href}
-                    className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.label}

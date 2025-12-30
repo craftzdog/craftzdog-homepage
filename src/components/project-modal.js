@@ -1,5 +1,4 @@
 import { AnimatePresence, motion } from 'framer-motion'
-import { useTheme } from 'next-themes'
 import { useEffect } from 'react'
 import ReactMarkdown from 'react-markdown'
 
@@ -13,8 +12,6 @@ import ReactMarkdown from 'react-markdown'
  * @param {boolean} isLoading - コンテンツ読み込み中かどうか
  */
 const ProjectModal = ({ isOpen, onClose, project, isLoading = false }) => {
-  const { theme } = useTheme()
-
   // ESCキーでモーダルを閉じる & 背景スクロール無効化（スクロールバーは維持）
   useEffect(() => {
     const handleEsc = e => {
@@ -57,7 +54,7 @@ const ProjectModal = ({ isOpen, onClose, project, isLoading = false }) => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="absolute inset-0 bg-black/60 dark:bg-black/80 backdrop-blur-sm"
+            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
             onClick={onClose}
           />
 
@@ -67,14 +64,14 @@ const ProjectModal = ({ isOpen, onClose, project, isLoading = false }) => {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ duration: 0.3, ease: 'easeOut' }}
-            className="relative bg-white dark:bg-gray-800 rounded-2xl max-h-[80vh] max-w-3xl w-full mx-auto overflow-hidden flex flex-col shadow-2xl"
+            className="relative bg-white rounded-2xl max-h-[80vh] max-w-3xl w-full mx-auto overflow-hidden flex flex-col shadow-2xl"
           >
             {/* Header */}
-            <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
+            <div className="flex items-center justify-between p-6 border-b border-gray-200">
               <h2 className="text-2xl font-bold">{project.title}</h2>
               <button
                 onClick={onClose}
-                className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 transition-colors"
+                className="text-gray-500 hover:text-gray-700 transition-colors"
                 aria-label="Close modal"
               >
                 <svg
@@ -111,16 +108,16 @@ const ProjectModal = ({ isOpen, onClose, project, isLoading = false }) => {
                             key={index}
                             className={`px-3 py-1 rounded-full text-sm font-medium ${
                               tag.color === 'blue'
-                                ? 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200'
+                                ? 'bg-blue-100 text-blue-800'
                                 : tag.color === 'green'
-                                  ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200'
+                                  ? 'bg-green-100 text-green-800'
                                   : tag.color === 'red'
-                                    ? 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200'
+                                    ? 'bg-red-100 text-red-800'
                                     : tag.color === 'yellow'
-                                      ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200'
+                                      ? 'bg-yellow-100 text-yellow-800'
                                       : tag.color === 'purple'
-                                        ? 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200'
-                                        : 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-200'
+                                        ? 'bg-purple-100 text-purple-800'
+                                        : 'bg-gray-100 text-gray-800'
                             }`}
                           >
                             {tag.name}
@@ -132,7 +129,7 @@ const ProjectModal = ({ isOpen, onClose, project, isLoading = false }) => {
 
                   {/* マークダウンコンテンツ */}
                   {project.content && (
-                    <div className="prose prose-sm dark:prose-invert max-w-none markdown-content">
+                    <div className="prose prose-sm max-w-none markdown-content">
                       <ReactMarkdown
                         components={{
                           h1: ({ children }) => (
@@ -166,9 +163,7 @@ const ProjectModal = ({ isOpen, onClose, project, isLoading = false }) => {
                           li: ({ children }) => (
                             <li className="mb-1">{children}</li>
                           ),
-                          hr: () => (
-                            <hr className="my-4 border-gray-300 dark:border-gray-600" />
-                          ),
+                          hr: () => <hr className="my-4 border-gray-300" />,
                           img: ({ src, alt }) => (
                             <img
                               src={src}
@@ -178,16 +173,16 @@ const ProjectModal = ({ isOpen, onClose, project, isLoading = false }) => {
                           ),
                           code: ({ inline, children }) =>
                             inline ? (
-                              <code className="bg-gray-100 dark:bg-gray-700 px-1.5 py-0.5 rounded text-sm whitespace-nowrap">
+                              <code className="bg-gray-100 px-1.5 py-0.5 rounded text-sm whitespace-nowrap">
                                 {children}
                               </code>
                             ) : (
-                              <code className="block bg-gray-100 dark:bg-gray-700 p-3 rounded overflow-x-auto mb-2">
+                              <code className="block bg-gray-100 p-3 rounded overflow-x-auto mb-2">
                                 {children}
                               </code>
                             ),
                           pre: ({ children }) => (
-                            <pre className="bg-gray-100 dark:bg-gray-700 p-3 rounded overflow-x-auto mb-2">
+                            <pre className="bg-gray-100 p-3 rounded overflow-x-auto mb-2">
                               {children}
                             </pre>
                           ),
@@ -196,7 +191,7 @@ const ProjectModal = ({ isOpen, onClose, project, isLoading = false }) => {
                               href={href}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="text-blue-600 dark:text-blue-400 hover:underline"
+                              className="text-blue-600 hover:underline"
                             >
                               {children}
                             </a>
