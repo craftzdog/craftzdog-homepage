@@ -40,7 +40,7 @@ const Projects = () => {
   if (loading) {
     return (
       <Layout title="Projects">
-        <div className="max-w-3xl mx-auto px-4">
+        <div>
           <h3 className="text-xl mb-4">研究室での活動</h3>
           <div className="flex justify-center py-10">
             <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-teal-500"></div>
@@ -54,7 +54,7 @@ const Projects = () => {
   if (error) {
     return (
       <Layout title="Projects">
-        <div className="max-w-3xl mx-auto px-4">
+        <div>
           <h3 className="text-xl mb-4 text-red-500">
             データの取得に失敗しました
           </h3>
@@ -66,7 +66,7 @@ const Projects = () => {
 
   return (
     <Layout title="Projects">
-      <div className="max-w-3xl mx-auto px-4">
+      <div>
         <h3 className="text-xl mb-4">研究室での活動</h3>
 
         <CardList items={mainProjects} delay={0} apiEndpoint="/api/projects" />

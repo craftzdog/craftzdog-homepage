@@ -26,7 +26,7 @@ const Main = ({ children, router }) => {
 
       <NavBar path={router.asPath} />
 
-      <div className="max-w-3xl mx-auto pt-14">
+      <div className="max-w-[605px] mx-auto pt-14 px-4">
         {children}
 
         <Footer />

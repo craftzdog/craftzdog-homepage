@@ -289,7 +289,7 @@ const generateStars = level => {
 
 const AboutMe = () => (
   <Layout title="About Me">
-    <div className="max-w-3xl mx-auto px-4">
+    <div>
       <div>
         <h3 className="text-xl mb-4">Skills</h3>
 

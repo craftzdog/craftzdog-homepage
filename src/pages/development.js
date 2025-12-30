@@ -33,7 +33,7 @@ const Development = () => {
   if (loading) {
     return (
       <Layout title="Development">
-        <div className="max-w-3xl mx-auto px-4">
+        <div>
           <h3 className="text-xl mb-4">制作物</h3>
           <div className="flex justify-center py-10">
             <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-teal-500"></div>
@@ -47,7 +47,7 @@ const Development = () => {
   if (error) {
     return (
       <Layout title="Development">
-        <div className="max-w-3xl mx-auto px-4">
+        <div>
           <h3 className="text-xl mb-4 text-red-500">
             データの取得に失敗しました
           </h3>
@@ -59,7 +59,7 @@ const Development = () => {
 
   return (
     <Layout title="Development">
-      <div className="max-w-3xl mx-auto px-4">
+      <div>
         <h3 className="text-xl mb-4">開発活動</h3>
         <CardList items={projects} delay={0.3} apiEndpoint="/api/development" />
       </div>

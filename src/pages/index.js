@@ -38,7 +38,7 @@ const Home = () => {
 
   return (
     <Layout>
-      <div className="max-w-3xl mx-auto px-4">
+      <div>
         {/* 挨拶 */}
         <div className="rounded-lg mb-6 p-3 text-center bg-white/50 dark:bg-white/20 glass">
           こんにちは！自分の弱みを糧にして生きている修士1年生です！💪

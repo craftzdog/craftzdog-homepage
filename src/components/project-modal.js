@@ -28,7 +28,8 @@ const ProjectModal = ({ isOpen, onClose, project, isLoading = false }) => {
       // 背景を固定してスクロールを無効化（スクロールバーは残る）
       document.body.style.position = 'fixed'
       document.body.style.top = `-${scrollY}px`
-      document.body.style.width = '100%'
+      document.body.style.left = '0'
+      document.body.style.right = '0'
 
       document.addEventListener('keydown', handleEsc)
     }
@@ -38,7 +39,8 @@ const ProjectModal = ({ isOpen, onClose, project, isLoading = false }) => {
       const scrollY = document.body.style.top
       document.body.style.position = ''
       document.body.style.top = ''
-      document.body.style.width = ''
+      document.body.style.left = ''
+      document.body.style.right = ''
       window.scrollTo(0, parseInt(scrollY || '0') * -1)
 
       document.removeEventListener('keydown', handleEsc)

@@ -56,7 +56,7 @@ const Navbar = props => {
       className="fixed w-full bg-white/25 dark:bg-[#20202380] glass z-[2]"
       {...props}
     >
-      <div className="max-w-3xl mx-auto flex flex-wrap items-center justify-between p-2">
+      <div className="max-w-3xl mx-auto flex flex-wrap items-center justify-between py-2 pl-1.5 pr-2 md:pr-3">
         <div className="flex items-center mr-5">
           <h1 className="text-lg font-bold tracking-tighter">
             <Logo />
