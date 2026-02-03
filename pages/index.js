@@ -92,7 +92,7 @@ const Home = () => (
           >
             Dev as Life
           </Link>
-          &quot; has more than 100k subscribers.
+          &quot; has more than 200k subscribers.
         </Paragraph>
         <Box align="center" my={4}>
           <Button
