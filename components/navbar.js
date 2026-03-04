@@ -42,6 +42,24 @@ const MenuLink = forwardRef((props, ref) => (
   <Link ref={ref} as={NextLink} {...props} />
 ))
 
+const MenuItemLink = ({ href, path, children, ...props }) => {
+  const active = path === href
+  const inactiveColor = useColorModeValue('gray.800', 'whiteAlpha.900')
+  return (
+    <MenuItem
+      as={MenuLink}
+      href={href}
+      bg={active ? 'grassTeal' : 'none'}
+      color={active ? '#202023' : inactiveColor}
+      _focus={active ? {} : { bg: 'none' }}
+      _hover={active ? {} : { bg: 'none' }}
+      {...props}
+    >
+      {children}
+    </MenuItem>
+  )
+}
+
 const Navbar = props => {
   const { path } = props
 
@@ -113,21 +131,21 @@ const Navbar = props => {
                 aria-label="Options"
               />
               <MenuList>
-                <MenuItem as={MenuLink} href="/">
+                <MenuItemLink href="/" path={path}>
                   About
-                </MenuItem>
-                <MenuItem as={MenuLink} href="/works">
+                </MenuItemLink>
+                <MenuItemLink href="/works" path={path}>
                   Works
-                </MenuItem>
-                <MenuItem as={MenuLink} href="https://store.craftz.dog/">
+                </MenuItemLink>
+                <MenuItemLink href="https://store.craftz.dog/" path={path}>
                   Wallpapers
-                </MenuItem>
-                <MenuItem as={MenuLink} href="/posts">
+                </MenuItemLink>
+                <MenuItemLink href="/posts" path={path}>
                   Posts
-                </MenuItem>
-                <MenuItem as={MenuLink} href="https://uses.craftz.dog/">
+                </MenuItemLink>
+                <MenuItemLink href="https://uses.craftz.dog/" path={path}>
                   Uses
-                </MenuItem>
+                </MenuItemLink>
                 <MenuItem
                   as={Link}
                   href="https://github.com/craftzdog/craftzdog-homepage"
