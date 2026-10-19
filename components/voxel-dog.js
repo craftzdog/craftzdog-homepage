@@ -38,7 +38,7 @@ const VoxelDog = () => {
       })
       renderer.setPixelRatio(window.devicePixelRatio)
       renderer.setSize(scW, scH)
-      renderer.outputEncoding = THREE.sRGBEncoding
+      renderer.outputColorSpace = THREE.SRGBColorSpace
       container.appendChild(renderer.domElement)
       refRenderer.current = renderer
       const scene = new THREE.Scene()
@@ -74,10 +74,15 @@ const VoxelDog = () => {
       loadGLTFModel(scene, urlDogGLB, {
         receiveShadow: false,
         castShadow: false
-      }).then(() => {
-        animate()
-        setLoading(false)
       })
+        .then(() => {
+          animate()
+          setLoading(false)
+        })
+        .catch(err => {
+          console.error('Failed to load dog model:', err)
+          setLoading(false)
+        })
 
       let req = null
       let frame = 0
